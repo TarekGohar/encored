@@ -1,0 +1,94 @@
+{
+  "Metadata": {
+    "home-title": "Home",
+    "home-description": "Welcome to Ed Battah & Co., a trusted importer and distributor of high-quality European ready-to-wear collections.",
+    "about-title": "About Us",
+    "about-description": "Learn about our history, our mission, and our collections.",
+    "collections-title": "Collections",
+    "collections-description": "Discover our compilation of beautiful European brands.",
+    "buy-title": "Where to Buy",
+    "buy-description": "Enter details and we will provide you with the nearest retailers.",
+    "buy-success-title": "Booking Submitted!",
+    "buy-success-description": "We will get in touch soon."
+  },
+  "Home": {
+    "about": {
+      "header": "About Us",
+      "subheader": "Learn about our history, our mission, and our collections.",
+      "learn": "Learn More"
+    },
+    "collections": {
+      "header": "Collections",
+      "subheader": "Discover our compilation of beautiful European brands.",
+      "view": "View"
+    },
+    "buy" : {
+      "header": "Where to Buy",
+      "subheader": "Enter details and we will provide you with the nearest retailers.",
+      "find": "Fill in Form"
+    }
+  },
+  "Navbar": {
+    "about": "About",
+    "collections": "Collections",
+    "contact": "Where to Buy",
+    "locale": "fr",
+    "hours": "Hours",
+    "date": "Monday - Friday",
+    "time": "9:00 AM - 5:00 PM"
+  },
+  "About": {
+    "header": "About Us",
+    "first-heading": "Our History",
+    "first-paragraph": "We provide high quality European ready-to-wear collections to independent boutiques, specialty shops, and small chain stores across Canada. Our collections include Bariloche, éclà, Elisa Cavaletti, Gardel by Moore, Lolitas, Soulmate, Tinta, Valentina’s, and range from workwear to street-wear, from versatile casuals to special-occasion statement pieces, and from timeless classics to current trends.",
+    "second-heading": "Our Mission",
+    "second-paragraph": "Ed Battah & Co. is a third-generation, family-run business that has built its reputation on delivering high-quality and comfortable garments to our customers. For decades, we have been a trusted importer and distributor of European clothing, carefully selecting pieces that embody exceptional craftsmanship, timeless style, and unparalleled comfort.",
+    "third-heading": "Our Collections",
+    "third-paragraph": "Ed Battah & Co. serves clients across Canada with sales offices in Montreal, Toronto, and Vancouver. These locations help us stay connected with our customers, providing personalized service and easy access to our selection of high-quality European garments.",
+    "view": "View Collections"
+  },
+  "Buy": {
+    "submit-title": "Booking Submitted!",
+    "submit-subtitle": "We will get in touch soon.",
+    "header": "Where to Buy",
+    "subheader": "For information on becoming a retailer, our retailers in your area, or any of our products, please fill out the form below:",
+    "name": "Name",
+    "name-placeholder": "Enter your name",
+    "email": "Email Address",
+    "email-placeholder": "Enter your email",
+    "phone": "Phone Number",
+    "phone-placeholder": "Enter your phone number",
+    "phone-type": {
+      "home": "Home",
+      "mobile": "Mobile",
+      "work": "Work"
+    },
+    "country": "Country",
+    "canada": "Canada",
+    "usa": "United States",
+    "address-1": "Address Line 1",
+    "address-1-placeholder": "Enter the first line of your address",
+    "address-2": "Address Line 2",
+    "address-2-placeholder": "Enter the second line of your address",
+    "city": "City",
+    "city-placeholder": "Enter your city",
+    "code-ca": "Postal Code",
+    "code-ca-placeholder": "Enter your postal code",
+    "code-us": "Zip Code",
+    "code-us-placeholder": "Enter your zip code",
+    "message": "Message",
+    "message-placeholder": "Enter your message",
+    "submit": "Submit Form"
+  },
+  "Collections": {
+    "bariloche-description": "Bariloche is a well-established Spanish brand known for expert, feminine tailoring with elegant touches of meticulous detailing. Known for their impeccable sizing and fit, Bariloche’s high-quality, versatile garments are both fashion-forward and comfortable. They specialize in classic tailoring, crisp expertly crafted shirts, and exquisitely tailored European tweed jackets and coats.",
+    "calatura-description": "Calatura is an Italian brand that offers a wide range of versatile, comfortable, and stylish garments that are perfect for everyday wear. Known for their high-quality textiles, Calatura’s collections are designed to be mixed and matched, allowing for a variety of looks that are both casual and sophisticated.",
+    "ecla-description": "éclà is the newest brand by renowned Italian designer, Mirella Matteini: an urban-chic glamour line dedicated to women who love all that is feminine. Fashionable and sophisticated, this collection’s focus is quality textiles, innovative design, attention to detail, and a love of beauty, romance, and superior craftsmanship.",
+    "elisa-description": "Elisa Cavaletti is a unique line of sophisticated but comfortable contemporary everyday garments designed in Italy by Daniela Dallavalle, as a celebration of inner beauty and joyful femininity. A versatile brand that speaks to women of a wide variety of styles, ages, and body-shapes, every season’s collections promise attention to detail, quality textiles, hand-detailing, and appealing, original prints.",
+    "gardel-description": "Gardel by Moore is a deluxe jersey-wear collection of versatile and feminine womenswear made in Portugal. Featuring flattering, breezy, relaxed fit garments perfect for layering or as singular show-pieces, Gardel by Moore is known for their soft heathered textures, and uses only the finest of textiles, including Supima cotton, linen, modal, and wool.",
+    "soulmate-description": "Soulmate is a Danish clothing brand that seeks to inspire a sense of femininity, independence, and individuality. Designed for the fashion-conscious woman with a clear sense of style, these garments are current, casual, and beautifully feminine, without compromising comfort.",
+    "tinta-description": "Tinta Style is a popular Spanish fashion house that combines traditional tailoring with modern production processes to offer a fresh, feminine, modern twist on much-loved traditional styles, often featuring bold colours, vibrant prints, eye-catching lining, and hand-sewn detailing.",
+    "valentinas-description": "VLT’S by Valentina’s is an Italian fashion brand set apart by the quality of its textiles, along with its attention to detail and impeccable finishing, designing garments of timeless style that are updated to lead current trends. VLT’S by Valentina’s is known for its distinctive detail elements, including superb buttons, specialized dyeing techniques, and highly sought-after traditional Tuscan embroidery. ",
+    "visit": "Visit Website"
+  }
+}

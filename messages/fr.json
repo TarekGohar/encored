@@ -1,0 +1,94 @@
+{
+  "Metadata": {
+    "home-title": "Accueil",
+    "home-description": "Bienvenue chez Ed Battah & Co., un importateur et distributeur de confiance de collections européennes de prêt",
+    "about-title": "À propos de nous",
+    "about-description": "En savoir plus sur notre histoire, notre mission et nos collections.",
+    "collections-title": "Collections",
+    "collections-description": "Découvrez nos collections de marques européennes.",
+    "buy-title": "Nous contacter",
+    "buy-description": "Pour plus d'informations sur les détaillants près de vous et pour toute autre demande.",
+    "buy-success-title": "Réservation effectuée!",
+    "buy-success-description": "Nous vous contacterons bientôt."
+  },
+  "Home": {
+    "about": {
+      "header": "À propos de nous",
+      "subheader": "En savoir plus sur notre histoire, notre mission et nos collections.",
+      "learn": "Savoir plus"
+    },
+    "collections": {
+      "header": "Collections",
+      "subheader": "Découvrez nos collections de marques européennes.",
+      "view": "Voir collections"
+    },
+    "buy" : {
+      "header": "Nous contacter",
+      "subheader": "Pour plus d'informations sur les détaillants près de vous et pour toute autre demande.",
+      "find": "Remplir la formulaire"
+    }
+  },
+  "Navbar": {
+    "about": "À propos",
+    "collections": "Collections",
+    "contact": "Nous contacter",
+    "locale": "en",
+    "hours": "Heures",
+    "date": "Lunda - Vendredi",
+    "time": "9:00 - 17:00"
+  },
+  "About": {
+    "header": "À propos",
+    "first-heading": "Notre histoire",
+    "first-paragraph": "Nous fournissons des collections européennes de prêt-à-porter haut-de-gamme aux boutiques indépendantes, aux magasins spécialisés et aux petites chaînes de magasins à travers le Canada. Parmi nos collections, vous trouverez Bariloche, éclà, Elisa Cavaletti, Gardel by Moore, Lolitas, Soulmate, Tinta, Valentina’s, pour offrir des vêtements de travail, des vêtements de rue et des vêtements décontractés polyvalents, comprenant autant des tendances actuelles que des intemporels classiques.",
+    "second-heading": "Notre Mission",
+    "second-paragraph": "Ed Battah & cie. est une entreprise familiale de troisième génération qui est fière de la qualité et du confort des vêtements que nous importons et distribuons, ainsi que du dévouement de notre personnel. Depuis des décennies, nous sommes un importateur et un distributeur de confiance de vêtements européens, sélectionnant avec soin des pièces qui incarnent un savoir-faire exceptionnel, un style intemporel et un confort inégalé.",
+    "third-heading": "Nos Collections",
+    "third-paragraph": "Ed Battah & Co. sert des clients à travers le Canada avec des bureaux de vente à Montréal, Toronto et Vancouver. Ces bureaux nous permettent de rester en contact avec nos clients, en leur offrant un service personnalisé et un accès facile à notre sélection de vêtements européens de haute qualité.",
+    "view": "Voir collections"
+  },
+  "Buy": {
+    "submit-title": "Réservation effectuée!",
+    "submit-subtitle": "Nous vous contacterons bientôt.",
+    "header": "Nous contacter",
+    "subheader": "Pour des renseignements sur devenir un détaillant, pour plus d'informations sur nos détaillants dans votre région, ou pour plus de détails sur nos produits, veuillez remplir le formulaire ci-dessous:",
+    "name": "Nom",
+    "name-placeholder": "Entrez votre nom",
+    "email": "Addresse courriel",
+    "email-placeholder": "Entrez votre courriel",
+    "phone": "Numéro de téléphone",
+    "phone-placeholder": "Entrez votre numéro de téléphone",
+    "phone-type": {
+      "home": "Domicile",
+      "mobile": "Mobile",
+      "work": "Travail"
+    },
+    "country": "Pays",
+    "canada": "Canada",
+    "usa": "États-Unis",
+    "address-1": "Adresse ligne 1",
+    "address-1-placeholder": "Entrez la première ligne de votre adresse",
+    "address-2": "Adresse ligne 2",
+    "address-2-placeholder": "Entrez la deuxième ligne de votre adresse",
+    "city": "Ville",
+    "city-placeholder": "Entrez votre ville",
+    "code-ca": "Code postal",
+    "code-ca-placeholder": "Entrez votre code postal",
+    "code-us": "Code postal",
+    "code-us-placeholder": "Entrez votre code postal",
+    "message": "Message",
+    "message-placeholder": "Entrez votre message",
+    "submit": "Soumettre le formulaire"
+  }, 
+  "Collections": {
+    "bariloche-description": "Bariloche est une marque espagnole bien établie, connue pour sa couture féminine et experte, ainsi que ses touches élégantes et détails méticuleux. Avec leurs coupes impeccables, les vêtements polyvalents et haut-de-gamme de Bariloche sont à la fois de haute mode et confortables. La marque se spécialise dans couture classique, les chemises parfaitement confectionnées et les vestes et manteaux en tweed parfaitement ajustés.",
+    "calatura-description": "Calatura est une marque de vêtements italienne qui se spécialise dans les vêtements de travail et de rue pour les femmes. Avec des coupes flatteuses, des textiles de qualité et des détails rajoutés à la main, les vêtements de Calatura sont à la fois élégants et confortables, et sont conçus pour les femmes qui apprécient la mode et le confort.",
+    "ecla-description": "éclà est la toute nouvelle marque de la célèbre designer italienne Mirella Matteini : une ligne glamour urbaine-chic dédiée aux femmes qui aiment tout ce qui est féminin. Chic et sophistiquée, cette collection met l'accent sur les textiles de qualité, le design innovant, le souci du détail et l'amour de la beauté, du romantisme et de la qualité de métier d’art.",
+    "elisa-description": "Elisa Cavaletti est une ligne unique de vêtements de tous les jours — contemporains, sophistiqués, mais confortable — conçue en Italie par Daniela Dallavalle, comme une célébration de la beauté intérieure et de la joie de la féminité. Avec cette marque polyvalente qui s'adresse aux femmes d'une grande variété de styles, d'âges et de silhouettes, chaque saison de collections promet une précision professionnelle, des textiles de qualité, des détails rajoutés à la main et des imprimés originaux et attrayants.",
+    "gardel-description": "Gardel by Moore est une collection de luxe de vêtements polyvalents et féminins en jersey, fabriquée au Portugal. Avec des coupes flatteuses, aérées et décontractées, ces vêtements sont sublimes quand superposés et exceptionnels quand portés comme pièces singulières. Gardel by Moore est connu pour ses douces textures chinées et utilise uniquement les meilleurs textiles, dont le coton, le lin, le modal et la laine Supima.",
+    "soulmate-description": "Soulmate est une marque de vêtements danoise qui cherche à inspirer un sentiment de féminité, d'indépendance et d'individualité. Conçus pour les femmes soucieuses de la mode avec un sens clair du style, ces vêtements sont actuels, décontractés et magnifiquement féminins, sans compromettre le confort.",
+    "tinta-description": "Tinta Style est une célèbre maison de couture espagnole qui combine la couture traditionnelle avec des processus de production modernes, pour offrir une touche fraîche, féminine et moderne sur des styles traditionnels très appréciés, présentant souvent des couleurs vives, des imprimés éclatants, des doublures accrocheuses et des détails rajoutés à la main.",
+    "valentinas-description": "VLT’S by Valentina’s est une marque de mode italienne qui se distingue par la qualité de ses textiles, ainsi que par son souci du détail et ses finitions impeccables. Créant des vêtements d’un style intemporel mis à jour pour mener les tendances actuelles, VLT’S by Valentina’s est connue pour ses détails distinctifs — notamment de superbes boutons, des techniques de teinture spécialisées et une broderie toscane traditionnelle très recherchée.",
+    "visit": "Visiter le site web"
+  }
+}
