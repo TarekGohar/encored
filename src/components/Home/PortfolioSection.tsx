@@ -13,30 +13,26 @@ export default function PortfolioSection() {
         <span
           className={`${
             isMobile ? "w-full" : "w-1/3"
-          } text-[#13265c]/50 font-semibold`}>
-          Industries We Serve
+          } text-[#13265c]/50 font-light tracking-wider uppercase`}>
+          Sectors We Serve
         </span>
 
         <h2
           className={`${
             isMobile ? "text-2xl" : "text-3xl md:text-4xl"
-          } font-medium text-[#13265c]`}>
-          Celebrating Our Most Recent Acquisitions
+          } text-[#13265c] uppercase`}>
+          We Serve a Variety of Sectors
         </h2>
         <p
-          className={`text-sm text-neutral-400 font-medium ${
+          className={`text-sm text-neutral-400 font-light ${
             isMobile ? "max-w-full" : "max-w-2xl"
           }`}>
-          Each transaction we undertake is more than a business deal. It&apos;s
-          the beginning of a new chapter, where legacy is honored, innovation is
-          fostered, and a shared vision for the future is realized. Our
-          acquisitions are built on trust, collaboration, and a commitment to
-          sustainable growth, ensuring that every company's story continues to
-          flourish within our portfolio.
+          From custom homes and modern apartments to large-scale industrial
+          spaces and commercial buildings, our expertise spans every facet of
+          construction. We deliver quality, reliability, and innovative
+          solutions across residential, industrial, and commercial projects.
         </p>
-        <Button href="/portfolio" size="lg" variant="primary">
-          View All Acquisitions
-        </Button>
+
         <motion.div
           className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-16 relative w-full justify-center items-center"
           initial="hidden"
@@ -52,19 +48,16 @@ export default function PortfolioSection() {
           }}>
           {[
             {
-              industry: "Dental",
-              company: "TDO",
+              industry: "Commercial",
               image: "/images/dental.webp",
             },
             {
-              industry: "Retail",
-              company: "Cybertill",
-              image: "/images/analytics.webp",
+              industry: "Industrial",
+              image: "/images/McGill/room.jpg",
             },
             {
-              industry: "Healthcare",
-              company: "American Data",
-              image: "/images/healthcare.webp",
+              industry: "Residential",
+              image: "/images/Westmount/View.jpg",
             },
           ].map((item, index) => (
             <motion.div
@@ -102,7 +95,7 @@ export default function PortfolioSection() {
               }}>
               <Image
                 src={item.image}
-                alt={`${item.company} - ${item.industry}`}
+                alt={`${item.industry}`}
                 width={1000}
                 height={160}
                 className="object-cover object-center w-full h-full absolute top-0 left-0"
@@ -120,10 +113,7 @@ export default function PortfolioSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 viewport={{ once: true }}>
-                <span className="text-sm text-[#ffffff] leading-tight">
-                  {item.company}
-                </span>
-                <span className="text-xs font-medium text-[#ffffff] leading-tight">
+                <span className="text-sm font-light tracking-wider text-[#ffffff] leading-tight">
                   {item.industry}
                 </span>
               </motion.h3>

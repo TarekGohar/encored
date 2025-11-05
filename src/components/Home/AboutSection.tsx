@@ -4,25 +4,26 @@ import React from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { useMediaQuery } from "react-responsive";
+import { ChevronRight } from "lucide-react";
 
 export default function AboutSection() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
     <div className="relative w-full">
-      <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col gap-12">
+      <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 py-32 flex flex-col gap-12">
         <div
           className={`flex items-start justify-between ${
             isMobile ? "flex-col" : "flex-row"
           }`}>
-          <span className="text-[#13265c] w-fit p-1 font-medium uppercase">
+          <span className="text-[#13265c] w-fit p-1 font-light tracking-wider uppercase">
             About Us
           </span>
           <div
-            className={`w-2/3 flex flex-col gap-8 items-start justify-start ${
-              isMobile ? "w-full" : "w-2/3"
+            className={`w-3/4 flex flex-col gap-8 items-start justify-start ${
+              isMobile ? "w-full" : "w-3/4"
             }`}>
-            <h2 className="text-3xl md:text-4xl font-medium uppercase text-[#13265c]">
+            <h2 className="text-3xl md:text-4xl font uppercase text-[#13265c]">
               Building relationships since 1994.
             </h2>
             <p className="text-sm text-neutral-400 font-light max-w-[30rem]">
@@ -32,7 +33,7 @@ export default function AboutSection() {
               every project.
             </p>
             <Button href="/portfolio" size="lg" variant="primary">
-              Learn More
+              Learn More <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
         </div>
