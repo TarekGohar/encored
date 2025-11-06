@@ -7,8 +7,8 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: {
-    default: "Edbattah & Co.",
-    template: "%s - Edbattah & Co.",
+    default: "Encotec",
+    template: "%s - Encotec",
   },
 };
 
@@ -26,7 +26,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <meta name="apple-mobile-web-app-title" content="EBC" />
+          <meta name="apple-mobile-web-app-title" content="EBC" />
       </head>
       <body className="font-gontserrat">
         <NextIntlClientProvider messages={messages}>
