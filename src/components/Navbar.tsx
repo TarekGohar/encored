@@ -63,53 +63,50 @@ export default function Navbar({ light }: navbarProps) {
     }
   }, [menu]);
 
-  const light_color = light
-    ? `text-white hover:text-main group-hover:text-main`
-    : `text-main hover:text-neutral-400 group-hover:text-neutral-400`;
-
-  const light_color_bg = light
-    ? `bg-white group-hover:bg-main`
-    : `bg-main group-hover:bg-neutral-50`;
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 w-full z-20 p-2 md:p-2 mx-auto flex items-center justify-between text-white unselectable">
+      <nav 
+        className="fixed top-0 left-0 right-0 w-full z-[1001] p-1 pr-10 mx-auto flex items-center justify-between text-white unselectable"
+        style={{
+          backdropFilter: "blur(12px)",
+          backgroundColor: "rgba(175, 175, 175, 0.2)",
+        }}>
         <Link
           href="/"
-          className={`hover:cursor-pointer w-20 md:w-[20rem] z-10 duration-300 ${light_color}`}
+          className={`hover:cursor-pointer w-20 md:w-[16rem] z-10 duration-300`}
           onClick={() => setMenu(false)}>
           <Image
             src="/images/logo.png"
             alt="Encotec"
             width={1000}
-            height={1000}
+            height={500}
+            className="w-full"
           />
         </Link>
 
-        <div className="hidden lg:flex items-center gap-x-20">
-          <Link href="/about" className={`navbar-link ${light_color}`}>
-            {t("about")}
+        <div className="hidden lg:flex items-center gap-x-16 text-black">
+          <Link href="/about" className="font-light tracking-widest hover:cursor-pointer ">
+            About
           </Link>
 
           {/* Collections Dropdown */}
-          <div>
-            <div
-              className="group flex items-center gap-x-2"
-              onMouseEnter={() => {
-                setHover(true);
-                setIsOpen(true);
-              }}
-              onMouseLeave={() => {
-                setHover(false);
-                setIsOpen(false);
-              }}>
-              <Link
-                href="/collections"
-                className={` relative navbar-link ${light_color}`}>
-                {t("collections")}
-              </Link>
+          <div
+            className="relative"
+            onMouseEnter={() => {
+              setHover(true);
+              setIsOpen(true);
+            }}
+            onMouseLeave={() => {
+              setHover(false);
+              setIsOpen(false);
+            }}>
+            <div className="group flex items-center gap-x-2">
+              <span className={` relative font-light tracking-widest cursor-pointer `}>
+                Services
+              </span>
               <svg
-                className={`w-5 h-5 navbar-link ${light_color} transition-transform ${
+                className={`w-5 h-5  transition-transform ${
                   isOpen ? "rotate-180" : ""
                 }`}
                 fill="none"
@@ -126,73 +123,46 @@ export default function Navbar({ light }: navbarProps) {
             </div>
 
             {hover ? (
-              <ul
-                className={`pt-6 pb-2 absolute flex-col space-y-6 navbar-link`}
-                onMouseEnter={() => {
-                  setHover(true);
-                  setIsOpen(true);
-                }}
-                onMouseLeave={() => {
-                  setHover(false);
-                  setIsOpen(false);
-                }}>
-                <li>
-                  <Link href={"/collections/bariloche"} className={light_color}>
-                    Bariloche
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/collections/calatura"} className={light_color}>
-                    Calatura
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/collections/ecla"} className={light_color}>
-                    Ecla
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={"/collections/elisa-cavaletti"}
-                    className={light_color}>
-                    Elisa Cavaletti
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={"/collections/gardel-by-moore"}
-                    className={light_color}>
-                    Gardel by Moore
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/collections/soulmate"} className={light_color}>
-                    Soulmate
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/collections/tinta"} className={light_color}>
-                    Tinta
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={"/collections/valentinas"}
-                    className={light_color}>
-                    Valentina&apos;s
-                  </Link>
-                </li>
-              </ul>
+              <>
+                {/* Invisible bridge to prevent gap */}
+                <div className="absolute top-full left-0 right-0 h-9"></div>
+                <ul
+                  className={`mt-9 py-4 px-6 absolute flex-col space-y-6 navbar-link`}
+                  style={{
+                    backdropFilter: "blur(12px)",
+                    backgroundColor: "rgba(175, 175, 175, 0.2)",
+                  }}>
+                  <li>
+                    <Link href={"/services/commercial"} className="font-light tracking-widest" >
+                      Commercial
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={"/services/industrial"} className="font-light tracking-widest">
+                      Industrial
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={"/services/residential"} className="font-light tracking-widest">
+                      Residential
+                    </Link>
+                  </li>
+                </ul>
+              </>
             ) : null}
           </div>
 
-          <Link href="/where-to-buy" className={`navbar-link ${light_color}`}>
-            {t("contact")}
+          <Link href="/contact" className={`font-light tracking-widest p-4 px-5`}
+          style={{
+            backdropFilter: "blur(2px)",
+            backgroundColor: "rgba(175, 175, 175, 0.2)",
+          }}>
+            Contact Us
           </Link>
           <Link
             href={pathname}
             locale={t("locale") as "en" | "fr" | undefined}
-            className={`navbar-link uppercase  ${light_color}`}>
+            className={`uppercase font-light tracking-widest`}>
             {t("locale")}
           </Link>
         </div>
@@ -205,49 +175,46 @@ export default function Navbar({ light }: navbarProps) {
             menu ? "open" : ""
           } z-50 block hamburger lg:hidden focus:outline-none group`}
           onClick={() => setMenu((prev) => !prev)}>
-          <span className={`hamburger-top ${light_color_bg}`}></span>
-          <span className={`hamburger-middle ${light_color_bg}`}></span>
-          <span className={`hamburger-bottom ${light_color_bg}`}></span>
+          <span className={`hamburger-top `}></span>
+          <span className={`hamburger-middle `}></span>
+          <span className={`hamburger-bottom `}></span>
         </button>
       </nav>
 
       {/* Mobile Menu */}
       <div
         id="menu"
-        className={`absolute top-0 bottom-0 left-0 flex-col z-10 items-end pr-6 self-end w-full min-h-screen pt-40 text-xl text-white bg-opacity-70 bg-white gap-y-12 lg:hidden ${
+        className={`fixed top-0 bottom-0 left-0 flex-col z-[1000] items-end pr-6 self-end w-full min-h-screen pt-40 text-xl text-black gap-y-12 lg:hidden ${
           menu
             ? "flex opacity-100 transition-opacity duration-500"
             : "opacity-0 pointer-events-none"
         }`}
-        onClick={() => setMenu(false)}>
+        style={{
+          backdropFilter: "blur(12px)",
+          backgroundColor: "rgba(255, 255, 255, 0.95)",
+        }}>
         <Link
           href="/about"
-          className={`navbar-link word ${light_color} ${
+          className={`word  ${
             visibleWords.about ? "show" : ""
           }`}
           onClick={() => setMenu(false)}>
-          {t("about")}
+          About
         </Link>
         <div>
           <div
             className={`word group flex flex-row-reverse items-center gap-x-2 pl-12 ${
               visibleWords.collections ? "show" : ""
             }`}
-            onMouseEnter={() => {
-              setHover(true);
-              setIsOpen(true);
-            }}
-            onMouseLeave={() => {
-              setHover(false);
-              setIsOpen(false);
+            onClick={() => {
+              setHover(!hover);
+              setIsOpen(!isOpen);
             }}>
-            <Link
-              href="/collections"
-              className={`relative navbar-link ${light_color}`}>
-              {t("collections")}
-            </Link>
+            <span className={`relative cursor-pointer `}>
+              Services
+            </span>
             <svg
-              className={`w-5 h-5 navbar-link ${light_color} transition-transform ${
+              className={`w-5 h-5 transition-transform ${
                 isOpen ? "rotate-90" : ""
               }`}
               fill="none"
@@ -265,61 +232,42 @@ export default function Navbar({ light }: navbarProps) {
 
           {hover ? (
             <ul
-              className="absolute right-0 mr-[9rem] -mt-[1.73rem] z-20 pb-2 flex-col space-y-6 text-right pr-10"
-              onTouchStart={() => {
-                setHover(true);
-                setIsOpen(true);
-              }}
-              onMouseEnter={() => {
-                setHover(true);
-                setIsOpen(true);
-              }}
-              onMouseLeave={() => {
-                setHover(false);
-                setIsOpen(false);
-              }}>
+              className="mt-6 mr-6 flex flex-col space-y-4 text-right text-base"
+              onClick={(e) => e.stopPropagation()}>
               <li>
-                <Link href={"/collections/bariloche"} className={light_color}>
-                  Bariloche
+                <Link 
+                  href={"/services/commercial"} 
+                  className="font-light tracking-widest text-black/70 hover:text-black"
+                  onClick={() => {
+                    setMenu(false);
+                    setHover(false);
+                    setIsOpen(false);
+                  }}>
+                  Commercial
                 </Link>
               </li>
               <li>
-                <Link href={"/collections/calatura"} className={light_color}>
-                  Calatura
+                <Link 
+                  href={"/services/industrial"} 
+                  className="font-light tracking-widest text-black/70 hover:text-black"
+                  onClick={() => {
+                    setMenu(false);
+                    setHover(false);
+                    setIsOpen(false);
+                  }}>
+                  Industrial
                 </Link>
               </li>
               <li>
-                <Link href={"/collections/ecla"} className={light_color}>
-                  Ecla
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={"/collections/elisa-cavaletti"}
-                  className={light_color}>
-                  Elisa Cavaletti
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={"/collections/gardel-by-moore"}
-                  className={light_color}>
-                  Gardel by Moore
-                </Link>
-              </li>
-              <li>
-                <Link href={"/collections/soulmate"} className={light_color}>
-                  Soulmate
-                </Link>
-              </li>
-              <li>
-                <Link href={"/collections/tinta"} className={light_color}>
-                  Tinta
-                </Link>
-              </li>
-              <li>
-                <Link href={"/collections/valentinas"} className={light_color}>
-                  Valentina&apos;s
+                <Link 
+                  href={"/services/residential"} 
+                  className="font-light tracking-widest text-black/70 hover:text-black"
+                  onClick={() => {
+                    setMenu(false);
+                    setHover(false);
+                    setIsOpen(false);
+                  }}>
+                  Residential
                 </Link>
               </li>
             </ul>
@@ -327,17 +275,17 @@ export default function Navbar({ light }: navbarProps) {
         </div>
 
         <Link
-          href="/where-to-buy"
-          className={`navbar-link word ${light_color} ${
+          href="/contact"
+          className={`word  ${
             visibleWords.contact ? "show" : ""
           }`}
           onClick={() => setMenu(false)}>
-          {t("contact")}
+          Contact
         </Link>
         <Link
           href={pathname}
           locale={t("locale") as "en" | "fr" | undefined}
-          className={`navbar-link word ${light_color} uppercase ${
+          className={`word  uppercase ${
             visibleWords.lang ? "show" : ""
           }`}
           onClick={() => setMenu(false)}>

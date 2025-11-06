@@ -40,9 +40,9 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 const getVariantClasses = (variant: ButtonVariant = "default"): string => {
   const variants = {
     default:
-      "bg-[#13265c]/10 text-[#ffffff] border-[#13265c]/20 hover:bg-[#13265c]/20 hover:border-[#13265c]/30",
+      "bg-neutral-900/10 text-[#ffffff] hover:bg-black/2",
     primary:
-      "bg-[#13265c]/5 text-[#13265c]/80 border-[#13265c]/0 hover:bg-[#13265c]/10 hover:border-[#13265c]/20",
+      "text-black hover:text-black/50",
     secondary:
       "bg-[#ffffff]/5 text-[#ffffff] border-[#ffffff]/0 hover:bg-[#ffffff]/10 hover:border-[#ffffff]/20",
     destructive:
@@ -51,7 +51,7 @@ const getVariantClasses = (variant: ButtonVariant = "default"): string => {
       "bg-theme-background text-theme-foreground border-theme-border hover:bg-theme-background-light hover:border-theme-foreground/20",
     ghost:
       "bg-transparent text-theme-foreground border-transparent hover:bg-theme-foreground/5 hover:border-theme-border",
-    link: "bg-transparent text-[#13265c] border-transparent underline-offset-4 hover:underline hover:bg-[#13265c]/5",
+    link: "bg-transparent text-black border-transparent underline-offset-4 hover:underline hover:bg-black/5",
   };
   return variants[variant];
 };
@@ -59,7 +59,7 @@ const getVariantClasses = (variant: ButtonVariant = "default"): string => {
 // Helper function to get size classes
 const getSizeClasses = (size: ButtonSize = "default"): string => {
   const sizes = {
-    default: "px-4 py-2",
+    default: "px-0 py-2",
     sm: "px-3 py-1.5",
     md: "px-5 py-2",
     lg: "px-8 py-2.5",
@@ -85,7 +85,7 @@ const Button = React.forwardRef<
 
   const baseClasses = cn(
     // Base styles
-    "inline-flex items-center justify-center whitespace-nowrap text-sm font- transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border-1 gap-2",
+    "inline-flex items-center justify-center whitespace-nowrap text-sm font-light transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 gap-2",
     // Variant styles
     getVariantClasses(variant),
     // Size styles

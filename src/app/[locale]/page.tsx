@@ -31,7 +31,7 @@ export default async function Home() {
           className="absolute inset-0 z-0"
           style={{
             background:
-              'url("/images/rooftop/roof.png") no-repeat center center / cover',
+              'url("/images/building-1.webp") no-repeat center center / cover',
           }}
         />
         {/* Nice shader overlay */}
@@ -43,7 +43,7 @@ export default async function Home() {
           }}
         />
         <div className="absolute inset-0 flex items-center justify-center max-w-screen z-20">
-          <h1 className="px-4 text-7xl leading-[5rem] md:leading-[7rem] sm:text-9xl md:text-10xl font- text-white text-left uppercase opacity-80 er">
+          <h1 className="px-4 text-7xl leading-[5rem] md:leading-[7rem] sm:text-9xl md:text-10xl font- text-white text-left uppercase opacity-90 er">
             Encotec
           </h1>
         </div>

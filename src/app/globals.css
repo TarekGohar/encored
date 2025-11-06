@@ -154,10 +154,6 @@ section#blank {
   transform: rotate(-45deg) translateX(-10.5px) translateY(5px);
 }
 
-.navbar-link {
-  @apply duration-150 text-lg ;
-}
-
 .word {
   opacity: 0;
   transform: translateY(20px);

@@ -2,29 +2,28 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Button from "@/components/ui/Button";
 import { useMediaQuery } from "react-responsive";
 
 export default function PortfolioSection() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <section className="bg-theme-background-light text-theme-foreground py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  flex flex-col gap-8 text-center items-center justify-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  flex flex-col gap-4 text-center items-center justify-center">
         <span
           className={`${
             isMobile ? "w-full" : "w-1/3"
-          } text-[#13265c]/50 font-light tracking-wider uppercase`}>
+          } text-black/50 font-light tracking-wider uppercase`}>
           Sectors We Serve
         </span>
 
         <h2
           className={`${
             isMobile ? "text-2xl" : "text-3xl md:text-4xl"
-          } text-[#13265c] uppercase`}>
+          } text-black uppercase`}>
           We Serve a Variety of Sectors
         </h2>
         <p
-          className={`text-sm text-neutral-400 font-light ${
+          className={`text-sm text-black/50 font-light ${
             isMobile ? "max-w-full" : "max-w-2xl"
           }`}>
           From custom homes and modern apartments to large-scale industrial
@@ -49,7 +48,7 @@ export default function PortfolioSection() {
           {[
             {
               industry: "Commercial",
-              image: "/images/dental.webp",
+              image: "/images/McGraw/mcgraw.png",
             },
             {
               industry: "Industrial",
@@ -61,12 +60,12 @@ export default function PortfolioSection() {
             },
           ].map((item, index) => (
             <motion.div
-              className={`w-full md:w-80 lg:w-[20rem] h-[20rem] md:h-[22rem] lg:h-[25rem] flex flex-col gap-2 bg-[#13265c]/3 p-6 overflow-hidden relative ${
+              className={`w-full md:w-80 lg:w-[20rem] h-[20rem] md:h-[22rem] lg:h-[25rem] flex flex-col gap-2 bg-black/3 p-6 overflow-hidden relative ${
                 index === 1
-                  ? "lg:mt-5"
+                  ? "lg:mt-10"
                   : index === 2
-                  ? "lg:-mt-12"
-                  : "lg:-mt-12"
+                  ? "lg:-mt-10"
+                  : "lg:-mt-10"
               }`}
               key={index}
               variants={{
@@ -102,7 +101,7 @@ export default function PortfolioSection() {
               />
               {/* Overlay */}
               <motion.div
-                className="absolute top-0 left-0 w-full h-full bg-[#13265c]/40 z-10"
+                className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"
                 initial={{ opacity: 0.4 }}
                 whileHover={{ opacity: isMobile ? 0.4 : 0.3 }}
                 transition={{ duration: 0.3 }}

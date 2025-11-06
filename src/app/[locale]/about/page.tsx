@@ -1,104 +1,108 @@
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
-import { Link } from "@/i18n/routing";
-import { getTranslations } from "next-intl/server";
+"use client";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Metadata" });
+import Button from "@/components/ui/Button";
+import { motion } from "framer-motion";
 
-  return {
-    title: t("about-title"),
-    description: t("about-description"),
-  };
-}
-
-export default async function Home() {
-  const t = await getTranslations("About");
+export default function AboutPage() {
   return (
     <>
-      <div>
-        <Navbar light={false} />
-        <div className="h-[20rem] md:h-[36rem] flex jusitfy-center items-center">
-          <h1 className=" px-4 container text-5xl md:text-7xl font-medium text-main uppercase ">
-            {t("header")}
+      <section id="about-hero" className="relative h-[60vh] min-h-[30rem]">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            background:
+              'url("/images/rooftop/roof.png") no-repeat center center / cover',
+          }}
+        />
+        {/* Shader overlay */}
+        <div
+          className="absolute inset-0 z-10 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(25,36,52,0.7) 0%, rgba(0,0,0,0.15) 60%, rgba(180,180,216,0.35) 100%)",
+          }}
+        />
+        <div className="absolute inset-0 flex items-center justify-center z-20">
+          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] sm:text-8xl md:text-9xl text-white text-center uppercase opacity-80">
+            Who we are
           </h1>
         </div>
-      </div>
+      </section>
 
-      {/* History */}
-      <div className=" bg-neutral-100">
-        <div className="py-12 flex flex-col md:flex-row gap-y-12 container h-fit md:h-[70rem] px-4">
-          <div className="h-full flex flex-col justify-center space-y-4 md:pr-8 lg:pr-12">
-            <h2 className="text-5xl md:text-5xl font-medium  uppercase text-main">
-              {t("first-heading")}
-            </h2>
-            <p className="font-light text-md leading-loose md:text-xl md:leading-loose text-neutral-500">
-              {t("first-paragraph")}
-            </p>
+      {/* About content only, styled to match site aesthetics */}
+      <section className="relative w-full bg-white">
+        <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col gap-10">
+          <div className="flex items-start justify-between flex-col md:flex-row">
+            <span className="text-black w-fit p-1 font-light tracking-wider uppercase">About Us</span>
+            <div className="flex flex-col gap-6 items-start justify-start md:max-w-2xl text-black/80 font-light leading-7">
+              <p className="text-sm md:text-base">
+                Established in 1994 under the name <span className="font-semibold">ENgineering & COnstruction TEChnologies</span>, Encotec Inc. was formed to
+                provide its clients with all their construction and renovation needs.
+              </p>
+              <p className="text-sm md:text-base">
+                Our role has varied from site management and coordination to turn-key and design-build mandates. We strive during
+                each project for positive team-oriented relationships with our clients, our consultants and our subcontractors.
+              </p>
+              <p className="text-sm md:text-base">
+                Our team has shown the strength and flexibility to turn any challenge into a success. We define this success not only
+                by the quality of construction and respect for budget and schedule, but also by the quality of the relationships we
+                have built with our clients.
+              </p>
+            </div>
           </div>
-          <Image
-            src="/images/elisa-cavaletti/_JCK0358 copia_2.webp"
-            width={960}
-            height={540}
-            alt="Elisa Cavaletti model"
-            className="md:w-1/2 h-full object-cover"
-          />
-        </div>
-      </div>
 
-      {/* Mission */}
-
-      <div className="py-12 container flex flex-col md:flex-row-reverse gap-y-12 h-fit md:h-[70rem] px-4">
-        <div className="h-full flex flex-col justify-center space-y-4 md:pl-8 lg:pl-12">
-          <h2 className="text-5xl md:text-5xl font-medium  uppercase text-main">
-            {t("second-heading")}
-          </h2>
-          <p className="font-light text-md leading-loose md:text-xl md:leading-loose text-neutral-500">
-            {t("second-paragraph")}
-          </p>
+          {/* Filler: subtle highlights band without duplicating other pages */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-black/10 pt-10">
+            {[{
+              title: "Established",
+              value: "1994"
+            },{
+              title: "Approach",
+              value: "Turn-key & Design-Build"
+            },{
+              title: "Focus",
+              value: "Client-first Collaboration"
+            }].map((item, idx) => (
+              <div key={idx} className="flex flex-col gap-2">
+                <span className="text-xs tracking-wider uppercase text-black/50">{item.title}</span>
+                <span className="text-lg text-black">{item.value}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <Image
-          src="/images/valentinas/vlt_s-ss24-florence-240216-ph-stefano-casati-03882.webp"
-          width={960}
-          height={540}
-          alt="Elisa Cavaletti model"
-          className="md:w-1/2 h-full object-cover"
-        />
-      </div>
+      </section>
 
-      <div className=" bg-neutral-100">
-        <div className="container h-[30rem] flex flex-col justify-center space-y-4 px-4">
-          <h2 className="text-5xl md:text-5xl font-medium  uppercase text-main">
-            {t("third-heading")}
-          </h2>
-          <p className="font-light text-md leading-loose md:text-xl md:leading-loose text-neutral-500">
-            {t("third-paragraph")}
-          </p>
-          <Link
-            href="/collections"
-            className="flex items-center gap-x-2 py-1 w-fit text-md md:text-xl text-neutral-600 hover:text-neutral-700 duration-150">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </svg>
-            <span>{t("view")}</span>
-          </Link>
+      {/* CTA Section */}
+      <section className="bg-theme-primary/10 text-black py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-theme-primary/5 backdrop-blur-sm"></div>
+        <div className="container max-w-5xl mx-auto text-center flex flex-col gap-8 relative z-10 px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8">
+            <h2 className="text-3xl md:text-4xl text-black mb-4">
+              Let's Build Something Together
+            </h2>
+            <p className="text-sm mb-8 text-black/50 font-light max-w-lg mx-auto leading-relaxed">
+              Ready to start your next project? Get in touch with our team to discuss how we can help bring your vision to life.
+            </p>
+            <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
+              <Button
+                href="/contact"
+                size="lg"
+                variant="primary"
+                className="w-[15rem]">
+                Contact Us
+              </Button>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
+
+

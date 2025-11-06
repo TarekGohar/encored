@@ -16,23 +16,23 @@ export default function AboutSection() {
           className={`flex items-start justify-between ${
             isMobile ? "flex-col" : "flex-row"
           }`}>
-          <span className="text-[#13265c] w-fit p-1 font-light tracking-wider uppercase">
+          <span className="text-black w-fit p-1 font-light tracking-wider uppercase">
             About Us
           </span>
           <div
-            className={`w-3/4 flex flex-col gap-8 items-start justify-start ${
-              isMobile ? "w-full" : "w-3/4"
+            className={` flex flex-col gap-8 items-start justify-start ${
+              isMobile ? "w-full" : ""
             }`}>
-            <h2 className="text-3xl md:text-4xl font uppercase text-[#13265c]">
+            <h2 className="text-3xl md:text-4xl uppercase text-black">
               Building relationships since 1994.
             </h2>
-            <p className="text-sm text-neutral-400 font-light max-w-[30rem]">
+            <p className="text-sm text-black/50 font-light max-w-[30rem]">
               Since 1994, Encotec Inc. has delivered complete construction and
               renovation services — cultivating strong, team-oriented
               relationships with our clients, consultants, and subcontractors on
               every project.
             </p>
-            <Button href="/portfolio" size="lg" variant="primary">
+            <Button href="/portfolio" variant="primary">
               Learn More <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
@@ -46,7 +46,7 @@ export default function AboutSection() {
             className="w-full h-[25rem] object-cover object-center"
           />
           {/* Shader overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#13265c]/60 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
         </div>
       </div>
     </div>
