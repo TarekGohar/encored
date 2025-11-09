@@ -1,21 +1,23 @@
 "use client";
 
-import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function CommercialPage() {
+export default function InstitutionalPage() {
   return (
     <>
-      <section id="commercial-hero" className="relative h-[60vh] min-h-[30rem]">
+      <section
+        id="institutional-hero"
+        className="relative h-[60vh] min-h-[30rem]"
+      >
         {/* Background image */}
         <div
           className="absolute inset-0 z-0"
           style={{
             background:
-              'url("/images/building-2.webp") no-repeat center center / cover',
+              'url("/images/building-3.webp") no-repeat center center / cover',
           }}
         />
         {/* Shader overlay */}
@@ -28,41 +30,40 @@ export default function CommercialPage() {
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] sm:text-8xl md:text-9xl text-white text-center uppercase opacity-90">
-            Commercial
+            Institutional
           </h1>
         </div>
       </section>
 
-      {/* Commercial content */}
+      {/* Institutional content */}
       <section className="relative w-full bg-white">
         <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col gap-10">
           <div className="flex items-start justify-between flex-col md:flex-row">
             <span className="text-black w-fit p-1 font-light tracking-wider uppercase">
-              Commercial Projects
+              Institutional Projects
             </span>
             <div className="flex flex-col gap-6 items-start justify-start md:max-w-2xl text-black/80 font-light leading-7">
               <p className="text-sm md:text-base">
-                Encotec brings decades of expertise to commercial construction
-                and renovation projects across Montreal and beyond. From office
-                buildings and retail spaces to hospitality venues and
-                institutional facilities, we deliver exceptional results that
-                meet the unique demands of commercial environments.
+                Encotec specializes in institutional construction and renovation
+                projects that demand precision, durability, and adherence to
+                stringent safety standards. Our experience spans manufacturing
+                facilities, warehouses, distribution centers, and specialized
+                institutional environments across diverse sectors.
               </p>
               <p className="text-sm md:text-base">
-                Our commercial portfolio spans a diverse range of sectors
-                including hotels, corporate offices, healthcare facilities,
-                educational institutions, and retail establishments. We
-                understand the critical importance of minimizing disruption to
-                your operations while maintaining the highest standards of
-                quality and safety.
+                We understand the unique challenges of institutional
+                construction — from heavy-duty infrastructure requirements and
+                specialized electrical systems to material handling
+                considerations and compliance with industry-specific
+                regulations. Our team brings technical expertise and practical
+                solutions to every institutional project.
               </p>
               <p className="text-sm md:text-base">
-                Whether you need a complete build-out, strategic renovations, or
-                ongoing maintenance, our team coordinates every aspect of your
-                project with precision and professionalism. We work closely with
-                architects, engineers, and stakeholders to ensure your
-                commercial space reflects your brand and serves your business
-                objectives.
+                From ground-up construction to facility upgrades and expansions,
+                we coordinate all aspects of your institutional project with a
+                focus on operational efficiency, safety, and long-term
+                performance. Our turn-key approach ensures seamless integration
+                of mechanical, electrical, and structural systems.
               </p>
             </div>
           </div>
@@ -71,16 +72,16 @@ export default function CommercialPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-black/10 pt-10">
             {[
               {
-                title: "Sectors Served",
-                value: "Hotels, Offices, Retail & More",
+                title: "Expertise",
+                value: "Manufacturing & Distribution",
               },
               {
-                title: "Project Scale",
-                value: "Small Fit-Outs to Large Build-Outs",
+                title: "Standards",
+                value: "Safety & Compliance Focused",
               },
               {
-                title: "Approach",
-                value: "Minimal Disruption, Maximum Quality",
+                title: "Solutions",
+                value: "Heavy-Duty Infrastructure",
               },
             ].map((item, idx) => (
               <div key={idx} className="flex flex-col gap-2">
@@ -102,7 +103,7 @@ export default function CommercialPage() {
               Featured Work
             </span>
             <h2 className="text-3xl md:text-4xl uppercase text-black">
-              Commercial Projects
+              Institutional Projects
             </h2>
           </div>
 
@@ -110,29 +111,29 @@ export default function CommercialPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                src: "/images/AEI Internet/AEILobby.webp",
-                alt: "AEI Internet Lobby",
+                src: "/images/606 Courcelle (Mission)/IMG_0052.webp",
+                alt: "606 Courcelle Mission Project",
               },
               {
-                src: "/images/Hotel du Park/WyndhamHotels (Bar).webp",
-                alt: "Hotel du Park Bar",
+                src: "/images/606 Courcelle (Mission)/IMG_0053.webp",
+                alt: "606 Courcelle Mission Interior",
               },
               {
-                src: "/images/Hyatt Regency Montreal/Hotels-HyattRegencyMontreal1.webp",
-                alt: "Hyatt Regency Montreal",
+                src: "/images/2222 Ontario Est (Mission)/IMG_5674.webp",
+                alt: "2222 Ontario Est Mission Project",
+              },
+              {
+                src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6260.webp",
+                alt: "880 rue Guy Salvation Army Kitchen",
               },
 
               {
-                src: "/images/Hyatt Regency Montreal/Lobby-MapofWorld.webp",
-                alt: "Hyatt Regency Lobby",
+                src: "/images/Maison des Greffés/IMG_0318.webp",
+                alt: "Maison des Greffés Interior",
               },
               {
-                src: "/images/Pierrefonds Animal Hospital/Commercial-PierrefondsAnimalHospital-1.webp",
-                alt: "Pierrefonds Animal Hospital",
-              },
-              {
-                src: "/images/The Ritz-Carlton Montreal/Ritz Montreal (1).webp",
-                alt: "The Ritz-Carlton Montreal",
+                src: "/images/McGill/IMG_6445-scaled (Corridor).webp",
+                alt: "McGill Corridor",
               },
             ].map((item, idx) => (
               <motion.div
@@ -171,11 +172,11 @@ export default function CommercialPage() {
             className="space-y-8"
           >
             <h2 className="text-3xl md:text-4xl text-black mb-4">
-              Ready to Transform Your Commercial Space?
+              Ready to Build Your Institutional Facility?
             </h2>
             <p className="text-sm mb-8 text-black/50 font-light max-w-lg mx-auto leading-relaxed">
-              Let's discuss your commercial project and how we can deliver
-              exceptional results for your business.
+              Let's discuss your institutional construction needs and deliver a
+              facility that supports your operations for years to come.
             </p>
             <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
               <Link

@@ -2,17 +2,26 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Encotec | Construction & Renovation Services",
-  description: "Get in touch with Encotec for your commercial, industrial, or residential construction project. Serving Montreal since 1994 with turn-key and design-build solutions.",
-  keywords: ["contact Encotec", "construction Montreal", "renovation services", "commercial construction", "industrial construction", "residential construction", "construction quote"],
+  description:
+    "Get in touch with Encotec for your commercial, institutional, or residential construction project. Serving Montreal since 1994 with turn-key and design-build solutions.",
+  keywords: [
+    "contact Encotec",
+    "construction Montreal",
+    "renovation services",
+    "commercial construction",
+    "institutional construction",
+    "residential construction",
+    "construction quote",
+  ],
   openGraph: {
     title: "Contact Encotec - Construction & Renovation Services",
     description:
-      "Get in touch with Encotec for your commercial, industrial, or residential construction project. Serving Montreal since 1994.",
+      "Get in touch with Encotec for your commercial, institutional, or residential construction project. Serving Montreal since 1994.",
     url: "https://encotec.ca/contact",
     siteName: "Encotec",
     images: [
       {
-        url: "/images/rooftop/roof.png",
+        url: "/images/rooftop/roofwebp",
         width: 1200,
         height: 630,
         alt: "Contact Encotec",
@@ -25,8 +34,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Encotec - Construction & Renovation Services",
     description:
-      "Get in touch with Encotec for your commercial, industrial, or residential construction project. Serving Montreal since 1994.",
-    images: ["/images/rooftop/roof.png"],
+      "Get in touch with Encotec for your commercial, institutional, or residential construction project. Serving Montreal since 1994.",
+    images: ["/images/rooftop/roofwebp"],
   },
   robots: {
     index: true,
@@ -35,4 +44,4 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://encotec.ca/contact",
   },
-}; 
+};

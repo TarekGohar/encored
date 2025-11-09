@@ -2,6 +2,8 @@
 
 import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -12,7 +14,7 @@ export default function AboutPage() {
           className="absolute inset-0 z-0"
           style={{
             background:
-              'url("/images/rooftop/roof.png") no-repeat center center / cover',
+              'url("/images/rooftop/roof.webp") no-repeat center center / cover',
           }}
         />
         {/* Shader overlay */}
@@ -34,38 +36,54 @@ export default function AboutPage() {
       <section className="relative w-full bg-white">
         <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col gap-10">
           <div className="flex items-start justify-between flex-col md:flex-row">
-            <span className="text-black w-fit p-1 font-light tracking-wider uppercase">About Us</span>
+            <span className="text-black w-fit p-1 font-light tracking-wider uppercase">
+              About Us
+            </span>
             <div className="flex flex-col gap-6 items-start justify-start md:max-w-2xl text-black/80 font-light leading-7">
               <p className="text-sm md:text-base">
-                Established in 1994 under the name <span className="font-semibold">ENgineering & COnstruction TEChnologies</span>, Encotec Inc. was formed to
-                provide its clients with all their construction and renovation needs.
+                Established in 1994 under the name{" "}
+                <span className="font-semibold">
+                  ENgineering & COnstruction TEChnologies
+                </span>
+                , Encotec Inc. was formed to provide its clients with all their
+                construction and renovation needs.
               </p>
               <p className="text-sm md:text-base">
-                Our role has varied from site management and coordination to turn-key and design-build mandates. We strive during
-                each project for positive team-oriented relationships with our clients, our consultants and our subcontractors.
+                Our role has varied from site management and coordination to
+                turn-key and design-build mandates. We strive during each
+                project for positive team-oriented relationships with our
+                clients, our consultants and our subcontractors.
               </p>
               <p className="text-sm md:text-base">
-                Our team has shown the strength and flexibility to turn any challenge into a success. We define this success not only
-                by the quality of construction and respect for budget and schedule, but also by the quality of the relationships we
-                have built with our clients.
+                Our team has shown the strength and flexibility to turn any
+                challenge into a success. We define this success not only by the
+                quality of construction and respect for budget and schedule, but
+                also by the quality of the relationships we have built with our
+                clients.
               </p>
             </div>
           </div>
 
           {/* Filler: subtle highlights band without duplicating other pages */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-black/10 pt-10">
-            {[{
-              title: "Established",
-              value: "1994"
-            },{
-              title: "Approach",
-              value: "Turn-key & Design-Build"
-            },{
-              title: "Focus",
-              value: "Client-first Collaboration"
-            }].map((item, idx) => (
+            {[
+              {
+                title: "Established",
+                value: "1994",
+              },
+              {
+                title: "Approach",
+                value: "Turn-key & Design-Build",
+              },
+              {
+                title: "Focus",
+                value: "Client-first Collaboration",
+              },
+            ].map((item, idx) => (
               <div key={idx} className="flex flex-col gap-2">
-                <span className="text-xs tracking-wider uppercase text-black/50">{item.title}</span>
+                <span className="text-xs tracking-wider uppercase text-black/50">
+                  {item.title}
+                </span>
                 <span className="text-lg text-black">{item.value}</span>
               </div>
             ))}
@@ -82,21 +100,23 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-8">
+            className="space-y-8"
+          >
             <h2 className="text-3xl md:text-4xl text-black mb-4">
               Let's Build Something Together
             </h2>
             <p className="text-sm mb-8 text-black/50 font-light max-w-lg mx-auto leading-relaxed">
-              Ready to start your next project? Get in touch with our team to discuss how we can help bring your vision to life.
+              Ready to start your next project? Get in touch with our team to
+              discuss how we can help bring your vision to life.
             </p>
             <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
-              <Button
+              <Link
                 href="/contact"
-                size="lg"
-                variant="primary"
-                className="w-[15rem]">
+                className="w-[15rem] flex items-center justify-center gap-2"
+              >
                 Contact Us
-              </Button>
+                <ChevronRight className="w-4 h-4" />
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -104,5 +124,3 @@ export default function AboutPage() {
     </>
   );
 }
-
-

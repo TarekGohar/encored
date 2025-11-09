@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <Link href="/" className="w-48">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="Encotec"
                 width={500}
                 height={250}
@@ -23,21 +23,33 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm text-white/70 font-light leading-relaxed">
-              Building relationships and quality construction projects since 1994.
+              Building relationships and quality construction projects since
+              1994.
             </p>
           </div>
 
           {/* Services */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-medium uppercase tracking-wider">Services</h3>
+            <h3 className="text-lg font-medium uppercase tracking-wider">
+              Services
+            </h3>
             <div className="flex flex-col gap-3 text-sm text-white/70 font-light">
-              <Link href="/services/commercial" className="hover:text-white transition-colors">
+              <Link
+                href="/services/commercial"
+                className="hover:text-white transition-colors"
+              >
                 Commercial Construction
               </Link>
-              <Link href="/services/industrial" className="hover:text-white transition-colors">
-                Industrial Construction
+              <Link
+                href="/services/institutional"
+                className="hover:text-white transition-colors"
+              >
+                Institutional Construction
               </Link>
-              <Link href="/services/residential" className="hover:text-white transition-colors">
+              <Link
+                href="/services/residential"
+                className="hover:text-white transition-colors"
+              >
                 Residential Construction
               </Link>
             </div>
@@ -45,15 +57,26 @@ export default function Footer() {
 
           {/* Company */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-medium uppercase tracking-wider">Company</h3>
+            <h3 className="text-lg font-medium uppercase tracking-wider">
+              Company
+            </h3>
             <div className="flex flex-col gap-3 text-sm text-white/70 font-light">
-              <Link href="/about" className="hover:text-white transition-colors">
+              <Link
+                href="/about"
+                className="hover:text-white transition-colors"
+              >
                 About Us
               </Link>
-              <Link href="/collections" className="hover:text-white transition-colors">
+              <Link
+                href="/collections"
+                className="hover:text-white transition-colors"
+              >
                 Portfolio
               </Link>
-              <Link href="/contact" className="hover:text-white transition-colors">
+              <Link
+                href="/contact"
+                className="hover:text-white transition-colors"
+              >
                 Contact
               </Link>
             </div>
@@ -61,7 +84,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-medium uppercase tracking-wider">Contact</h3>
+            <h3 className="text-lg font-medium uppercase tracking-wider">
+              Contact
+            </h3>
             <div className="flex flex-col gap-4 text-sm text-white/70 font-light">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 flex-shrink-0 mt-0.5" />
@@ -70,15 +95,15 @@ export default function Footer() {
                   <p>Westmount, QC H3Z 1E7</p>
                 </div>
               </div>
-              <a 
-                href="tel:+15149080266" 
+              <a
+                href="tel:+15149080266"
                 className="flex items-center gap-3 hover:text-white transition-colors"
               >
                 <Phone className="h-5 w-5 flex-shrink-0" />
                 (514) 908-0266
               </a>
-              <a 
-                href="mailto:info@encotec.ca" 
+              <a
+                href="mailto:info@encotec.ca"
                 className="flex items-center gap-3 hover:text-white transition-colors"
               >
                 <Mail className="h-5 w-5 flex-shrink-0" />

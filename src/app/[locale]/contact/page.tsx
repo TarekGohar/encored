@@ -26,7 +26,9 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -71,7 +73,7 @@ export default function ContactPage() {
           className="absolute inset-0 z-0"
           style={{
             background:
-              'url("/images/rooftop/roof.png") no-repeat center center / cover',
+              'url("/images/rooftop/roof.webp") no-repeat center center / cover',
           }}
         />
         {/* Shader overlay */}
@@ -93,12 +95,18 @@ export default function ContactPage() {
       <section className="relative w-full bg-white">
         <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col gap-16">
           <div className="flex items-start justify-between flex-col md:flex-row">
-            <span className="text-black w-fit p-1 font-light tracking-wider uppercase">Get in Touch</span>
+            <span className="text-black w-fit p-1 font-light tracking-wider uppercase">
+              Get in Touch
+            </span>
             <div className="flex flex-col gap-6 items-start justify-start md:max-w-2xl">
-              <h2 className="text-3xl md:text-4xl uppercase text-black">Let's Build Together</h2>
+              <h2 className="text-3xl md:text-4xl uppercase text-black">
+                Let's Build Together
+              </h2>
               <p className="text-sm md:text-base text-black/80 font-light leading-7">
-                Whether you're planning a commercial build-out, an industrial facility, or a residential renovation, 
-                Encotec is ready to bring your vision to life. Reach out today to discuss your project needs.
+                Whether you're planning a commercial build-out, an institutional
+                facility, or a residential renovation, Encotec is ready to bring
+                your vision to life. Reach out today to discuss your project
+                needs.
               </p>
             </div>
           </div>
@@ -110,13 +118,15 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-black/5 p-6 flex flex-col gap-4">
+              className="bg-black/5 p-6 flex flex-col gap-4"
+            >
               <Phone className="h-6 w-6 text-black" />
               <div>
-                <h3 className="text-lg font-medium text-black mb-2">Phone</h3>
+                <h3 className="text-lg text-black mb-2">Phone</h3>
                 <a
                   href="tel:+15149080266"
-                  className="text-sm text-black/70 hover:text-black transition-colors">
+                  className="text-sm font-light text-black/70 hover:text-black transition-colors"
+                >
                   (514) 908-0266
                 </a>
               </div>
@@ -127,13 +137,15 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-black/5 p-6 flex flex-col gap-4">
+              className="bg-black/5 p-6 flex flex-col gap-4"
+            >
               <Mail className="h-6 w-6 text-black" />
               <div>
-                <h3 className="text-lg font-medium text-black mb-2">Email</h3>
+                <h3 className="text-lg font text-black mb-2">Email</h3>
                 <a
                   href="mailto:info@encotec.ca"
-                  className="text-sm text-black/70 hover:text-black transition-colors">
+                  className="text-sm font-light text-black/70 hover:text-black transition-colors"
+                >
                   info@encotec.ca
                 </a>
               </div>
@@ -144,11 +156,12 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-black/5 p-6 flex flex-col gap-4">
+              className="bg-black/5 p-6 flex flex-col gap-4"
+            >
               <Clock className="h-6 w-6 text-black" />
               <div>
-                <h3 className="text-lg font-medium text-black mb-2">Hours</h3>
-                <p className="text-sm text-black/70">
+                <h3 className="text-lg text-black mb-2">Hours</h3>
+                <p className="text-sm font-light text-black/70">
                   Monday - Friday
                   <br />
                   8:00 AM - 5:00 PM
@@ -169,7 +182,8 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-8">
+              className="bg-white p-8"
+            >
               <h3 className="text-2xl md:text-3xl uppercase text-black mb-6">
                 Request a Quote
               </h3>
@@ -178,7 +192,8 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-light text-black mb-2">
+                      className="block text-sm font-light text-black mb-2"
+                    >
                       Name *
                     </label>
                     <input
@@ -195,7 +210,8 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm font-light text-black mb-2">
+                      className="block text-sm font-light text-black mb-2"
+                    >
                       Company
                     </label>
                     <input
@@ -214,7 +230,8 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-light text-black mb-2">
+                      className="block text-sm font-light text-black mb-2"
+                    >
                       Email *
                     </label>
                     <input
@@ -231,7 +248,8 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-light text-black mb-2">
+                      className="block text-sm font-light text-black mb-2"
+                    >
                       Phone *
                     </label>
                     <input
@@ -250,7 +268,8 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="projectType"
-                    className="block text-sm font-light text-black mb-2">
+                    className="block text-sm font-light text-black mb-2"
+                  >
                     Project Type *
                   </label>
                   <div className="relative">
@@ -263,13 +282,14 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 appearance-none cursor-pointer"
                       style={{
                         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000000' d='M6 9L1 4h10z'/%3E%3C/svg%3E")`,
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'right 1rem center',
-                        paddingRight: '3rem'
-                      }}>
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "right 1rem center",
+                        paddingRight: "3rem",
+                      }}
+                    >
                       <option value="">Select a project type</option>
                       <option value="commercial">Commercial</option>
-                      <option value="industrial">Industrial</option>
+                      <option value="institutional">Institutional</option>
                       <option value="residential">Residential</option>
                       <option value="renovation">Renovation</option>
                       <option value="other">Other</option>
@@ -280,7 +300,8 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-light text-black mb-2">
+                    className="block text-sm font-light text-black mb-2"
+                  >
                     Project Details *
                   </label>
                   <textarea
@@ -291,14 +312,16 @@ export default function ContactPage() {
                     required
                     rows={5}
                     className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 resize-none"
-                    placeholder="Tell us about your project..."></textarea>
+                    placeholder="Tell us about your project..."
+                  ></textarea>
                 </div>
 
                 <div className="flex justify-start">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center bg-black text-white px-8 py-3 font-medium hover:bg-black/90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed">
+                    className="inline-flex items-center bg-black text-white px-8 py-3 hover:bg-black/90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
                     {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-5 w-5 animate-spin" />
@@ -321,25 +344,25 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white p-8 space-y-8">
+              className="bg-white p-8 space-y-8"
+            >
               <div>
                 <h3 className="text-2xl md:text-3xl uppercase text-black mb-6">
                   Our Office
                 </h3>
                 <p className="text-sm md:text-base text-black/70 font-light leading-7 mb-8">
-                  Visit us at our office or reach out through any of the contact methods above. 
-                  We're here to answer your questions and help bring your construction project to life.
+                  Visit us at our office or reach out through any of the contact
+                  methods above. We're here to answer your questions and help
+                  bring your construction project to life.
                 </p>
               </div>
 
-              <div className="bg-black/0 p-6">
+              <div className="bg-black/2 p-6">
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-lg font-medium text-black mb-2">
-                      Encotec Inc.
-                    </h4>
-                    <p className="text-sm text-black/70 leading-relaxed">
+                    <h4 className="text-lg text-black mb-2">Encotec Inc.</h4>
+                    <p className="text-sm font-light text-black/70 leading-relaxed">
                       4459 Rue Sherbrooke O.
                       <br />
                       Westmount, QC H3Z 1E7
@@ -350,16 +373,15 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-black/0 p-6">
+              <div className="bg-black/2 p-6">
                 <div className="flex items-start gap-4">
                   <Building2 className="h-6 w-6 text-black flex-shrink-0" />
                   <div>
-                    <h4 className="text-lg font-medium text-black mb-2">
-                      What We Do
-                    </h4>
-                    <p className="text-sm text-black/70 leading-relaxed">
-                      From site management and coordination to turn-key and design-build mandates, 
-                      we handle commercial, industrial, and residential construction projects with 
+                    <h4 className="text-lg text-black mb-2">What We Do</h4>
+                    <p className="text-sm font-light text-black/70 leading-relaxed">
+                      From site management and coordination to turn-key and
+                      design-build mandates, we handle commercial,
+                      institutional, and residential construction projects with
                       professionalism and care.
                     </p>
                   </div>

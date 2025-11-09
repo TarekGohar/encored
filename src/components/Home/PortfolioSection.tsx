@@ -12,24 +12,27 @@ export default function PortfolioSection() {
         <span
           className={`${
             isMobile ? "w-full" : "w-1/3"
-          } text-black/50 font-light tracking-wider uppercase`}>
+          } text-black/50 font-light tracking-wider uppercase`}
+        >
           Sectors We Serve
         </span>
 
         <h2
           className={`${
             isMobile ? "text-2xl" : "text-3xl md:text-4xl"
-          } text-black uppercase`}>
+          } text-black uppercase`}
+        >
           We Serve a Variety of Sectors
         </h2>
         <p
           className={`text-sm text-black/50 font-light ${
             isMobile ? "max-w-full" : "max-w-2xl"
-          }`}>
-          From custom homes and modern apartments to large-scale industrial
+          }`}
+        >
+          From custom homes and modern apartments to large-scale institutional
           spaces and commercial buildings, our expertise spans every facet of
           construction. We deliver quality, reliability, and innovative
-          solutions across residential, industrial, and commercial projects.
+          solutions across residential, institutional, and commercial projects.
         </p>
 
         <motion.div
@@ -44,19 +47,20 @@ export default function PortfolioSection() {
                 staggerChildren: 0.2,
               },
             },
-          }}>
+          }}
+        >
           {[
             {
               industry: "Commercial",
-              image: "/images/McGraw/mcgraw.png",
+              image: "/images/McGraw/mcgrawwebp",
             },
             {
-              industry: "Industrial",
-              image: "/images/McGill/room.jpg",
+              industry: "Institutional",
+              image: "/images/McGill/roomwebp",
             },
             {
               industry: "Residential",
-              image: "/images/Westmount/View.jpg",
+              image: "/images/Westmount/Viewwebp",
             },
           ].map((item, index) => (
             <motion.div
@@ -91,7 +95,8 @@ export default function PortfolioSection() {
                   duration: 0.3,
                   ease: "easeOut",
                 },
-              }}>
+              }}
+            >
               <Image
                 src={item.image}
                 alt={`${item.industry}`}
@@ -111,7 +116,8 @@ export default function PortfolioSection() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                viewport={{ once: true }}>
+                viewport={{ once: true }}
+              >
                 <span className="text-sm font-light tracking-wider text-[#ffffff] leading-tight">
                   {item.industry}
                 </span>

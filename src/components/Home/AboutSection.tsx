@@ -15,14 +15,16 @@ export default function AboutSection() {
         <div
           className={`flex items-start justify-between ${
             isMobile ? "flex-col" : "flex-row"
-          }`}>
+          }`}
+        >
           <span className="text-black w-fit p-1 font-light tracking-wider uppercase">
             About Us
           </span>
           <div
             className={` flex flex-col gap-8 items-start justify-start ${
               isMobile ? "w-full" : ""
-            }`}>
+            }`}
+          >
             <h2 className="text-3xl md:text-4xl uppercase text-black">
               Building relationships since 1994.
             </h2>
@@ -39,7 +41,7 @@ export default function AboutSection() {
         </div>
         <div className="w-full overflow-hidden relative">
           <Image
-            src="/images/Westmount/IMG_7980.jpg"
+            src="/images/Westmount/IMG_7980webp"
             alt="Valsoft"
             width={1000}
             height={160}
