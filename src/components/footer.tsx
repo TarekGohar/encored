@@ -36,20 +36,17 @@ export default function Footer() {
             <div className="flex flex-col gap-3 text-sm text-white/70 font-light">
               <Link
                 href="/services/commercial"
-                className="hover:text-white transition-colors"
-              >
+                className="hover:text-white transition-colors">
                 Commercial Construction
               </Link>
               <Link
                 href="/services/institutional"
-                className="hover:text-white transition-colors"
-              >
+                className="hover:text-white transition-colors">
                 Institutional Construction
               </Link>
               <Link
                 href="/services/residential"
-                className="hover:text-white transition-colors"
-              >
+                className="hover:text-white transition-colors">
                 Residential Construction
               </Link>
             </div>
@@ -63,20 +60,17 @@ export default function Footer() {
             <div className="flex flex-col gap-3 text-sm text-white/70 font-light">
               <Link
                 href="/about"
-                className="hover:text-white transition-colors"
-              >
+                className="hover:text-white transition-colors">
                 About Us
               </Link>
               <Link
                 href="/collections"
-                className="hover:text-white transition-colors"
-              >
+                className="hover:text-white transition-colors">
                 Portfolio
               </Link>
               <Link
                 href="/contact"
-                className="hover:text-white transition-colors"
-              >
+                className="hover:text-white transition-colors">
                 Contact
               </Link>
             </div>
@@ -97,17 +91,15 @@ export default function Footer() {
               </div>
               <a
                 href="tel:+15149080266"
-                className="flex items-center gap-3 hover:text-white transition-colors"
-              >
+                className="flex items-center gap-3 hover:text-white transition-colors">
                 <Phone className="h-5 w-5 flex-shrink-0" />
                 (514) 908-0266
               </a>
               <a
-                href="mailto:info@encotec.ca"
-                className="flex items-center gap-3 hover:text-white transition-colors"
-              >
+                href="mailto:michele@encotec.ca"
+                className="flex items-center gap-3 hover:text-white transition-colors">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                info@encotec.ca
+                michele@encotec.ca
               </a>
             </div>
           </div>

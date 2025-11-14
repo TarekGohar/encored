@@ -118,15 +118,13 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-black/5 p-6 flex flex-col gap-4"
-            >
+              className="bg-black/5 p-6 flex flex-col gap-4">
               <Phone className="h-6 w-6 text-black" />
               <div>
                 <h3 className="text-lg text-black mb-2">Phone</h3>
                 <a
                   href="tel:+15149080266"
-                  className="text-sm font-light text-black/70 hover:text-black transition-colors"
-                >
+                  className="text-sm font-light text-black/70 hover:text-black transition-colors">
                   (514) 908-0266
                 </a>
               </div>
@@ -137,16 +135,14 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-black/5 p-6 flex flex-col gap-4"
-            >
+              className="bg-black/5 p-6 flex flex-col gap-4">
               <Mail className="h-6 w-6 text-black" />
               <div>
                 <h3 className="text-lg font text-black mb-2">Email</h3>
                 <a
-                  href="mailto:info@encotec.ca"
-                  className="text-sm font-light text-black/70 hover:text-black transition-colors"
-                >
-                  info@encotec.ca
+                  href="mailto:michele@encotec.ca"
+                  className="text-sm font-light text-black/70 hover:text-black transition-colors">
+                  michele@encotec.ca
                 </a>
               </div>
             </motion.div>
@@ -156,8 +152,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-black/5 p-6 flex flex-col gap-4"
-            >
+              className="bg-black/5 p-6 flex flex-col gap-4">
               <Clock className="h-6 w-6 text-black" />
               <div>
                 <h3 className="text-lg text-black mb-2">Hours</h3>
@@ -182,8 +177,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-8"
-            >
+              className="bg-white p-8">
               <h3 className="text-2xl md:text-3xl uppercase text-black mb-6">
                 Request a Quote
               </h3>
@@ -192,8 +186,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-light text-black mb-2"
-                    >
+                      className="block text-sm font-light text-black mb-2">
                       Name *
                     </label>
                     <input
@@ -210,8 +203,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm font-light text-black mb-2"
-                    >
+                      className="block text-sm font-light text-black mb-2">
                       Company
                     </label>
                     <input
@@ -230,8 +222,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-light text-black mb-2"
-                    >
+                      className="block text-sm font-light text-black mb-2">
                       Email *
                     </label>
                     <input
@@ -248,8 +239,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-light text-black mb-2"
-                    >
+                      className="block text-sm font-light text-black mb-2">
                       Phone *
                     </label>
                     <input
@@ -268,8 +258,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="projectType"
-                    className="block text-sm font-light text-black mb-2"
-                  >
+                    className="block text-sm font-light text-black mb-2">
                     Project Type *
                   </label>
                   <div className="relative">
@@ -285,8 +274,7 @@ export default function ContactPage() {
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "right 1rem center",
                         paddingRight: "3rem",
-                      }}
-                    >
+                      }}>
                       <option value="">Select a project type</option>
                       <option value="commercial">Commercial</option>
                       <option value="institutional">Institutional</option>
@@ -300,8 +288,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-light text-black mb-2"
-                  >
+                    className="block text-sm font-light text-black mb-2">
                     Project Details *
                   </label>
                   <textarea
@@ -312,16 +299,14 @@ export default function ContactPage() {
                     required
                     rows={5}
                     className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 resize-none"
-                    placeholder="Tell us about your project..."
-                  ></textarea>
+                    placeholder="Tell us about your project..."></textarea>
                 </div>
 
                 <div className="flex justify-start">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center bg-black text-white px-8 py-3 hover:bg-black/90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
-                  >
+                    className="inline-flex items-center bg-black text-white px-8 py-3 hover:bg-black/90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed">
                     {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-5 w-5 animate-spin" />
@@ -344,8 +329,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white p-8 space-y-8"
-            >
+              className="bg-white p-8 space-y-8">
               <div>
                 <h3 className="text-2xl md:text-3xl uppercase text-black mb-6">
                   Our Office

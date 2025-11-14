@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Encotec",
     images: [
       {
-        url: "/images/rooftop/roofwebp",
+        url: "/images/rooftop/roof.webp",
         width: 1200,
         height: 630,
         alt: "Contact Encotec",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Contact Encotec - Construction & Renovation Services",
     description:
       "Get in touch with Encotec for your commercial, institutional, or residential construction project. Serving Montreal since 1994.",
-    images: ["/images/rooftop/roofwebp"],
+    images: ["/images/rooftop/roof.webp"],
   },
   robots: {
     index: true,
