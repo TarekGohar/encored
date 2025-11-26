@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import { ChevronRight } from "lucide-react";
+import { Link } from "@/i18n/routing";
 
 export default function PortfolioSection() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -19,7 +21,7 @@ export default function PortfolioSection() {
         <h2
           className={`${
             isMobile ? "text-2xl" : "text-3xl md:text-4xl"
-          } text-black uppercase`}>
+          } text-black uppercase font-light`}>
           We Serve a Variety of Sectors
         </h2>
         <p
@@ -49,75 +51,82 @@ export default function PortfolioSection() {
             {
               industry: "Commercial",
               image: "/images/McGraw/mcgraw.webp",
+              link: "/services/commercial",
             },
             {
               industry: "Institutional",
               image: "/images/McGill/room.webp",
+              link: "/services/institutional",
             },
             {
               industry: "Residential",
               image: "/images/Westmount/View.webp",
+              link: "/services/residential",
             },
           ].map((item, index) => (
-            <motion.div
-              className={`w-full md:w-80 lg:w-[20rem] h-[20rem] md:h-[22rem] lg:h-[25rem] flex flex-col gap-2 bg-black/3 p-6 overflow-hidden relative ${
-                index === 1
-                  ? "lg:mt-10"
-                  : index === 2
-                  ? "lg:-mt-10"
-                  : "lg:-mt-10"
-              }`}
-              key={index}
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  y: 60,
-                  scale: 0.9,
-                },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
+            <Link href={item.link as any} key={index} className="block">
+              <motion.div
+                className={`w-full md:w-80 lg:w-[20rem] h-[20rem] md:h-[22rem] lg:h-[25rem] flex flex-col gap-2 bg-black/3 p-6 overflow-hidden relative cursor-pointer ${
+                  index === 1
+                    ? "lg:mt-10"
+                    : index === 2
+                    ? "lg:-mt-10"
+                    : "lg:-mt-10"
+                }`}
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    y: 60,
+                    scale: 0.9,
+                  },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    transition: {
+                      duration: 0.6,
+                      ease: "easeOut",
+                    },
+                  },
+                }}
+                whileHover={{
+                  scale: isMobile ? 1 : 1.02,
+                  y: isMobile ? 0 : -8,
                   transition: {
-                    duration: 0.6,
+                    duration: 0.3,
                     ease: "easeOut",
                   },
-                },
-              }}
-              whileHover={{
-                scale: isMobile ? 1 : 1.02,
-                y: isMobile ? 0 : -8,
-                transition: {
-                  duration: 0.3,
-                  ease: "easeOut",
-                },
-              }}>
-              <Image
-                src={item.image}
-                alt={`${item.industry}`}
-                width={1000}
-                height={160}
-                className="object-cover object-center w-full h-full absolute top-0 left-0"
-              />
-              {/* Overlay */}
-              <motion.div
-                className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"
-                initial={{ opacity: 0.4 }}
-                whileHover={{ opacity: isMobile ? 0.4 : 0.3 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.h3
-                className="absolute top-0 left-0 text-base md:text-lg font-medium text-[#ffffff] leading-tight z-20 p-4 md:p-6 flex flex-col items-start justify-start space-y-1"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                viewport={{ once: true }}>
-                <span className="text-sm font-light tracking-wider text-[#ffffff] leading-tight">
-                  {item.industry}
-                </span>
-              </motion.h3>
-              <p className="absolute bottom-0 left-0 text-sm text-[#ffffff] leading-tight z-20 p-6"></p>
-            </motion.div>
+                }}>
+                <Image
+                  src={item.image}
+                  alt={`${item.industry}`}
+                  width={1000}
+                  height={160}
+                  className="object-cover object-center w-full h-full absolute top-0 left-0"
+                />
+                {/* Overlay */}
+                <motion.div
+                  className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"
+                  initial={{ opacity: 0.4 }}
+                  whileHover={{ opacity: isMobile ? 0.4 : 0.3 }}
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.h3
+                  className="absolute top-0 left-0 text-base md:text-lg font-medium text-[#ffffff] leading-tight z-20 p-4 md:p-6 flex flex-col items-start justify-start space-y-1"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  viewport={{ once: true }}>
+                  <span className="text-sm font-light tracking-wider text-[#ffffff] leading-tight">
+                    {item.industry}
+                  </span>
+                </motion.h3>
+                <div className="absolute bottom-0 left-0 text-sm text-[#ffffff] leading-tight z-20 p-6 flex items-center gap-2">
+                  <span className="text-sm font-light">View Collection</span>
+                  <ChevronRight className="w-4 h-4" />
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
       </div>

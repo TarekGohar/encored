@@ -42,7 +42,30 @@ export default async function Home() {
               "linear-gradient(135deg, rgba(25,36,52,0.7) 0%, rgba(0,0,0,0.15) 60%, rgba(180,180,216,0.35) 100%)",
           }}
         />
-        <div className="absolute inset-0 flex items-center justify-center max-w-screen z-20">
+        <div className="absolute inset-0 flex items-center justify-center gap-x-6 max-w-screen z-20">
+          <div className="h-[6rem] w-[6rem]">
+            <svg
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 2448.53 2480.83">
+              <path
+                fill="white"
+                d="M1144.45,2480.83C680.22,2444.4.01,1993.56,0,1239.9-.01,493.33,681.15,43.21,1142.92,0l1.53,2480.83Z"
+              />
+              <path
+                fill="white"
+                d="M1282.16,0c528.54,0,1037.69,471.44,1068.28,792.94l-1068.63.65"
+              />
+              <path
+                fill="white"
+                d="M1282.16,2480.83c528.54,0,1037.69-471.44,1068.28-792.94l-1068.63-.65"
+              />
+              <path
+                fill="white"
+                d="M1281.81,933.27h862.75c8.14,0,14.75,6.61,14.75,14.75v570.86c0,8.14-6.61,14.75-14.75,14.75h-862.75v-600.35h0Z"
+              />
+            </svg>
+          </div>
           <h1 className="px-4 text-7xl leading-[5rem] md:leading-[7rem] sm:text-9xl md:text-10xl font- text-white text-left uppercase opacity-90 er">
             Encotec
           </h1>

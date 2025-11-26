@@ -23,7 +23,7 @@ export default function AboutSection() {
             className={` flex flex-col gap-8 items-start justify-start ${
               isMobile ? "w-full" : ""
             }`}>
-            <h2 className="text-3xl md:text-4xl uppercase text-black">
+            <h2 className="text-3xl md:text-4xl uppercase text-black font-light">
               Building relationships since 1994.
             </h2>
             <p className="text-sm text-black/50 font-light max-w-[30rem]">
@@ -36,17 +36,6 @@ export default function AboutSection() {
               Learn More <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
-        </div>
-        <div className="w-full overflow-hidden relative">
-          <Image
-            src="/images/Westmount/IMG_7980.webp"
-            alt="Valsoft"
-            width={1000}
-            height={160}
-            className="w-full h-[25rem] object-cover object-center"
-          />
-          {/* Shader overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
         </div>
       </div>
     </div>

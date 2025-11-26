@@ -26,7 +26,7 @@ export default function AboutPage() {
           }}
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] sm:text-8xl md:text-9xl text-white text-center uppercase opacity-80">
+          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] sm:text-8xl md:text-7xl text-white text-center uppercase opacity-90">
             Who we are
           </h1>
         </div>
@@ -42,7 +42,7 @@ export default function AboutPage() {
             <div className="flex flex-col gap-6 items-start justify-start md:max-w-2xl text-black/80 font-light leading-7">
               <p className="text-sm md:text-base">
                 Established in 1994 under the name{" "}
-                <span className="font-semibold">
+                <span className="font-medium">
                   ENgineering & COnstruction TEChnologies
                 </span>
                 , Encotec Inc. was formed to provide its clients with all their
@@ -100,9 +100,8 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
-          >
-            <h2 className="text-3xl md:text-4xl text-black mb-4">
+            className="space-y-8">
+            <h2 className="text-3xl md:text-4xl text-black mb-4 font-light">
               Let's Build Something Together
             </h2>
             <p className="text-sm mb-8 text-black/50 font-light max-w-lg mx-auto leading-relaxed">
@@ -112,8 +111,7 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
               <Link
                 href="/contact"
-                className="w-[15rem] flex items-center justify-center gap-2"
-              >
+                className="w-[15rem] flex items-center justify-center gap-2 font-light hover:text-black/60 duration-300">
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>

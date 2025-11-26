@@ -27,7 +27,7 @@ export default function CommercialPage() {
           }}
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] sm:text-8xl md:text-9xl text-white text-center uppercase opacity-90">
+          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] text-white text-center uppercase opacity-90">
             Commercial
           </h1>
         </div>
@@ -142,8 +142,7 @@ export default function CommercialPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                whileHover={{ scale: 1.02 }}
-              >
+                whileHover={{ scale: 1.02 }}>
                 <Image
                   src={item.src}
                   alt={item.alt}
@@ -168,8 +167,7 @@ export default function CommercialPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
-          >
+            className="space-y-8">
             <h2 className="text-3xl md:text-4xl text-black mb-4">
               Ready to Transform Your Commercial Space?
             </h2>
@@ -180,8 +178,7 @@ export default function CommercialPage() {
             <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
               <Link
                 href="/contact"
-                className="w-[15rem] flex items-center justify-center gap-2"
-              >
+                className="w-[15rem] flex items-center justify-center gap-2">
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>

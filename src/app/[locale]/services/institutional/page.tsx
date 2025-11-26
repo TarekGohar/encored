@@ -10,8 +10,7 @@ export default function InstitutionalPage() {
     <>
       <section
         id="institutional-hero"
-        className="relative h-[60vh] min-h-[30rem]"
-      >
+        className="relative h-[60vh] min-h-[30rem]">
         {/* Background image */}
         <div
           className="absolute inset-0 z-0"
@@ -29,7 +28,7 @@ export default function InstitutionalPage() {
           }}
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] sm:text-8xl md:text-9xl text-white text-center uppercase opacity-90">
+          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] sm:text-8xl md:text-6xl text-white text-center uppercase opacity-90">
             Institutional
           </h1>
         </div>
@@ -102,7 +101,7 @@ export default function InstitutionalPage() {
             <span className="text-black/50 font-light tracking-wider uppercase">
               Featured Work
             </span>
-            <h2 className="text-3xl md:text-4xl uppercase text-black">
+            <h2 className="text-3xl md:text-4xl uppercase text-black font-light">
               Institutional Projects
             </h2>
           </div>
@@ -113,38 +112,54 @@ export default function InstitutionalPage() {
               {
                 src: "/images/606 Courcelle (Mission)/IMG_0052.webp",
                 alt: "606 Courcelle Mission Project",
+                title: "Welcome Hall Mission",
+                description:
+                  "Renovation of corridor and offices for Welcome Hall Mission",
               },
               {
                 src: "/images/606 Courcelle (Mission)/IMG_0053.webp",
                 alt: "606 Courcelle Mission Interior",
+                title: "Welcome Hall Mission",
+                description:
+                  "Renovation of corridor and offices for Welcome Hall Mission",
               },
               {
                 src: "/images/2222 Ontario Est (Mission)/IMG_5674.webp",
                 alt: "2222 Ontario Est Mission Project",
+                title: "Welcome Hall Mission",
+                description:
+                  "Complete building renovation of 22 rooms for Welcome Hall Mission",
               },
               {
                 src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6260.webp",
                 alt: "880 rue Guy Salvation Army Kitchen",
+                title: "Salvation Army",
+                description:
+                  "Major renovation and addition to existing building",
               },
-
               {
                 src: "/images/Maison des Greffés/IMG_0318.webp",
                 alt: "Maison des Greffés Interior",
+                title: "Maison des Greffés",
+                description:
+                  "Various renovations including cafeteria, resident smoking rooms, accessible toilets and suites",
               },
               {
                 src: "/images/McGill/IMG_6445-scaled (Corridor).webp",
                 alt: "McGill Corridor",
+                title: "McGill University",
+                description:
+                  "Major renovation of office spaces, day-care, gym, showers, change rooms, and HVAC",
               },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
-                className="relative w-full h-[20rem] overflow-hidden rounded-sm"
+                className="relative w-full h-[20rem] overflow-hidden rounded-sm group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                whileHover={{ scale: 1.02 }}
-              >
+                whileHover={{ scale: 1.02 }}>
                 <Image
                   src={item.src}
                   alt={item.alt}
@@ -152,8 +167,84 @@ export default function InstitutionalPage() {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                {/* Overlay with project info */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-lg font-light uppercase tracking-wide mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm font-light leading-relaxed opacity-90">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="relative w-full bg-white py-24">
+        <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-8 items-center text-center mb-16">
+            <span className="text-black/50 font-light tracking-wider uppercase">
+              Our Partners
+            </span>
+            <h2 className="text-3xl md:text-4xl uppercase text-black font-light">
+              Trusted Institutional Partners
+            </h2>
+          </div>
+
+          {/* Partners grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {[
+              {
+                name: "YMCA's of Quebec",
+                logo: "/images/logos/ymca.jpg",
+                description:
+                  "Major Renovation of office spaces, day-care, gym, showers, change rooms, and HVAC.",
+              },
+              {
+                name: "Chez Doris",
+                logo: "/images/logos/chez-doris.webp",
+                description:
+                  "Major renovations and 3-storey addition to community women's shelter.",
+              },
+              {
+                name: "Montreal Association for the Blind",
+                logo: "/images/logos/mab.jpeg",
+                description:
+                  "Various renovations including cafeteria, resident smoking rooms, accessible toilets and suites.",
+              },
+            ].map((partner, idx) => (
+              <motion.div
+                key={idx}
+                className="flex flex-col items-center gap-6 p-6 bg-theme-background-light rounded-sm"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}>
+                {/* Logo container */}
+                <div className="relative w-full h-24 flex items-center justify-center">
+                  <div className="relative w-40 h-24">
+                    <Image
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      fill
+                      className="object-contain"
+                      sizes="128px"
+                    />
+                  </div>
+                </div>
+                {/* Partner name */}
+                <h3 className="text-xl font-light text-black uppercase tracking-wide text-center">
+                  {partner.name}
+                </h3>
+                {/* Description */}
+                <p className="text-sm text-black/70 font-light leading-relaxed text-center">
+                  {partner.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -169,9 +260,8 @@ export default function InstitutionalPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
-          >
-            <h2 className="text-3xl md:text-4xl text-black mb-4">
+            className="space-y-8">
+            <h2 className="text-3xl md:text-4xl text-black mb-4 font-light">
               Ready to Build Your Institutional Facility?
             </h2>
             <p className="text-sm mb-8 text-black/50 font-light max-w-lg mx-auto leading-relaxed">
@@ -181,8 +271,7 @@ export default function InstitutionalPage() {
             <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
               <Link
                 href="/contact"
-                className="w-[15rem] flex items-center justify-center gap-2"
-              >
+                className="w-[15rem] flex items-center justify-center gap-2 font-light hover:text-black/60 duration-300">
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>

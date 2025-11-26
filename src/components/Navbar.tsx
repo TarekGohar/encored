@@ -105,14 +105,12 @@ export default function Navbar({ light }: navbarProps) {
         style={{
           WebkitBackdropFilter: "blur(12px)",
           backdropFilter: "blur(12px)",
-          backgroundColor: "rgba(210, 210, 210, 0.2)",
-        }}
-      >
+          backgroundColor: "rgba(255, 255, 255, 0.2)",
+        }}>
         <Link
           href="/"
           className={`hover:cursor-pointer w-20 md:w-[16rem] z-10 duration-300`}
-          onClick={() => setMenu(false)}
-        >
+          onClick={() => setMenu(false)}>
           <Image
             src="/images/logo.webp"
             alt="Encotec"
@@ -125,8 +123,7 @@ export default function Navbar({ light }: navbarProps) {
         <div className="hidden lg:flex items-center gap-x-16 text-black">
           <Link
             href="/about"
-            className="font-light tracking-widest hover:cursor-pointer "
-          >
+            className="font-light tracking-widest hover:cursor-pointer ">
             About
           </Link>
 
@@ -141,12 +138,10 @@ export default function Navbar({ light }: navbarProps) {
             onMouseLeave={() => {
               setHover(false);
               setIsOpen(false);
-            }}
-          >
+            }}>
             <div className="group flex items-center gap-x-2">
               <span
-                className={` relative font-light tracking-widest cursor-pointer `}
-              >
+                className={` relative font-light tracking-widest cursor-pointer `}>
                 Services
               </span>
               <svg
@@ -156,8 +151,7 @@ export default function Navbar({ light }: navbarProps) {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -173,16 +167,14 @@ export default function Navbar({ light }: navbarProps) {
             className={`font-light tracking-widest p-4 px-5`}
             style={{
               backdropFilter: "blur(2px)",
-              backgroundColor: "rgba(255, 255, 255, 0.1)",
-            }}
-          >
+              backgroundColor: "rgba(230, 230, 230, 0.1)",
+            }}>
             Contact Us
           </Link>
           <Link
             href={pathname}
             locale={t("locale") as "en" | "fr" | undefined}
-            className={`uppercase font-light tracking-widest`}
-          >
+            className={`uppercase font-light tracking-widest`}>
             {t("locale")}
           </Link>
         </div>
@@ -194,8 +186,7 @@ export default function Navbar({ light }: navbarProps) {
           className={`${
             menu ? "open" : ""
           } z-50 block hamburger lg:hidden focus:outline-none group`}
-          onClick={() => setMenu((prev) => !prev)}
-        >
+          onClick={() => setMenu((prev) => !prev)}>
           <span className={`hamburger-top `}></span>
           <span className={`hamburger-middle `}></span>
           <span className={`hamburger-bottom `}></span>
@@ -218,8 +209,7 @@ export default function Navbar({ light }: navbarProps) {
           onMouseLeave={() => {
             setHover(false);
             setIsOpen(false);
-          }}
-        >
+          }}>
           {/* Invisible bridge to prevent gap */}
           <div style={{ height: "34px", width: "100%" }} />
 
@@ -233,29 +223,25 @@ export default function Navbar({ light }: navbarProps) {
               WebkitTransform: "translateZ(0)",
               transform: "translateZ(0)",
               minWidth: "170px",
-            }}
-          >
+            }}>
             <li>
               <Link
                 href={"/services/commercial"}
-                className="font-light tracking-widest text-black"
-              >
+                className="font-light tracking-widest text-black">
                 Commercial
               </Link>
             </li>
             <li>
               <Link
                 href={"/services/institutional"}
-                className="font-light tracking-widest text-black"
-              >
+                className="font-light tracking-widest text-black">
                 Institutional
               </Link>
             </li>
             <li>
               <Link
                 href={"/services/residential"}
-                className="font-light tracking-widest text-black"
-              >
+                className="font-light tracking-widest text-black">
                 Residential
               </Link>
             </li>
@@ -275,13 +261,11 @@ export default function Navbar({ light }: navbarProps) {
           WebkitBackdropFilter: "blur(12px)",
           backdropFilter: "blur(12px)",
           backgroundColor: "rgba(255, 255, 255, 0.95)",
-        }}
-      >
+        }}>
         <Link
           href="/about"
           className={`word  ${visibleWords.about ? "show" : ""}`}
-          onClick={() => setMenu(false)}
-        >
+          onClick={() => setMenu(false)}>
           About
         </Link>
         <div>
@@ -292,8 +276,7 @@ export default function Navbar({ light }: navbarProps) {
             onClick={() => {
               setHover(!hover);
               setIsOpen(!isOpen);
-            }}
-          >
+            }}>
             <span className={`relative cursor-pointer `}>Services</span>
             <svg
               className={`w-5 h-5 transition-transform ${
@@ -302,8 +285,7 @@ export default function Navbar({ light }: navbarProps) {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -316,8 +298,7 @@ export default function Navbar({ light }: navbarProps) {
           {hover ? (
             <ul
               className="mt-6 mr-6 flex flex-col space-y-4 text-right text-base"
-              onClick={(e) => e.stopPropagation()}
-            >
+              onClick={(e) => e.stopPropagation()}>
               <li>
                 <Link
                   href={"/services/commercial"}
@@ -326,8 +307,7 @@ export default function Navbar({ light }: navbarProps) {
                     setMenu(false);
                     setHover(false);
                     setIsOpen(false);
-                  }}
-                >
+                  }}>
                   Commercial
                 </Link>
               </li>
@@ -339,8 +319,7 @@ export default function Navbar({ light }: navbarProps) {
                     setMenu(false);
                     setHover(false);
                     setIsOpen(false);
-                  }}
-                >
+                  }}>
                   Institutional
                 </Link>
               </li>
@@ -352,8 +331,7 @@ export default function Navbar({ light }: navbarProps) {
                     setMenu(false);
                     setHover(false);
                     setIsOpen(false);
-                  }}
-                >
+                  }}>
                   Residential
                 </Link>
               </li>
@@ -364,16 +342,14 @@ export default function Navbar({ light }: navbarProps) {
         <Link
           href="/contact"
           className={`word  ${visibleWords.contact ? "show" : ""}`}
-          onClick={() => setMenu(false)}
-        >
+          onClick={() => setMenu(false)}>
           Contact
         </Link>
         <Link
           href={pathname}
           locale={t("locale") as "en" | "fr" | undefined}
           className={`word  uppercase ${visibleWords.lang ? "show" : ""}`}
-          onClick={() => setMenu(false)}
-        >
+          onClick={() => setMenu(false)}>
           {t("locale")}
         </Link>
       </div>

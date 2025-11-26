@@ -37,17 +37,17 @@ export default function Footer() {
               <Link
                 href="/services/commercial"
                 className="hover:text-white transition-colors">
-                Commercial Construction
+                Commercial
               </Link>
               <Link
                 href="/services/institutional"
                 className="hover:text-white transition-colors">
-                Institutional Construction
+                Institutional
               </Link>
               <Link
                 href="/services/residential"
                 className="hover:text-white transition-colors">
-                Residential Construction
+                Residential
               </Link>
             </div>
           </div>
@@ -83,7 +83,10 @@ export default function Footer() {
             </h3>
             <div className="flex flex-col gap-4 text-sm text-white/70 font-light">
               <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                <MapPin
+                  className="h-5 w-5 flex-shrink-0 mt-0.5"
+                  strokeWidth={1.5}
+                />
                 <div>
                   <p>4459 Rue Sherbrooke O.</p>
                   <p>Westmount, QC H3Z 1E7</p>
@@ -92,13 +95,13 @@ export default function Footer() {
               <a
                 href="tel:+15149080266"
                 className="flex items-center gap-3 hover:text-white transition-colors">
-                <Phone className="h-5 w-5 flex-shrink-0" />
+                <Phone className="h-5 w-5 flex-shrink-0" strokeWidth={1.5} />
                 (514) 908-0266
               </a>
               <a
                 href="mailto:michele@encotec.ca"
                 className="flex items-center gap-3 hover:text-white transition-colors">
-                <Mail className="h-5 w-5 flex-shrink-0" />
+                <Mail className="h-5 w-5 flex-shrink-0" strokeWidth={1.5} />
                 michele@encotec.ca
               </a>
             </div>
