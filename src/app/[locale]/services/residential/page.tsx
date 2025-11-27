@@ -195,20 +195,88 @@ export default function ResidentialPage() {
       images: [
         { src: "/images/Westmount/Kitchen.webp", alt: "Westmount Kitchen" },
         { src: "/images/Westmount/Corridor.webp", alt: "Westmount Corridor" },
-        { src: "/images/Westmount/MasterBathShower.webp", alt: "Westmount Master Bath" },
-        { src: "/images/Westmount/SittingRoom.webp", alt: "Westmount Sitting Room" },
+        {
+          src: "/images/Westmount/MasterBathShower.webp",
+          alt: "Westmount Master Bath",
+        },
+        {
+          src: "/images/Westmount/SittingRoom.webp",
+          alt: "Westmount Sitting Room",
+        },
         { src: "/images/Westmount/View.webp", alt: "Westmount View" },
       ],
     },
     {
       titleKey: "showcase.residence3",
       images: [
-        { src: "/images/House/1F_HOUSE.jpg", alt: "Private Residence Exterior" },
-        { src: "/images/House/2F_HOUSE.jpg", alt: "Private Residence Interior" },
-        { src: "/images/House/3F_HOUSE.jpg", alt: "Private Residence Living Space" },
-        { src: "/images/House/4F_HOUSE.jpg", alt: "Private Residence Details" },
-        { src: "/images/House/5F_HOUSE.jpg", alt: "Private Residence Architecture" },
-        { src: "/images/House/6F_HOUSE.jpg", alt: "Private Residence Design" },
+        {
+          src: "/images/House/3F_HOUSE.webp",
+          alt: "Private Residence 3F",
+        },
+        {
+          src: "/images/House/4F_HOUSE.webp",
+          alt: "Private Residence 4F",
+        },
+        {
+          src: "/images/House/6F_HOUSE.webp",
+          alt: "Private Residence 6F",
+        },
+        {
+          src: "/images/House/10F_HOUSE.webp",
+          alt: "Private Residence 10F",
+        },
+        {
+          src: "/images/House/11F_HOUSE.webp",
+          alt: "Private Residence 11F",
+        },
+        {
+          src: "/images/House/13F_HOUSE.webp",
+          alt: "Private Residence 13F",
+        },
+        {
+          src: "/images/House/14F_HOUSE.webp",
+          alt: "Private Residence 14F",
+        },
+        {
+          src: "/images/House/16F_HOUSE.webp",
+          alt: "Private Residence 16F",
+        },
+        {
+          src: "/images/House/17F_HOUSE.webp",
+          alt: "Private Residence 17F",
+        },
+        {
+          src: "/images/House/18F_HOUSE.webp",
+          alt: "Private Residence 18F",
+        },
+        {
+          src: "/images/House/20F_HOUSE.webp",
+          alt: "Private Residence 20F",
+        },
+        {
+          src: "/images/House/21F_HOUSE.webp",
+          alt: "Private Residence 21F",
+        },
+        {
+          src: "/images/House/23F_HOUSE.webp",
+          alt: "Private Residence 23F",
+        },
+        {
+          src: "/images/House/24F_HOUSE.webp",
+          alt: "Private Residence 24F",
+        },
+        {
+          src: "/images/House/25F_HOUSE.webp",
+          alt: "Private Residence 25F",
+        },
+        {
+          src: "/images/House/26F_HOUSE.webp",
+          alt: "Private Residence 26F",
+        },
+        {
+          src: "/images/House/27F_HOUSE.webp",
+          alt: "Private Residence 27F",
+        },
       ],
     },
   ];
@@ -223,7 +291,7 @@ export default function ResidentialPage() {
           className="absolute top-0 left-0 w-full h-full z-0"
           style={{
             background:
-              'url("/images/House/16F_HOUSE.jpg") no-repeat 50% 60% / cover',
+              'url("/images/House/16F_HOUSE.webp") no-repeat 50% 60% / cover',
             height: "100%",
           }}
         />

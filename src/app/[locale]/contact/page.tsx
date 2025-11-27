@@ -93,7 +93,7 @@ export default function ContactPage() {
           }}
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] sm:text-8xl md:text-9xl text-white text-center uppercase opacity-80">
+          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] text-white text-center uppercase opacity-80">
             {t("hero.title")}
           </h1>
         </div>
@@ -143,7 +143,9 @@ export default function ContactPage() {
               className="bg-black/5 p-6 flex flex-col gap-4">
               <Mail className="h-6 w-6 text-black" />
               <div>
-                <h3 className="text-lg font text-black mb-2">{t("cards.email")}</h3>
+                <h3 className="text-lg font text-black mb-2">
+                  {t("cards.email")}
+                </h3>
                 <a
                   href="mailto:michele@encotec.ca"
                   className="text-sm font-light text-black/70 hover:text-black transition-colors">
@@ -278,7 +280,9 @@ export default function ContactPage() {
                         backgroundPosition: "right 1rem center",
                         paddingRight: "3rem",
                       }}>
-                      <option value="">{t("form.projectTypePlaceholder")}</option>
+                      <option value="">
+                        {t("form.projectTypePlaceholder")}
+                      </option>
                       {projectTypes.map((type) => (
                         <option key={type.value} value={type.value}>
                           {type.label}
@@ -346,7 +350,9 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-lg text-black mb-2">{t("office.companyName")}</h4>
+                    <h4 className="text-lg text-black mb-2">
+                      {t("office.companyName")}
+                    </h4>
                     <p className="text-sm font-light text-black/70 leading-relaxed whitespace-pre-line">
                       {t("office.address")}
                     </p>
@@ -358,7 +364,9 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <Building2 className="h-6 w-6 text-black flex-shrink-0" />
                   <div>
-                    <h4 className="text-lg text-black mb-2">{t("office.whatWeDo")}</h4>
+                    <h4 className="text-lg text-black mb-2">
+                      {t("office.whatWeDo")}
+                    </h4>
                     <p className="text-sm font-light text-black/70 leading-relaxed">
                       {t("office.whatWeDoDescription")}
                     </p>

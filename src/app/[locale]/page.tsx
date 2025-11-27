@@ -28,7 +28,7 @@ export default async function Home() {
           className="absolute inset-0 z-0"
           style={{
             background:
-              'url("/images/House/18F_HOUSE.jpg") no-repeat center center / cover',
+              'url("/images/rooftop/IMG_0296.webp") no-repeat center center / cover',
           }}
         />
         {/* Nice shader overlay */}

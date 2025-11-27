@@ -66,7 +66,7 @@ export default function PortfolioSection() {
             },
           }}>
           {sectors.map((item, index) => (
-            <Link href={item.link as any} key={index} className="block">
+            <Link href={item.link as Parameters<typeof Link>[0]["href"]} key={index} className="block">
               <motion.div
                 className={`w-full md:w-80 lg:w-[20rem] h-[20rem] md:h-[22rem] lg:h-[25rem] flex flex-col gap-2 bg-black/3 p-6 overflow-hidden relative cursor-pointer ${
                   index === 1

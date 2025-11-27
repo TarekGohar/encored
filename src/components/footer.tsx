@@ -31,7 +31,7 @@ export default function Footer() {
 
           {/* Services */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-medium uppercase tracking-wider">
+            <h3 className="text-lg font-light uppercase tracking-wider">
               {t("services")}
             </h3>
             <div className="flex flex-col gap-3 text-sm text-white/70 font-light">
@@ -55,13 +55,13 @@ export default function Footer() {
 
           {/* Company */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-medium uppercase tracking-wider">
+            <h3 className="text-lg font-light uppercase tracking-wider">
               {t("company")}
             </h3>
             <div className="flex flex-col gap-3 text-sm text-white/70 font-light">
               <Link
                 href="/about"
-                className="hover:text-white transition-colors">
+                className="hover:text-white transition-colors ">
                 {t("aboutUs")}
               </Link>
               <Link
@@ -74,30 +74,30 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-medium uppercase tracking-wider">
+            <h3 className="text-lg font-light uppercase tracking-wider">
               {t("contactTitle")}
             </h3>
             <div className="flex flex-col gap-4 text-sm text-white/70 font-light">
               <div className="flex items-start gap-3">
                 <MapPin
                   className="h-5 w-5 flex-shrink-0 mt-0.5"
-                  strokeWidth={1.5}
+                  strokeWidth={1}
                 />
                 <div>
-                  <p>4459 Rue Sherbrooke O.</p>
-                  <p>Westmount, QC H3Z 1E7</p>
+                  <p className="font-light">4459 Rue Sherbrooke O.</p>
+                  <p className="font-light">Westmount, QC H3Z 1E7</p>
                 </div>
               </div>
               <a
                 href="tel:+15149080266"
-                className="flex items-center gap-3 hover:text-white transition-colors">
-                <Phone className="h-5 w-5 flex-shrink-0" strokeWidth={1.5} />
+                className="flex items-center gap-3 hover:text-white transition-colors font-light">
+                <Phone className="h-5 w-5 flex-shrink-0" strokeWidth={1} />
                 (514) 908-0266
               </a>
               <a
                 href="mailto:michele@encotec.ca"
-                className="flex items-center gap-3 hover:text-white transition-colors">
-                <Mail className="h-5 w-5 flex-shrink-0" strokeWidth={1.5} />
+                className="flex items-center gap-3 hover:text-white transition-colors font-light">
+                <Mail className="h-5 w-5 flex-shrink-0" strokeWidth={1} />
                 michele@encotec.ca
               </a>
             </div>

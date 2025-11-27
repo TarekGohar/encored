@@ -1,10 +1,81 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
+
+// Mini carousel for small project cards
+function MiniCarousel({
+  images,
+  title,
+  description,
+}: {
+  images: { src: string; alt: string }[];
+  title: string;
+  description: string;
+}) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <div className="relative w-full h-full">
+      <Image
+        src={images[currentIndex].src}
+        alt={images[currentIndex].alt}
+        fill
+        className="object-cover transition-opacity duration-300"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      />
+      {/* Navigation buttons */}
+      <button
+        onClick={goToPrevious}
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white p-1 rounded-full transition-colors"
+        aria-label="Previous image">
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white p-1 rounded-full transition-colors"
+        aria-label="Next image">
+        <ChevronRight className="w-5 h-5" />
+      </button>
+      {/* Dots indicator */}
+      <div className="absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              idx === currentIndex ? "bg-white" : "bg-white/50"
+            }`}
+            aria-label={`Go to image ${idx + 1}`}
+          />
+        ))}
+      </div>
+      {/* Overlay with project info */}
+      <div className="absolute inset-0 bg-gradient-to-t from-neutral-300/50 via-neutral-300/30 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+          <h3 className="text-lg font-light uppercase tracking-wide mb-2">
+            {title}
+          </h3>
+          <p className="text-sm font-light leading-relaxed opacity-90">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function InstitutionalPage() {
   const t = useTranslations("Services.institutional");
@@ -15,22 +86,28 @@ export default function InstitutionalPage() {
     { titleKey: "highlights.approach", valueKey: "highlights.approachValue" },
   ];
 
-  const projects = [
+  // Welcome Hall carousel images
+  const welcomeHallImages = [
     {
       src: "/images/606 Courcelle (Mission)/IMG_0052.webp",
       alt: "606 Courcelle Mission Project",
-      title: "Welcome Hall Mission",
-      description:
-        "Renovation of corridor and offices for Welcome Hall Mission",
     },
     {
       src: "/images/606 Courcelle (Mission)/IMG_0053.webp",
       alt: "606 Courcelle Mission Interior",
+    },
+  ];
+
+  const projects = [
+    {
+      type: "carousel" as const,
+      images: welcomeHallImages,
       title: "Welcome Hall Mission",
       description:
         "Renovation of corridor and offices for Welcome Hall Mission",
     },
     {
+      type: "image" as const,
       src: "/images/2222 Ontario Est (Mission)/IMG_5674.webp",
       alt: "2222 Ontario Est Mission Project",
       title: "Welcome Hall Mission",
@@ -38,19 +115,14 @@ export default function InstitutionalPage() {
         "Complete building renovation of 22 rooms for Welcome Hall Mission",
     },
     {
+      type: "image" as const,
       src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6260.webp",
       alt: "880 rue Guy Salvation Army Kitchen",
       title: "Salvation Army",
       description: "Major renovation and addition to existing building",
     },
     {
-      src: "/images/Maison des Greffés/IMG_0318.webp",
-      alt: "Maison des Greffés Interior",
-      title: "Maison des Greffés",
-      description:
-        "Various renovations including cafeteria, resident smoking rooms, accessible toilets and suites",
-    },
-    {
+      type: "image" as const,
       src: "/images/McGill/IMG_6445-scaled (Corridor).webp",
       alt: "McGill Corridor",
       title: "McGill University",
@@ -58,6 +130,7 @@ export default function InstitutionalPage() {
         "Major renovation of office spaces, day-care, gym, showers, change rooms, and HVAC",
     },
     {
+      type: "image" as const,
       src: "/images/McGill/IMG_6446-scaled (Office).webp",
       alt: "McGill Office",
       title: "McGill University",
@@ -165,24 +238,34 @@ export default function InstitutionalPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 whileHover={{ scale: 1.02 }}>
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                {/* Overlay with project info */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-lg font-light uppercase tracking-wide mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm font-light leading-relaxed opacity-90">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
+                {item.type === "carousel" ? (
+                  <MiniCarousel
+                    images={item.images}
+                    title={item.title}
+                    description={item.description}
+                  />
+                ) : (
+                  <>
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    {/* Overlay with project info */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-300/50 via-neutral-300/30 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 className="text-lg font-light uppercase tracking-wide mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm font-light leading-relaxed opacity-90">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                )}
               </motion.div>
             ))}
           </div>
