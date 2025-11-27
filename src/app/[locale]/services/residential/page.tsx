@@ -93,7 +93,7 @@ function InfiniteCarousel({ title, images }: InfiniteCarouselProps) {
     <div className="w-full">
       {/* Title */}
       <div className="mb-6 text-center">
-        <h3 className="text-2xl md:text-3xl text-black font-light tracking-wide">
+        <h3 className="text-2xl text-black font-light tracking-wide">
           {title}
         </h3>
       </div>
@@ -291,7 +291,7 @@ export default function ResidentialPage() {
           className="absolute top-0 left-0 w-full h-full z-0"
           style={{
             background:
-              'url("/images/House/16F_HOUSE.webp") no-repeat 50% 60% / cover',
+              'url("/images/House/4F_HOUSE.webp") no-repeat 50% 60% / cover',
             height: "100%",
           }}
         />
@@ -328,7 +328,7 @@ export default function ResidentialPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-black/10 pt-10">
             {highlights.map((item, idx) => (
               <div key={idx} className="flex flex-col gap-2">
-                <span className="text-xs tracking-wider uppercase text-black/50">
+                <span className="text-xs tracking-wider uppercase text-black/50 font-light">
                   {t(item.titleKey)}
                 </span>
                 <span className="text-lg text-black">{t(item.valueKey)}</span>
@@ -345,7 +345,7 @@ export default function ResidentialPage() {
             <span className="text-black/50 font-light tracking-wider uppercase">
               {t("showcase.label")}
             </span>
-            <h2 className="text-3xl md:text-4xl uppercase text-black">
+            <h2 className="text-3xl md:text-4xl uppercase text-black font-light">
               {t("showcase.title")}
             </h2>
           </div>
@@ -373,7 +373,7 @@ export default function ResidentialPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="space-y-8">
-            <h2 className="text-3xl md:text-4xl text-black mb-4">
+            <h2 className="text-3xl md:text-4xl text-black mb-4 font-light">
               {t("cta.title")}
             </h2>
             <p className="text-sm mb-8 text-black/50 font-light max-w-lg mx-auto leading-relaxed">

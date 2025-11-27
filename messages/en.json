@@ -166,6 +166,28 @@
         "label": "Featured Work",
         "title": "Commercial Projects"
       },
+      "projects": {
+        "aeiInternet": {
+          "title": "AEI Internet",
+          "description": "Modern lobby renovation for technology company headquarters"
+        },
+        "hotelDuPark": {
+          "title": "Hotel du Park",
+          "description": "Elegant bar and lounge renovation at Wyndham Hotels"
+        },
+        "doubleTree": {
+          "title": "Double Tree Hotel",
+          "description": "Complete renovation of former Hyatt Regency Montreal including lobby, rooms, and common areas"
+        },
+        "pierrefondsAnimalHospital": {
+          "title": "Pierrefonds Animal Hospital",
+          "description": "Full veterinary clinic renovation with modern medical facilities"
+        },
+        "ritzCarlton": {
+          "title": "The Ritz-Carlton Montreal",
+          "description": "Luxury hotel renovation maintaining heritage while adding modern amenities"
+        }
+      },
       "cta": {
         "title": "Ready to Transform Your Commercial Space?",
         "description": "Let's discuss your commercial project and how we can deliver exceptional results for your business.",
@@ -194,9 +216,39 @@
         "label": "Featured Work",
         "title": "Institutional Projects"
       },
+      "projects": {
+        "welcomeHallPrism": {
+          "title": "Welcome Hall Mission Prism",
+          "description": "Renovation of corridor and offices for Welcome Hall Mission"
+        },
+        "welcomeHallReintegration": {
+          "title": "Welcome Hall Mission Reintegration Centre",
+          "description": "Complete building renovation of 25 rooms for Welcome Hall Mission"
+        },
+        "salvationArmyKitchen": {
+          "title": "Salvation Army Kitchen",
+          "description": "Major renovation of cafeteria and kitchen"
+        },
+        "welcomeHallDental": {
+          "title": "Welcome Hall Mission Dental Clinic",
+          "description": "Major renovation of office spaces, day-care, gym, showers, change rooms, and HVAC"
+        }
+      },
       "partners": {
         "label": "Our Partners",
-        "title": "Trusted Institutional Partners"
+        "title": "Trusted Institutional Partners",
+        "ymca": {
+          "name": "YMCA's of Quebec",
+          "description": "Major Renovation of office spaces, day-care, gym, showers, change rooms, and HVAC."
+        },
+        "chezDoris": {
+          "name": "Chez Doris",
+          "description": "Major renovations and 3-storey addition to community women's shelter."
+        },
+        "mab": {
+          "name": "Montreal Association for the Blind",
+          "description": "Various renovations including cafeteria, resident smoking rooms, accessible toilets and suites."
+        }
       },
       "cta": {
         "title": "Ready to Build Your Institutional Facility?",

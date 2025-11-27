@@ -50,7 +50,7 @@ function MiniCarousel({
         <ChevronRight className="w-5 h-5" />
       </button>
       {/* Dots indicator */}
-      <div className="absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
         {images.map((_, idx) => (
           <button
             key={idx}
@@ -63,7 +63,7 @@ function MiniCarousel({
         ))}
       </div>
       {/* Overlay with project info */}
-      <div className="absolute inset-0 bg-gradient-to-t from-neutral-300/50 via-neutral-300/30 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute inset-0 bg-gradient-to-t from-neutral-500/50 via-neutral-500/30 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
           <h3 className="text-lg font-light uppercase tracking-wide mb-2">
             {title}
@@ -98,64 +98,66 @@ export default function InstitutionalPage() {
     },
   ];
 
+  // McGill University carousel images
+  const mcgillImages = [
+    {
+      src: "/images/McGill/IMG_6445-scaled (Corridor).webp",
+      alt: "McGill Corridor",
+    },
+    {
+      src: "/images/McGill/IMG_6446-scaled (Office).webp",
+      alt: "McGill Office",
+    },
+    {
+      src: "/images/McGill/room.webp",
+      alt: "McGill Room",
+    },
+  ];
+
   const projects = [
     {
       type: "carousel" as const,
       images: welcomeHallImages,
-      title: "Welcome Hall Mission",
-      description:
-        "Renovation of corridor and offices for Welcome Hall Mission",
+      title: t("projects.welcomeHallPrism.title"),
+      description: t("projects.welcomeHallPrism.description"),
     },
     {
       type: "image" as const,
       src: "/images/2222 Ontario Est (Mission)/IMG_5674.webp",
       alt: "2222 Ontario Est Mission Project",
-      title: "Welcome Hall Mission",
-      description:
-        "Complete building renovation of 22 rooms for Welcome Hall Mission",
+      title: t("projects.welcomeHallReintegration.title"),
+      description: t("projects.welcomeHallReintegration.description"),
     },
     {
       type: "image" as const,
       src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6260.webp",
       alt: "880 rue Guy Salvation Army Kitchen",
-      title: "Salvation Army",
-      description: "Major renovation and addition to existing building",
+      title: t("projects.salvationArmyKitchen.title"),
+      description: t("projects.salvationArmyKitchen.description"),
     },
     {
-      type: "image" as const,
-      src: "/images/McGill/IMG_6445-scaled (Corridor).webp",
-      alt: "McGill Corridor",
-      title: "McGill University",
-      description:
-        "Major renovation of office spaces, day-care, gym, showers, change rooms, and HVAC",
-    },
-    {
-      type: "image" as const,
-      src: "/images/McGill/IMG_6446-scaled (Office).webp",
-      alt: "McGill Office",
-      title: "McGill University",
-      description: "Modern office space renovation with contemporary finishes",
+      type: "carousel" as const,
+      images: mcgillImages,
+      title: t("projects.welcomeHallDental.title"),
+      description: t("projects.welcomeHallDental.description"),
     },
   ];
 
   const partners = [
     {
-      name: "YMCA's of Quebec",
+      name: t("partners.ymca.name"),
       logo: "/images/logos/ymca.jpg",
-      description:
-        "Major Renovation of office spaces, day-care, gym, showers, change rooms, and HVAC.",
+      description: t("partners.ymca.description"),
     },
     {
-      name: "Chez Doris",
+      name: t("partners.chezDoris.name"),
       logo: "/images/logos/chez-doris.webp",
-      description:
-        "Major renovations and 3-storey addition to community women's shelter.",
+      description: t("partners.chezDoris.description"),
     },
     {
-      name: "Montreal Association for the Blind",
+      name: t("partners.mab.name"),
       logo: "/images/logos/mab.jpeg",
-      description:
-        "Various renovations including cafeteria, resident smoking rooms, accessible toilets and suites.",
+      description: t("partners.mab.description"),
     },
   ];
 
@@ -254,7 +256,7 @@ export default function InstitutionalPage() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     {/* Overlay with project info */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-300/50 via-neutral-300/30 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-500/50 via-neutral-500/30 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                         <h3 className="text-lg font-light uppercase tracking-wide mb-2">
                           {item.title}

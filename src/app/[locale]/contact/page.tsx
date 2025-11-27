@@ -107,7 +107,7 @@ export default function ContactPage() {
               {t("intro.label")}
             </span>
             <div className="flex flex-col gap-6 items-start justify-start md:max-w-2xl">
-              <h2 className="text-3xl md:text-4xl uppercase text-black">
+              <h2 className="text-3xl md:text-4xl uppercase text-black font-light">
                 {t("intro.title")}
               </h2>
               <p className="text-sm md:text-base text-black/80 font-light leading-7">
@@ -126,7 +126,9 @@ export default function ContactPage() {
               className="bg-black/5 p-6 flex flex-col gap-4">
               <Phone className="h-6 w-6 text-black" />
               <div>
-                <h3 className="text-lg text-black mb-2">{t("cards.phone")}</h3>
+                <h3 className="text-lg text-black mb-2 font-light">
+                  {t("cards.phone")}
+                </h3>
                 <a
                   href="tel:+15149080266"
                   className="text-sm font-light text-black/70 hover:text-black transition-colors">
@@ -143,7 +145,7 @@ export default function ContactPage() {
               className="bg-black/5 p-6 flex flex-col gap-4">
               <Mail className="h-6 w-6 text-black" />
               <div>
-                <h3 className="text-lg font text-black mb-2">
+                <h3 className="text-lg font-light text-black mb-2">
                   {t("cards.email")}
                 </h3>
                 <a
@@ -162,7 +164,9 @@ export default function ContactPage() {
               className="bg-black/5 p-6 flex flex-col gap-4">
               <Clock className="h-6 w-6 text-black" />
               <div>
-                <h3 className="text-lg text-black mb-2">{t("cards.hours")}</h3>
+                <h3 className="text-lg font-light text-black mb-2">
+                  {t("cards.hours")}
+                </h3>
                 <p className="text-sm font-light text-black/70 whitespace-pre-line">
                   {t("cards.hoursValue")}
                 </p>
@@ -183,7 +187,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="bg-white p-8">
-              <h3 className="text-2xl md:text-3xl uppercase text-black mb-6">
+              <h3 className="text-2xl md:text-3xl uppercase text-black mb-6 font-light">
                 {t("form.title")}
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -201,7 +205,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10"
+                      className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 font-light"
                       placeholder={t("form.namePlaceholder")}
                     />
                   </div>
@@ -217,7 +221,7 @@ export default function ContactPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10"
+                      className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 font-light"
                       placeholder={t("form.companyPlaceholder")}
                     />
                   </div>
@@ -237,7 +241,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10"
+                      className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 font-light"
                       placeholder={t("form.emailPlaceholder")}
                     />
                   </div>
@@ -254,7 +258,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10"
+                      className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 font-light"
                       placeholder={t("form.phonePlaceholder")}
                     />
                   </div>
@@ -273,7 +277,7 @@ export default function ContactPage() {
                       value={formData.projectType}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 appearance-none cursor-pointer"
+                      className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 appearance-none cursor-pointer font-light"
                       style={{
                         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000000' d='M6 9L1 4h10z'/%3E%3C/svg%3E")`,
                         backgroundRepeat: "no-repeat",
@@ -305,7 +309,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 resize-none"
+                    className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 resize-none font-light"
                     placeholder={t("form.messagePlaceholder")}></textarea>
                 </div>
 
@@ -338,7 +342,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white p-8 space-y-8">
               <div>
-                <h3 className="text-2xl md:text-3xl uppercase text-black mb-6">
+                <h3 className="text-2xl md:text-3xl uppercase text-black mb-6 font-light">
                   {t("office.title")}
                 </h3>
                 <p className="text-sm md:text-base text-black/70 font-light leading-7 mb-8">
@@ -350,7 +354,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-lg text-black mb-2">
+                    <h4 className="text-lg font-light text-black mb-2">
                       {t("office.companyName")}
                     </h4>
                     <p className="text-sm font-light text-black/70 leading-relaxed whitespace-pre-line">
@@ -364,7 +368,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <Building2 className="h-6 w-6 text-black flex-shrink-0" />
                   <div>
-                    <h4 className="text-lg text-black mb-2">
+                    <h4 className="text-lg font-light text-black mb-2">
                       {t("office.whatWeDo")}
                     </h4>
                     <p className="text-sm font-light text-black/70 leading-relaxed">

@@ -166,6 +166,28 @@
         "label": "Travaux en vedette",
         "title": "Projets commerciaux"
       },
+      "projects": {
+        "aeiInternet": {
+          "title": "AEI Internet",
+          "description": "Rénovation moderne du hall d'entrée pour le siège social d'une entreprise technologique"
+        },
+        "hotelDuPark": {
+          "title": "Hotel du Park",
+          "description": "Rénovation élégante du bar et du salon chez Wyndham Hotels"
+        },
+        "doubleTree": {
+          "title": "Double Tree Hotel",
+          "description": "Rénovation complète de l'ancien Hyatt Regency Montréal incluant le hall, les chambres et les espaces communs"
+        },
+        "pierrefondsAnimalHospital": {
+          "title": "Hôpital vétérinaire de Pierrefonds",
+          "description": "Rénovation complète de la clinique vétérinaire avec installations médicales modernes"
+        },
+        "ritzCarlton": {
+          "title": "Le Ritz-Carlton Montréal",
+          "description": "Rénovation de l'hôtel de luxe préservant le patrimoine tout en ajoutant des commodités modernes"
+        }
+      },
       "cta": {
         "title": "Prêt à transformer votre espace commercial?",
         "description": "Discutons de votre projet commercial et de la façon dont nous pouvons obtenir des résultats exceptionnels pour votre entreprise.",
@@ -194,9 +216,39 @@
         "label": "Travaux en vedette",
         "title": "Projets institutionnels"
       },
+      "projects": {
+        "welcomeHallPrism": {
+          "title": "Welcome Hall Mission Prism",
+          "description": "Rénovation de corridor et de bureaux pour Welcome Hall Mission"
+        },
+        "welcomeHallReintegration": {
+          "title": "Centre de réintégration Welcome Hall Mission",
+          "description": "Rénovation complète de 25 chambres pour Welcome Hall Mission"
+        },
+        "salvationArmyKitchen": {
+          "title": "Cuisine de Salvation Army",
+          "description": "Rénovation majeure de la cafétéria et de la cuisine"
+        },
+        "welcomeHallDental": {
+          "title": "Clinique dentaire Welcome Hall Mission",
+          "description": "Rénovation majeure de bureaux, garderie, gymnase, douches, vestiaires et CVAC"
+        }
+      },
       "partners": {
         "label": "Nos partenaires",
-        "title": "Partenaires institutionnels de confiance"
+        "title": "Partenaires institutionnels de confiance",
+        "ymca": {
+          "name": "YMCA du Québec",
+          "description": "Rénovation majeure de bureaux, garderie, gymnase, douches, vestiaires et CVAC."
+        },
+        "chezDoris": {
+          "name": "Chez Doris",
+          "description": "Rénovations majeures et ajout de 3 étages au refuge communautaire pour femmes."
+        },
+        "mab": {
+          "name": "Association montréalaise pour les aveugles",
+          "description": "Diverses rénovations incluant cafétéria, salles fumeurs pour résidents, toilettes et suites accessibles."
+        }
       },
       "cta": {
         "title": "Prêt à construire votre installation institutionnelle?",
