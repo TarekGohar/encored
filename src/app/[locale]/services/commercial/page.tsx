@@ -1,12 +1,29 @@
 "use client";
 
-import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function CommercialPage() {
+  const t = useTranslations("Services.commercial");
+
+  const highlights = [
+    { titleKey: "highlights.sectors", valueKey: "highlights.sectorsValue" },
+    { titleKey: "highlights.scale", valueKey: "highlights.scaleValue" },
+    { titleKey: "highlights.approach", valueKey: "highlights.approachValue" },
+  ];
+
+  const images = [
+    { src: "/images/AEI Internet/AEILobby.webp", alt: "AEI Internet Lobby" },
+    { src: "/images/Hotel du Park/WyndhamHotels (Bar).webp", alt: "Hotel du Park Bar" },
+    { src: "/images/Hyatt Regency Montreal/Hotels-HyattRegencyMontreal1.webp", alt: "Hyatt Regency Montreal" },
+    { src: "/images/Hyatt Regency Montreal/Lobby-MapofWorld.webp", alt: "Hyatt Regency Lobby" },
+    { src: "/images/Pierrefonds Animal Hospital/Commercial-PierrefondsAnimalHospital-1.webp", alt: "Pierrefonds Animal Hospital" },
+    { src: "/images/The Ritz-Carlton Montreal/Ritz Montreal (1).webp", alt: "The Ritz-Carlton Montreal" },
+  ];
+
   return (
     <>
       <section id="commercial-hero" className="relative h-[60vh] min-h-[30rem]">
@@ -28,7 +45,7 @@ export default function CommercialPage() {
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] text-white text-center uppercase opacity-90">
-            Commercial
+            {t("hero.title")}
           </h1>
         </div>
       </section>
@@ -38,56 +55,23 @@ export default function CommercialPage() {
         <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col gap-10">
           <div className="flex items-start justify-between flex-col md:flex-row">
             <span className="text-black w-fit p-1 font-light tracking-wider uppercase">
-              Commercial Projects
+              {t("content.label")}
             </span>
             <div className="flex flex-col gap-6 items-start justify-start md:max-w-2xl text-black/80 font-light leading-7">
-              <p className="text-sm md:text-base">
-                Encotec brings decades of expertise to commercial construction
-                and renovation projects across Montreal and beyond. From office
-                buildings and retail spaces to hospitality venues and
-                institutional facilities, we deliver exceptional results that
-                meet the unique demands of commercial environments.
-              </p>
-              <p className="text-sm md:text-base">
-                Our commercial portfolio spans a diverse range of sectors
-                including hotels, corporate offices, healthcare facilities,
-                educational institutions, and retail establishments. We
-                understand the critical importance of minimizing disruption to
-                your operations while maintaining the highest standards of
-                quality and safety.
-              </p>
-              <p className="text-sm md:text-base">
-                Whether you need a complete build-out, strategic renovations, or
-                ongoing maintenance, our team coordinates every aspect of your
-                project with precision and professionalism. We work closely with
-                architects, engineers, and stakeholders to ensure your
-                commercial space reflects your brand and serves your business
-                objectives.
-              </p>
+              <p className="text-sm md:text-base">{t("content.paragraph1")}</p>
+              <p className="text-sm md:text-base">{t("content.paragraph2")}</p>
+              <p className="text-sm md:text-base">{t("content.paragraph3")}</p>
             </div>
           </div>
 
           {/* Project highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-black/10 pt-10">
-            {[
-              {
-                title: "Sectors Served",
-                value: "Hotels, Offices, Retail & More",
-              },
-              {
-                title: "Project Scale",
-                value: "Small Fit-Outs to Large Build-Outs",
-              },
-              {
-                title: "Approach",
-                value: "Minimal Disruption, Maximum Quality",
-              },
-            ].map((item, idx) => (
+            {highlights.map((item, idx) => (
               <div key={idx} className="flex flex-col gap-2">
                 <span className="text-xs tracking-wider uppercase text-black/50">
-                  {item.title}
+                  {t(item.titleKey)}
                 </span>
-                <span className="text-lg text-black">{item.value}</span>
+                <span className="text-lg text-black">{t(item.valueKey)}</span>
               </div>
             ))}
           </div>
@@ -99,42 +83,16 @@ export default function CommercialPage() {
         <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-8 items-center text-center mb-12">
             <span className="text-black/50 font-light tracking-wider uppercase">
-              Featured Work
+              {t("showcase.label")}
             </span>
             <h2 className="text-3xl md:text-4xl uppercase text-black">
-              Commercial Projects
+              {t("showcase.title")}
             </h2>
           </div>
 
           {/* Image grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                src: "/images/AEI Internet/AEILobby.webp",
-                alt: "AEI Internet Lobby",
-              },
-              {
-                src: "/images/Hotel du Park/WyndhamHotels (Bar).webp",
-                alt: "Hotel du Park Bar",
-              },
-              {
-                src: "/images/Hyatt Regency Montreal/Hotels-HyattRegencyMontreal1.webp",
-                alt: "Hyatt Regency Montreal",
-              },
-
-              {
-                src: "/images/Hyatt Regency Montreal/Lobby-MapofWorld.webp",
-                alt: "Hyatt Regency Lobby",
-              },
-              {
-                src: "/images/Pierrefonds Animal Hospital/Commercial-PierrefondsAnimalHospital-1.webp",
-                alt: "Pierrefonds Animal Hospital",
-              },
-              {
-                src: "/images/The Ritz-Carlton Montreal/Ritz Montreal (1).webp",
-                alt: "The Ritz-Carlton Montreal",
-              },
-            ].map((item, idx) => (
+            {images.map((item, idx) => (
               <motion.div
                 key={idx}
                 className="relative w-full h-[20rem] overflow-hidden rounded-sm"
@@ -169,17 +127,16 @@ export default function CommercialPage() {
             transition={{ duration: 0.8 }}
             className="space-y-8">
             <h2 className="text-3xl md:text-4xl text-black mb-4">
-              Ready to Transform Your Commercial Space?
+              {t("cta.title")}
             </h2>
             <p className="text-sm mb-8 text-black/50 font-light max-w-lg mx-auto leading-relaxed">
-              Let's discuss your commercial project and how we can deliver
-              exceptional results for your business.
+              {t("cta.description")}
             </p>
             <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
               <Link
                 href="/contact"
                 className="w-[15rem] flex items-center justify-center gap-2">
-                Contact Us
+                {t("cta.button")}
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>

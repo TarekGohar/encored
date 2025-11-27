@@ -1,9 +1,8 @@
 "use client";
 
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useState, useEffect, useRef } from "react";
-import { useTranslations } from "next-intl";
-import { usePathname } from "@/i18n/routing";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 
 interface navbarProps {
@@ -18,6 +17,8 @@ export default function Navbar({ light }: navbarProps) {
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
   const t = useTranslations("Navbar");
   const pathname = usePathname();
+  const locale = useLocale();
+  const targetLocale = locale === "en" ? "fr" : "en";
 
   const [visibleWords, setVisibleWords] = useState({
     about: false,
@@ -123,8 +124,8 @@ export default function Navbar({ light }: navbarProps) {
         <div className="hidden lg:flex items-center gap-x-16 text-black">
           <Link
             href="/about"
-            className="font-light tracking-widest hover:cursor-pointer ">
-            About
+            className="font-light tracking hover:cursor-pointer ">
+            {t("about")}
           </Link>
 
           {/* Collections Dropdown */}
@@ -140,9 +141,8 @@ export default function Navbar({ light }: navbarProps) {
               setIsOpen(false);
             }}>
             <div className="group flex items-center gap-x-2">
-              <span
-                className={` relative font-light tracking-widest cursor-pointer `}>
-                Services
+              <span className={` relative font-light tracking cursor-pointer `}>
+                {t("services")}
               </span>
               <svg
                 className={`w-5 h-5  transition-transform ${
@@ -164,18 +164,18 @@ export default function Navbar({ light }: navbarProps) {
 
           <Link
             href="/contact"
-            className={`font-light tracking-widest p-4 px-5`}
+            className={`font-light tracking p-4 px-5`}
             style={{
               backdropFilter: "blur(2px)",
               backgroundColor: "rgba(230, 230, 230, 0.1)",
             }}>
-            Contact Us
+            {t("contactUs")}
           </Link>
           <Link
             href={pathname}
-            locale={t("locale") as "en" | "fr" | undefined}
-            className={`uppercase font-light tracking-widest`}>
-            {t("locale")}
+            locale={targetLocale}
+            className={`uppercase font-light tracking`}>
+            {targetLocale}
           </Link>
         </div>
 
@@ -218,7 +218,7 @@ export default function Navbar({ light }: navbarProps) {
             style={{
               WebkitBackdropFilter: "blur(12px)",
               backdropFilter: "blur(12px)",
-              backgroundColor: "rgba(210, 210, 210, 0.5)",
+              backgroundColor: "rgba(255, 255, 255, 0.2)",
               isolation: "isolate",
               WebkitTransform: "translateZ(0)",
               transform: "translateZ(0)",
@@ -227,22 +227,22 @@ export default function Navbar({ light }: navbarProps) {
             <li>
               <Link
                 href={"/services/commercial"}
-                className="font-light tracking-widest text-black">
-                Commercial
+                className="font-light tracking text-black">
+                {t("commercial")}
               </Link>
             </li>
             <li>
               <Link
                 href={"/services/institutional"}
-                className="font-light tracking-widest text-black">
-                Institutional
+                className="font-light tracking text-black">
+                {t("institutional")}
               </Link>
             </li>
             <li>
               <Link
                 href={"/services/residential"}
-                className="font-light tracking-widest text-black">
-                Residential
+                className="font-light tracking text-black">
+                {t("residential")}
               </Link>
             </li>
           </ul>
@@ -266,7 +266,7 @@ export default function Navbar({ light }: navbarProps) {
           href="/about"
           className={`word  ${visibleWords.about ? "show" : ""}`}
           onClick={() => setMenu(false)}>
-          About
+          {t("about")}
         </Link>
         <div>
           <div
@@ -277,7 +277,7 @@ export default function Navbar({ light }: navbarProps) {
               setHover(!hover);
               setIsOpen(!isOpen);
             }}>
-            <span className={`relative cursor-pointer `}>Services</span>
+            <span className={`relative cursor-pointer `}>{t("services")}</span>
             <svg
               className={`w-5 h-5 transition-transform ${
                 isOpen ? "rotate-90" : ""
@@ -302,37 +302,37 @@ export default function Navbar({ light }: navbarProps) {
               <li>
                 <Link
                   href={"/services/commercial"}
-                  className="font-light tracking-widest text-black/70 hover:text-black"
+                  className="font-light tracking text-black/70 hover:text-black"
                   onClick={() => {
                     setMenu(false);
                     setHover(false);
                     setIsOpen(false);
                   }}>
-                  Commercial
+                  {t("commercial")}
                 </Link>
               </li>
               <li>
                 <Link
                   href={"/services/institutional"}
-                  className="font-light tracking-widest text-black/70 hover:text-black"
+                  className="font-light tracking text-black/70 hover:text-black"
                   onClick={() => {
                     setMenu(false);
                     setHover(false);
                     setIsOpen(false);
                   }}>
-                  Institutional
+                  {t("institutional")}
                 </Link>
               </li>
               <li>
                 <Link
                   href={"/services/residential"}
-                  className="font-light tracking-widest text-black/70 hover:text-black"
+                  className="font-light tracking text-black/70 hover:text-black"
                   onClick={() => {
                     setMenu(false);
                     setHover(false);
                     setIsOpen(false);
                   }}>
-                  Residential
+                  {t("residential")}
                 </Link>
               </li>
             </ul>
@@ -343,14 +343,14 @@ export default function Navbar({ light }: navbarProps) {
           href="/contact"
           className={`word  ${visibleWords.contact ? "show" : ""}`}
           onClick={() => setMenu(false)}>
-          Contact
+          {t("contact")}
         </Link>
         <Link
           href={pathname}
-          locale={t("locale") as "en" | "fr" | undefined}
+          locale={targetLocale}
           className={`word  uppercase ${visibleWords.lang ? "show" : ""}`}
           onClick={() => setMenu(false)}>
-          {t("locale")}
+          {targetLocale}
         </Link>
       </div>
     </>

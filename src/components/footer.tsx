@@ -3,8 +3,10 @@
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
   const year = new Date().getFullYear();
 
   return (
@@ -23,31 +25,30 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm text-white/70 font-light leading-relaxed">
-              Building relationships and quality construction projects since
-              1994.
+              {t("tagline")}
             </p>
           </div>
 
           {/* Services */}
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-medium uppercase tracking-wider">
-              Services
+              {t("services")}
             </h3>
             <div className="flex flex-col gap-3 text-sm text-white/70 font-light">
               <Link
                 href="/services/commercial"
                 className="hover:text-white transition-colors">
-                Commercial
+                {t("commercial")}
               </Link>
               <Link
                 href="/services/institutional"
                 className="hover:text-white transition-colors">
-                Institutional
+                {t("institutional")}
               </Link>
               <Link
                 href="/services/residential"
                 className="hover:text-white transition-colors">
-                Residential
+                {t("residential")}
               </Link>
             </div>
           </div>
@@ -55,23 +56,18 @@ export default function Footer() {
           {/* Company */}
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-medium uppercase tracking-wider">
-              Company
+              {t("company")}
             </h3>
             <div className="flex flex-col gap-3 text-sm text-white/70 font-light">
               <Link
                 href="/about"
                 className="hover:text-white transition-colors">
-                About Us
-              </Link>
-              <Link
-                href="/collections"
-                className="hover:text-white transition-colors">
-                Portfolio
+                {t("aboutUs")}
               </Link>
               <Link
                 href="/contact"
                 className="hover:text-white transition-colors">
-                Contact
+                {t("contact")}
               </Link>
             </div>
           </div>
@@ -79,7 +75,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-medium uppercase tracking-wider">
-              Contact
+              {t("contactTitle")}
             </h3>
             <div className="flex flex-col gap-4 text-sm text-white/70 font-light">
               <div className="flex items-start gap-3">
@@ -111,10 +107,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/50 font-light">
-            © {year} Encotec Inc. All Rights Reserved.
+            {t("copyright", { year })}
           </p>
           <div className="flex items-center gap-6 text-xs text-white/50 font-light">
-            <span>Monday - Friday: 8:00 AM - 5:00 PM</span>
+            <span>{t("hours")}</span>
           </div>
         </div>
       </div>

@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useState, useEffect, useCallback, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 interface InfiniteCarouselProps {
   title: string;
@@ -130,12 +131,12 @@ function InfiniteCarousel({ title, images }: InfiniteCarouselProps) {
               key={idx}
               className="relative h-[25rem] md:h-[35rem] flex-shrink-0 px-2"
               style={{ width: `${slideWidthPercent}%` }}>
-              <div className="relative w-full h-full overflow-hidden rounded-sm bg-black/5">
+              <div className="relative w-full h-full overflow-hidden rounded-sm">
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-contain"
+                  className="object-cover"
                   sizes="50vw"
                 />
                 {/* Overlay on hover */}
@@ -171,6 +172,47 @@ function InfiniteCarousel({ title, images }: InfiniteCarouselProps) {
 }
 
 export default function ResidentialPage() {
+  const t = useTranslations("Services.residential");
+
+  const highlights = [
+    { titleKey: "highlights.sectors", valueKey: "highlights.sectorsValue" },
+    { titleKey: "highlights.scale", valueKey: "highlights.scaleValue" },
+    { titleKey: "highlights.approach", valueKey: "highlights.approachValue" },
+  ];
+
+  const carousels = [
+    {
+      titleKey: "showcase.residence1",
+      images: [
+        { src: "/images/rooftop/IMG_0234 (1).webp", alt: "Rooftop Project" },
+        { src: "/images/rooftop/IMG_0267.webp", alt: "Rooftop Development" },
+        { src: "/images/rooftop/IMG_0261.webp", alt: "Rooftop View" },
+        { src: "/images/rooftop/roof.webp", alt: "Rooftop Space" },
+      ],
+    },
+    {
+      titleKey: "showcase.residence2",
+      images: [
+        { src: "/images/Westmount/Kitchen.webp", alt: "Westmount Kitchen" },
+        { src: "/images/Westmount/Corridor.webp", alt: "Westmount Corridor" },
+        { src: "/images/Westmount/MasterBathShower.webp", alt: "Westmount Master Bath" },
+        { src: "/images/Westmount/SittingRoom.webp", alt: "Westmount Sitting Room" },
+        { src: "/images/Westmount/View.webp", alt: "Westmount View" },
+      ],
+    },
+    {
+      titleKey: "showcase.residence3",
+      images: [
+        { src: "/images/House/1F_HOUSE.jpg", alt: "Private Residence Exterior" },
+        { src: "/images/House/2F_HOUSE.jpg", alt: "Private Residence Interior" },
+        { src: "/images/House/3F_HOUSE.jpg", alt: "Private Residence Living Space" },
+        { src: "/images/House/4F_HOUSE.jpg", alt: "Private Residence Details" },
+        { src: "/images/House/5F_HOUSE.jpg", alt: "Private Residence Architecture" },
+        { src: "/images/House/6F_HOUSE.jpg", alt: "Private Residence Design" },
+      ],
+    },
+  ];
+
   return (
     <>
       <section
@@ -178,10 +220,11 @@ export default function ResidentialPage() {
         className="relative h-[60vh] min-h-[30rem]">
         {/* Background image */}
         <div
-          className="absolute inset-0 z-0"
+          className="absolute top-0 left-0 w-full h-full z-0"
           style={{
             background:
-              'url("/images/building-4.webp") no-repeat center center / cover',
+              'url("/images/House/16F_HOUSE.jpg") no-repeat 50% 60% / cover',
+            height: "100%",
           }}
         />
         {/* Shader overlay */}
@@ -189,12 +232,12 @@ export default function ResidentialPage() {
           className="absolute inset-0 z-10 pointer-events-none"
           style={{
             background:
-              "linear-gradient(135deg, rgba(25,36,52,0.7) 0%, rgba(0,0,0,0.15) 60%, rgba(180,180,216,0.35) 100%)",
+              "linear-gradient(135deg, rgba(25,36,52,0.8) 0%, rgba(0,0,0,0.15) 60%, rgba(180,180,216,0.35) 100%)",
           }}
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] text-white text-center uppercase opacity-90">
-            Residential
+            {t("hero.title")}
           </h1>
         </div>
       </section>
@@ -204,56 +247,23 @@ export default function ResidentialPage() {
         <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col gap-10">
           <div className="flex items-start justify-between flex-col md:flex-row">
             <span className="text-black w-fit p-1 font-light tracking-wider uppercase">
-              Residential Projects
+              {t("content.label")}
             </span>
             <div className="flex flex-col gap-6 items-start justify-start md:max-w-2xl text-black/80 font-light leading-7">
-              <p className="text-sm md:text-base">
-                Encotec brings craftsmanship and attention to detail to every
-                residential project. From custom homes and luxury condominiums
-                to multi-unit developments and heritage renovations, we create
-                living spaces that combine beauty, functionality, and lasting
-                quality.
-              </p>
-              <p className="text-sm md:text-base">
-                Our residential portfolio includes single-family homes,
-                apartment buildings, townhouse complexes, and high-end
-                residential renovations. We understand that homes are personal
-                spaces, and we work closely with homeowners, architects, and
-                designers to bring your vision to life with meticulous care and
-                professional execution.
-              </p>
-              <p className="text-sm md:text-base">
-                Whether you're building a dream home from the ground up,
-                renovating a heritage property, or developing a multi-unit
-                residential complex, our team manages every detail with
-                precision. We combine modern construction techniques with
-                timeless craftsmanship to deliver residential spaces that stand
-                the test of time.
-              </p>
+              <p className="text-sm md:text-base">{t("content.paragraph1")}</p>
+              <p className="text-sm md:text-base">{t("content.paragraph2")}</p>
+              <p className="text-sm md:text-base">{t("content.paragraph3")}</p>
             </div>
           </div>
 
           {/* Project highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-black/10 pt-10">
-            {[
-              {
-                title: "Specialization",
-                value: "Custom Homes & Renovations",
-              },
-              {
-                title: "Craftsmanship",
-                value: "Attention to Every Detail",
-              },
-              {
-                title: "Service",
-                value: "From Concept to Completion",
-              },
-            ].map((item, idx) => (
+            {highlights.map((item, idx) => (
               <div key={idx} className="flex flex-col gap-2">
                 <span className="text-xs tracking-wider uppercase text-black/50">
-                  {item.title}
+                  {t(item.titleKey)}
                 </span>
-                <span className="text-lg text-black">{item.value}</span>
+                <span className="text-lg text-black">{t(item.valueKey)}</span>
               </div>
             ))}
           </div>
@@ -265,55 +275,22 @@ export default function ResidentialPage() {
         <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-8 items-center text-center mb-12">
             <span className="text-black/50 font-light tracking-wider uppercase">
-              Featured Work
+              {t("showcase.label")}
             </span>
             <h2 className="text-3xl md:text-4xl uppercase text-black">
-              Residential Projects
+              {t("showcase.title")}
             </h2>
           </div>
 
           {/* Infinite Image Carousels */}
           <div className="flex flex-col gap-16">
-            <InfiniteCarousel
-              title="Private Residence #1"
-              images={[
-                {
-                  src: "/images/rooftop/IMG_0234 (1).webp",
-                  alt: "Rooftop Project",
-                },
-                {
-                  src: "/images/rooftop/IMG_0267.webp",
-                  alt: "Rooftop Development",
-                },
-                { src: "/images/rooftop/IMG_0261.webp", alt: "Rooftop View" },
-                { src: "/images/rooftop/roof.webp", alt: "Rooftop Space" },
-              ]}
-            />
-            <InfiniteCarousel
-              title="Private Residence #2"
-              images={[
-                {
-                  src: "/images/Westmount/Kitchen.webp",
-                  alt: "Westmount Kitchen",
-                },
-                {
-                  src: "/images/Westmount/Corridor.webp",
-                  alt: "Westmount Corridor",
-                },
-                {
-                  src: "/images/Westmount/MasterBathShower.webp",
-                  alt: "Westmount Master Bath",
-                },
-                {
-                  src: "/images/Westmount/SittingRoom.webp",
-                  alt: "Westmount Sitting Room",
-                },
-                {
-                  src: "/images/Westmount/View.webp",
-                  alt: "Westmount View",
-                },
-              ]}
-            />
+            {carousels.map((carousel, idx) => (
+              <InfiniteCarousel
+                key={idx}
+                title={t(carousel.titleKey)}
+                images={carousel.images}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -329,17 +306,16 @@ export default function ResidentialPage() {
             transition={{ duration: 0.8 }}
             className="space-y-8">
             <h2 className="text-3xl md:text-4xl text-black mb-4">
-              Ready to Build Your Dream Home?
+              {t("cta.title")}
             </h2>
             <p className="text-sm mb-8 text-black/50 font-light max-w-lg mx-auto leading-relaxed">
-              Let's bring your residential vision to life with craftsmanship and
-              care that exceeds expectations.
+              {t("cta.description")}
             </p>
             <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
               <Link
                 href="/contact"
                 className="w-[15rem] flex items-center justify-center gap-2">
-                Contact Us
+                {t("cta.button")}
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>

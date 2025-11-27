@@ -5,9 +5,30 @@ import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import { ChevronRight } from "lucide-react";
 import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function PortfolioSection() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const t = useTranslations("Home.portfolio");
+
+  const sectors = [
+    {
+      key: "commercial",
+      image: "/images/McGraw/mcgraw.webp",
+      link: "/services/commercial",
+    },
+    {
+      key: "institutional",
+      image: "/images/McGill/room.webp",
+      link: "/services/institutional",
+    },
+    {
+      key: "residential",
+      image: "/images/Westmount/View.webp",
+      link: "/services/residential",
+    },
+  ];
+
   return (
     <section className="bg-theme-background-light text-theme-foreground py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  flex flex-col gap-4 text-center items-center justify-center">
@@ -15,23 +36,20 @@ export default function PortfolioSection() {
           className={`${
             isMobile ? "w-full" : "w-1/3"
           } text-black/50 font-light tracking-wider uppercase`}>
-          Sectors We Serve
+          {t("label")}
         </span>
 
         <h2
           className={`${
             isMobile ? "text-2xl" : "text-3xl md:text-4xl"
           } text-black uppercase font-light`}>
-          We Serve a Variety of Sectors
+          {t("title")}
         </h2>
         <p
           className={`text-sm text-black/50 font-light ${
             isMobile ? "max-w-full" : "max-w-2xl"
           }`}>
-          From custom homes and modern apartments to large-scale institutional
-          spaces and commercial buildings, our expertise spans every facet of
-          construction. We deliver quality, reliability, and innovative
-          solutions across residential, institutional, and commercial projects.
+          {t("description")}
         </p>
 
         <motion.div
@@ -47,23 +65,7 @@ export default function PortfolioSection() {
               },
             },
           }}>
-          {[
-            {
-              industry: "Commercial",
-              image: "/images/McGraw/mcgraw.webp",
-              link: "/services/commercial",
-            },
-            {
-              industry: "Institutional",
-              image: "/images/McGill/room.webp",
-              link: "/services/institutional",
-            },
-            {
-              industry: "Residential",
-              image: "/images/Westmount/View.webp",
-              link: "/services/residential",
-            },
-          ].map((item, index) => (
+          {sectors.map((item, index) => (
             <Link href={item.link as any} key={index} className="block">
               <motion.div
                 className={`w-full md:w-80 lg:w-[20rem] h-[20rem] md:h-[22rem] lg:h-[25rem] flex flex-col gap-2 bg-black/3 p-6 overflow-hidden relative cursor-pointer ${
@@ -99,7 +101,7 @@ export default function PortfolioSection() {
                 }}>
                 <Image
                   src={item.image}
-                  alt={`${item.industry}`}
+                  alt={t(item.key)}
                   width={1000}
                   height={160}
                   className="object-cover object-center w-full h-full absolute top-0 left-0"
@@ -118,11 +120,13 @@ export default function PortfolioSection() {
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   viewport={{ once: true }}>
                   <span className="text-sm font-light tracking-wider text-[#ffffff] leading-tight">
-                    {item.industry}
+                    {t(item.key)}
                   </span>
                 </motion.h3>
                 <div className="absolute bottom-0 left-0 text-sm text-[#ffffff] leading-tight z-20 p-6 flex items-center gap-2">
-                  <span className="text-sm font-light">View Collection</span>
+                  <span className="text-sm font-light">
+                    {t("viewCollection")}
+                  </span>
                   <ChevronRight className="w-4 h-4" />
                 </div>
               </motion.div>

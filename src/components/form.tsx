@@ -1,8 +1,7 @@
 "use client";
 
 import PhoneInput from "@/components/phone-input";
-import { useRouter } from "@/i18n/routing";
-import { usePathname } from "@/i18n/routing";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import DropdownSelector from "./DropdownSelector";

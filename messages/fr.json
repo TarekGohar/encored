@@ -1,51 +1,240 @@
 {
   "Metadata": {
     "home-title": "Accueil",
-    "home-description": "Bienvenue chez Ed Battah & Co., un importateur et distributeur de confiance de collections européennes de prêt",
+    "home-description": "Encotec Inc. - Services complets de construction et de rénovation depuis 1994.",
     "about-title": "À propos de nous",
-    "about-description": "En savoir plus sur notre histoire, notre mission et nos collections.",
-    "collections-title": "Collections",
-    "collections-description": "Découvrez nos collections de marques européennes.",
-    "buy-title": "Nous contacter",
-    "buy-description": "Pour plus d'informations sur les détaillants près de vous et pour toute autre demande.",
-    "buy-success-title": "Réservation effectuée!",
-    "buy-success-description": "Nous vous contacterons bientôt."
+    "about-description": "En savoir plus sur notre histoire et notre mission.",
+    "contact-title": "Nous contacter",
+    "contact-description": "Contactez-nous pour votre prochain projet."
   },
   "Home": {
+    "hero": {
+      "title": "Encotec"
+    },
     "about": {
-      "header": "À propos de nous",
-      "subheader": "En savoir plus sur notre histoire, notre mission et nos collections.",
-      "learn": "Savoir plus"
+      "label": "À propos de nous",
+      "title": "Bâtir des relations depuis 1994.",
+      "description": "Depuis 1994, Encotec Inc. offre des services complets de construction et de rénovation — cultivant des relations solides et axées sur le travail d'équipe avec nos clients, consultants et sous-traitants sur chaque projet.",
+      "cta": "En savoir plus"
     },
-    "collections": {
-      "header": "Collections",
-      "subheader": "Découvrez nos collections de marques européennes.",
-      "view": "Voir collections"
+    "portfolio": {
+      "label": "Secteurs que nous desservons",
+      "title": "Nous desservons une variété de secteurs",
+      "description": "Des maisons sur mesure et appartements modernes aux grands espaces institutionnels et bâtiments commerciaux, notre expertise couvre tous les aspects de la construction. Nous offrons qualité, fiabilité et solutions innovantes pour les projets résidentiels, institutionnels et commerciaux.",
+      "commercial": "Commercial",
+      "institutional": "Institutionnel",
+      "residential": "Résidentiel",
+      "viewCollection": "Voir la collection"
     },
-    "buy" : {
-      "header": "Nous contacter",
-      "subheader": "Pour plus d'informations sur les détaillants près de vous et pour toute autre demande.",
-      "find": "Remplir la formulaire"
+    "cta": {
+      "title": "Prêt à démarrer votre prochain projet?",
+      "description": "De la gestion de chantier aux solutions clés en main, laissez Encotec donner vie à votre vision de construction et de rénovation.",
+      "button": "Nous contacter"
     }
+  },
+  "Footer": {
+    "tagline": "Bâtir des relations et des projets de construction de qualité depuis 1994.",
+    "services": "Services",
+    "commercial": "Commercial",
+    "institutional": "Institutionnel",
+    "residential": "Résidentiel",
+    "company": "Entreprise",
+    "aboutUs": "À propos",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "contactTitle": "Contact",
+    "copyright": "© {year} Encotec Inc. Tous droits réservés.",
+    "hours": "Lundi - Vendredi: 8h00 - 17h00"
   },
   "Navbar": {
     "about": "À propos",
-    "collections": "Collections",
-    "contact": "Nous contacter",
-    "locale": "en",
-    "hours": "Heures",
-    "date": "Lunda - Vendredi",
-    "time": "9:00 - 17:00"
+    "services": "Services",
+    "contact": "Contact",
+    "contactUs": "Nous contacter",
+    "commercial": "Commercial",
+    "institutional": "Institutionnel",
+    "residential": "Résidentiel",
+    "locale": "en"
   },
   "About": {
-    "header": "À propos",
-    "first-heading": "Notre histoire",
-    "first-paragraph": "Nous fournissons des collections européennes de prêt-à-porter haut-de-gamme aux boutiques indépendantes, aux magasins spécialisés et aux petites chaînes de magasins à travers le Canada. Parmi nos collections, vous trouverez Bariloche, éclà, Elisa Cavaletti, Gardel by Moore, Lolitas, Soulmate, Tinta, Valentina’s, pour offrir des vêtements de travail, des vêtements de rue et des vêtements décontractés polyvalents, comprenant autant des tendances actuelles que des intemporels classiques.",
-    "second-heading": "Notre Mission",
-    "second-paragraph": "Ed Battah & cie. est une entreprise familiale de troisième génération qui est fière de la qualité et du confort des vêtements que nous importons et distribuons, ainsi que du dévouement de notre personnel. Depuis des décennies, nous sommes un importateur et un distributeur de confiance de vêtements européens, sélectionnant avec soin des pièces qui incarnent un savoir-faire exceptionnel, un style intemporel et un confort inégalé.",
-    "third-heading": "Nos Collections",
-    "third-paragraph": "Ed Battah & Co. sert des clients à travers le Canada avec des bureaux de vente à Montréal, Toronto et Vancouver. Ces bureaux nous permettent de rester en contact avec nos clients, en leur offrant un service personnalisé et un accès facile à notre sélection de vêtements européens de haute qualité.",
-    "view": "Voir collections"
+    "hero": {
+      "title": "Qui nous sommes"
+    },
+    "content": {
+      "label": "À propos de nous",
+      "paragraph1": "Fondée en 1994 sous le nom <strong>ENgineering & COnstruction TEChnologies</strong>, Encotec Inc. a été créée pour offrir à ses clients tous leurs besoins en construction et rénovation.",
+      "paragraph2": "Notre rôle a varié de la gestion et coordination de chantier aux mandats clés en main et conception-construction. Nous nous efforçons à chaque projet de maintenir des relations positives axées sur le travail d'équipe avec nos clients, nos consultants et nos sous-traitants.",
+      "paragraph3": "Notre équipe a démontré la force et la flexibilité nécessaires pour transformer tout défi en succès. Nous définissons ce succès non seulement par la qualité de la construction et le respect du budget et de l'échéancier, mais aussi par la qualité des relations que nous avons bâties avec nos clients."
+    },
+    "highlights": {
+      "established": "Fondée",
+      "establishedValue": "1994",
+      "approach": "Approche",
+      "approachValue": "Clé en main & Conception-construction",
+      "focus": "Priorité",
+      "focusValue": "Collaboration client d'abord"
+    },
+    "cta": {
+      "title": "Construisons ensemble",
+      "description": "Prêt à démarrer votre prochain projet? Contactez notre équipe pour discuter de la façon dont nous pouvons donner vie à votre vision.",
+      "button": "Nous contacter"
+    }
+  },
+  "Contact": {
+    "hero": {
+      "title": "Nous contacter"
+    },
+    "intro": {
+      "label": "Contactez-nous",
+      "title": "Construisons ensemble",
+      "description": "Que vous planifiez un aménagement commercial, un établissement institutionnel ou une rénovation résidentielle, Encotec est prêt à donner vie à votre vision. Contactez-nous dès aujourd'hui pour discuter de vos besoins."
+    },
+    "cards": {
+      "phone": "Téléphone",
+      "email": "Courriel",
+      "hours": "Heures",
+      "hoursValue": "Lundi - Vendredi\n8h00 - 17h00"
+    },
+    "form": {
+      "title": "Demander une soumission",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "company": "Entreprise",
+      "companyPlaceholder": "Votre entreprise",
+      "email": "Courriel",
+      "emailPlaceholder": "votre.courriel@exemple.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "(514) 908-0266",
+      "projectType": "Type de projet",
+      "projectTypePlaceholder": "Sélectionnez un type de projet",
+      "projectTypes": {
+        "commercial": "Commercial",
+        "institutional": "Institutionnel",
+        "residential": "Résidentiel",
+        "renovation": "Rénovation",
+        "other": "Autre"
+      },
+      "message": "Détails du projet",
+      "messagePlaceholder": "Parlez-nous de votre projet...",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "required": "*"
+    },
+    "office": {
+      "title": "Notre bureau",
+      "description": "Visitez-nous à notre bureau ou contactez-nous par l'un des moyens ci-dessus. Nous sommes là pour répondre à vos questions et vous aider à réaliser votre projet de construction.",
+      "companyName": "Encotec Inc.",
+      "address": "4459 Rue Sherbrooke O.\nWestmount, QC H3Z 1E7\nCanada",
+      "whatWeDo": "Ce que nous faisons",
+      "whatWeDoDescription": "De la gestion et coordination de chantier aux mandats clés en main et conception-construction, nous gérons des projets de construction commerciaux, institutionnels et résidentiels avec professionnalisme et soin."
+    },
+    "errors": {
+      "sendFailed": "Échec de l'envoi du message. Veuillez réessayer.",
+      "genericError": "Une erreur s'est produite. Veuillez réessayer plus tard."
+    },
+    "success": {
+      "badge": "Merci",
+      "title": "Message reçu",
+      "description": "Merci d'avoir contacté Encotec. Nous avons bien reçu votre demande et vous répondrons dans les plus brefs délais.",
+      "cardTitle": "Votre demande a été soumise",
+      "cardDescription": "Nous apprécions votre intérêt pour Encotec. Notre équipe examinera votre message et vous contactera dans un délai de 2 jours ouvrables.",
+      "returnHome": "Retour à l'accueil",
+      "sendAnother": "Envoyer un autre message",
+      "redirect": "Vous serez automatiquement redirigé vers la page d'accueil dans 10 secondes."
+    }
+  },
+  "Services": {
+    "commercial": {
+      "hero": {
+        "title": "Commercial"
+      },
+      "content": {
+        "label": "Projets commerciaux",
+        "paragraph1": "Encotec apporte des décennies d'expertise aux projets de construction et de rénovation commerciale à Montréal et ailleurs. Des immeubles de bureaux et espaces commerciaux aux établissements hôteliers et institutionnels, nous livrons des résultats exceptionnels qui répondent aux exigences uniques des environnements commerciaux.",
+        "paragraph2": "Notre portefeuille commercial couvre une gamme diversifiée de secteurs, notamment les hôtels, les bureaux d'entreprise, les établissements de santé, les institutions d'enseignement et les commerces de détail. Nous comprenons l'importance cruciale de minimiser les perturbations de vos opérations tout en maintenant les plus hauts standards de qualité et de sécurité.",
+        "paragraph3": "Que vous ayez besoin d'un aménagement complet, de rénovations stratégiques ou d'un entretien continu, notre équipe coordonne chaque aspect de votre projet avec précision et professionnalisme. Nous travaillons en étroite collaboration avec les architectes, les ingénieurs et les parties prenantes pour nous assurer que votre espace commercial reflète votre marque et sert vos objectifs commerciaux."
+      },
+      "highlights": {
+        "sectors": "Secteurs desservis",
+        "sectorsValue": "Hôtels, Bureaux, Commerce & Plus",
+        "scale": "Échelle des projets",
+        "scaleValue": "Petits aménagements aux grands projets",
+        "approach": "Approche",
+        "approachValue": "Perturbation minimale, qualité maximale"
+      },
+      "showcase": {
+        "label": "Travaux en vedette",
+        "title": "Projets commerciaux"
+      },
+      "cta": {
+        "title": "Prêt à transformer votre espace commercial?",
+        "description": "Discutons de votre projet commercial et de la façon dont nous pouvons obtenir des résultats exceptionnels pour votre entreprise.",
+        "button": "Nous contacter"
+      }
+    },
+    "institutional": {
+      "hero": {
+        "title": "Institutionnel"
+      },
+      "content": {
+        "label": "Projets institutionnels",
+        "paragraph1": "Encotec se spécialise dans les projets de construction et de rénovation institutionnelle qui exigent précision, durabilité et respect de normes de sécurité strictes. Notre expérience couvre les installations de fabrication, les entrepôts, les centres de distribution et les environnements institutionnels spécialisés dans divers secteurs.",
+        "paragraph2": "Nous comprenons les défis uniques de la construction institutionnelle — des exigences d'infrastructure robuste et des systèmes électriques spécialisés aux considérations de manutention des matériaux et à la conformité aux réglementations spécifiques à l'industrie. Notre équipe apporte une expertise technique et des solutions pratiques à chaque projet institutionnel.",
+        "paragraph3": "De la construction complète aux mises à niveau et agrandissements d'installations, nous coordonnons tous les aspects de votre projet institutionnel en mettant l'accent sur l'efficacité opérationnelle, la sécurité et la performance à long terme. Notre approche clé en main assure une intégration harmonieuse des systèmes mécaniques, électriques et structurels."
+      },
+      "highlights": {
+        "sectors": "Expertise",
+        "sectorsValue": "Fabrication & Distribution",
+        "scale": "Normes",
+        "scaleValue": "Sécurité & Conformité",
+        "approach": "Solutions",
+        "approachValue": "Infrastructure robuste"
+      },
+      "showcase": {
+        "label": "Travaux en vedette",
+        "title": "Projets institutionnels"
+      },
+      "partners": {
+        "label": "Nos partenaires",
+        "title": "Partenaires institutionnels de confiance"
+      },
+      "cta": {
+        "title": "Prêt à construire votre installation institutionnelle?",
+        "description": "Discutons de vos besoins en construction institutionnelle et livrons une installation qui soutiendra vos opérations pour les années à venir.",
+        "button": "Nous contacter"
+      }
+    },
+    "residential": {
+      "hero": {
+        "title": "Résidentiel"
+      },
+      "content": {
+        "label": "Projets résidentiels",
+        "paragraph1": "Encotec apporte un savoir-faire et une attention aux détails à chaque projet résidentiel. Des maisons sur mesure et condominiums de luxe aux développements multi-logements et rénovations patrimoniales, nous créons des espaces de vie qui allient beauté, fonctionnalité et qualité durable.",
+        "paragraph2": "Notre portefeuille résidentiel comprend des maisons unifamiliales, des immeubles d'appartements, des complexes de maisons en rangée et des rénovations résidentielles haut de gamme. Nous comprenons que les maisons sont des espaces personnels, et nous travaillons en étroite collaboration avec les propriétaires, les architectes et les designers pour donner vie à votre vision avec un soin méticuleux et une exécution professionnelle.",
+        "paragraph3": "Que vous construisiez la maison de vos rêves à partir de zéro, rénoviez une propriété patrimoniale ou développiez un complexe résidentiel multi-logements, notre équipe gère chaque détail avec précision. Nous combinons les techniques de construction modernes avec un savoir-faire intemporel pour livrer des espaces résidentiels qui résistent à l'épreuve du temps."
+      },
+      "highlights": {
+        "sectors": "Spécialisation",
+        "sectorsValue": "Maisons sur mesure & Rénovations",
+        "scale": "Savoir-faire",
+        "scaleValue": "Attention à chaque détail",
+        "approach": "Service",
+        "approachValue": "Du concept à la réalisation"
+      },
+      "showcase": {
+        "label": "Travaux en vedette",
+        "title": "Projets résidentiels",
+        "residence1": "Résidence privée #1",
+        "residence2": "Résidence privée #2",
+        "residence3": "Résidence privée #3"
+      },
+      "cta": {
+        "title": "Prêt à construire la maison de vos rêves?",
+        "description": "Donnons vie à votre vision résidentielle avec un savoir-faire et un soin qui dépassent les attentes.",
+        "button": "Nous contacter"
+      }
+    }
   },
   "Buy": {
     "submit-title": "Réservation effectuée!",

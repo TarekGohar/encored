@@ -1,51 +1,240 @@
 {
   "Metadata": {
     "home-title": "Home",
-    "home-description": "Welcome to Ed Battah & Co., a trusted importer and distributor of high-quality European ready-to-wear collections.",
+    "home-description": "Encotec Inc. - Complete construction and renovation services since 1994.",
     "about-title": "About Us",
-    "about-description": "Learn about our history, our mission, and our collections.",
-    "collections-title": "Collections",
-    "collections-description": "Discover our compilation of beautiful European brands.",
-    "buy-title": "Where to Buy",
-    "buy-description": "Enter details and we will provide you with the nearest retailers.",
-    "buy-success-title": "Booking Submitted!",
-    "buy-success-description": "We will get in touch soon."
+    "about-description": "Learn about our history and our mission.",
+    "contact-title": "Contact Us",
+    "contact-description": "Get in touch with us for your next project."
   },
   "Home": {
+    "hero": {
+      "title": "Encotec"
+    },
     "about": {
-      "header": "About Us",
-      "subheader": "Learn about our history, our mission, and our collections.",
-      "learn": "Learn More"
+      "label": "About Us",
+      "title": "Building relationships since 1994.",
+      "description": "Since 1994, Encotec Inc. has delivered complete construction and renovation services — cultivating strong, team-oriented relationships with our clients, consultants, and subcontractors on every project.",
+      "cta": "Learn More"
     },
-    "collections": {
-      "header": "Collections",
-      "subheader": "Discover our compilation of beautiful European brands.",
-      "view": "View"
+    "portfolio": {
+      "label": "Sectors We Serve",
+      "title": "We Serve a Variety of Sectors",
+      "description": "From custom homes and modern apartments to large-scale institutional spaces and commercial buildings, our expertise spans every facet of construction. We deliver quality, reliability, and innovative solutions across residential, institutional, and commercial projects.",
+      "commercial": "Commercial",
+      "institutional": "Institutional",
+      "residential": "Residential",
+      "viewCollection": "View Collection"
     },
-    "buy" : {
-      "header": "Where to Buy",
-      "subheader": "Enter details and we will provide you with the nearest retailers.",
-      "find": "Fill in Form"
+    "cta": {
+      "title": "Ready to Start Your Next Project?",
+      "description": "From site management to turn-key solutions, let Encotec bring your construction and renovation vision to life.",
+      "button": "Get in Touch"
     }
+  },
+  "Footer": {
+    "tagline": "Building relationships and quality construction projects since 1994.",
+    "services": "Services",
+    "commercial": "Commercial",
+    "institutional": "Institutional",
+    "residential": "Residential",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "contactTitle": "Contact",
+    "copyright": "© {year} Encotec Inc. All Rights Reserved.",
+    "hours": "Monday - Friday: 8:00 AM - 5:00 PM"
   },
   "Navbar": {
     "about": "About",
-    "collections": "Collections",
-    "contact": "Where to Buy",
-    "locale": "fr",
-    "hours": "Hours",
-    "date": "Monday - Friday",
-    "time": "9:00 AM - 5:00 PM"
+    "services": "Services",
+    "contact": "Contact",
+    "contactUs": "Contact Us",
+    "commercial": "Commercial",
+    "institutional": "Institutional",
+    "residential": "Residential",
+    "locale": "fr"
   },
   "About": {
-    "header": "About Us",
-    "first-heading": "Our History",
-    "first-paragraph": "We provide high quality European ready-to-wear collections to independent boutiques, specialty shops, and small chain stores across Canada. Our collections include Bariloche, éclà, Elisa Cavaletti, Gardel by Moore, Lolitas, Soulmate, Tinta, Valentina’s, and range from workwear to street-wear, from versatile casuals to special-occasion statement pieces, and from timeless classics to current trends.",
-    "second-heading": "Our Mission",
-    "second-paragraph": "Ed Battah & Co. is a third-generation, family-run business that has built its reputation on delivering high-quality and comfortable garments to our customers. For decades, we have been a trusted importer and distributor of European clothing, carefully selecting pieces that embody exceptional craftsmanship, timeless style, and unparalleled comfort.",
-    "third-heading": "Our Collections",
-    "third-paragraph": "Ed Battah & Co. serves clients across Canada with sales offices in Montreal, Toronto, and Vancouver. These locations help us stay connected with our customers, providing personalized service and easy access to our selection of high-quality European garments.",
-    "view": "View Collections"
+    "hero": {
+      "title": "Who we are"
+    },
+    "content": {
+      "label": "About Us",
+      "paragraph1": "Established in 1994 under the name <strong>ENgineering & COnstruction TEChnologies</strong>, Encotec Inc. was formed to provide its clients with all their construction and renovation needs.",
+      "paragraph2": "Our role has varied from site management and coordination to turn-key and design-build mandates. We strive during each project for positive team-oriented relationships with our clients, our consultants and our subcontractors.",
+      "paragraph3": "Our team has shown the strength and flexibility to turn any challenge into a success. We define this success not only by the quality of construction and respect for budget and schedule, but also by the quality of the relationships we have built with our clients."
+    },
+    "highlights": {
+      "established": "Established",
+      "establishedValue": "1994",
+      "approach": "Approach",
+      "approachValue": "Turn-key & Design-Build",
+      "focus": "Focus",
+      "focusValue": "Client-first Collaboration"
+    },
+    "cta": {
+      "title": "Let's Build Something Together",
+      "description": "Ready to start your next project? Get in touch with our team to discuss how we can help bring your vision to life.",
+      "button": "Contact Us"
+    }
+  },
+  "Contact": {
+    "hero": {
+      "title": "Contact Us"
+    },
+    "intro": {
+      "label": "Get in Touch",
+      "title": "Let's Build Together",
+      "description": "Whether you're planning a commercial build-out, an institutional facility, or a residential renovation, Encotec is ready to bring your vision to life. Reach out today to discuss your project needs."
+    },
+    "cards": {
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours",
+      "hoursValue": "Monday - Friday\n8:00 AM - 5:00 PM"
+    },
+    "form": {
+      "title": "Request a Quote",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "company": "Company",
+      "companyPlaceholder": "Your company",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "(514) 908-0266",
+      "projectType": "Project Type",
+      "projectTypePlaceholder": "Select a project type",
+      "projectTypes": {
+        "commercial": "Commercial",
+        "institutional": "Institutional",
+        "residential": "Residential",
+        "renovation": "Renovation",
+        "other": "Other"
+      },
+      "message": "Project Details",
+      "messagePlaceholder": "Tell us about your project...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "required": "*"
+    },
+    "office": {
+      "title": "Our Office",
+      "description": "Visit us at our office or reach out through any of the contact methods above. We're here to answer your questions and help bring your construction project to life.",
+      "companyName": "Encotec Inc.",
+      "address": "4459 Rue Sherbrooke O.\nWestmount, QC H3Z 1E7\nCanada",
+      "whatWeDo": "What We Do",
+      "whatWeDoDescription": "From site management and coordination to turn-key and design-build mandates, we handle commercial, institutional, and residential construction projects with professionalism and care."
+    },
+    "errors": {
+      "sendFailed": "Failed to send message. Please try again.",
+      "genericError": "An error occurred. Please try again later."
+    },
+    "success": {
+      "badge": "Thank You",
+      "title": "Message Received",
+      "description": "Thank you for reaching out to Encotec. We've received your inquiry and will get back to you shortly.",
+      "cardTitle": "Your Inquiry Has Been Submitted",
+      "cardDescription": "We appreciate your interest in Encotec. Our team will review your message and contact you within 2 business days.",
+      "returnHome": "Return to Home",
+      "sendAnother": "Send Another Message",
+      "redirect": "You will be automatically redirected to the home page in 10 seconds."
+    }
+  },
+  "Services": {
+    "commercial": {
+      "hero": {
+        "title": "Commercial"
+      },
+      "content": {
+        "label": "Commercial Projects",
+        "paragraph1": "Encotec brings decades of expertise to commercial construction and renovation projects across Montreal and beyond. From office buildings and retail spaces to hospitality venues and institutional facilities, we deliver exceptional results that meet the unique demands of commercial environments.",
+        "paragraph2": "Our commercial portfolio spans a diverse range of sectors including hotels, corporate offices, healthcare facilities, educational institutions, and retail establishments. We understand the critical importance of minimizing disruption to your operations while maintaining the highest standards of quality and safety.",
+        "paragraph3": "Whether you need a complete build-out, strategic renovations, or ongoing maintenance, our team coordinates every aspect of your project with precision and professionalism. We work closely with architects, engineers, and stakeholders to ensure your commercial space reflects your brand and serves your business objectives."
+      },
+      "highlights": {
+        "sectors": "Sectors Served",
+        "sectorsValue": "Hotels, Offices, Retail & More",
+        "scale": "Project Scale",
+        "scaleValue": "Small Fit-Outs to Large Build-Outs",
+        "approach": "Approach",
+        "approachValue": "Minimal Disruption, Maximum Quality"
+      },
+      "showcase": {
+        "label": "Featured Work",
+        "title": "Commercial Projects"
+      },
+      "cta": {
+        "title": "Ready to Transform Your Commercial Space?",
+        "description": "Let's discuss your commercial project and how we can deliver exceptional results for your business.",
+        "button": "Contact Us"
+      }
+    },
+    "institutional": {
+      "hero": {
+        "title": "Institutional"
+      },
+      "content": {
+        "label": "Institutional Projects",
+        "paragraph1": "Encotec specializes in institutional construction and renovation projects that demand precision, durability, and adherence to stringent safety standards. Our experience spans manufacturing facilities, warehouses, distribution centers, and specialized institutional environments across diverse sectors.",
+        "paragraph2": "We understand the unique challenges of institutional construction — from heavy-duty infrastructure requirements and specialized electrical systems to material handling considerations and compliance with industry-specific regulations. Our team brings technical expertise and practical solutions to every institutional project.",
+        "paragraph3": "From ground-up construction to facility upgrades and expansions, we coordinate all aspects of your institutional project with a focus on operational efficiency, safety, and long-term performance. Our turn-key approach ensures seamless integration of mechanical, electrical, and structural systems."
+      },
+      "highlights": {
+        "sectors": "Expertise",
+        "sectorsValue": "Manufacturing & Distribution",
+        "scale": "Standards",
+        "scaleValue": "Safety & Compliance Focused",
+        "approach": "Solutions",
+        "approachValue": "Heavy-Duty Infrastructure"
+      },
+      "showcase": {
+        "label": "Featured Work",
+        "title": "Institutional Projects"
+      },
+      "partners": {
+        "label": "Our Partners",
+        "title": "Trusted Institutional Partners"
+      },
+      "cta": {
+        "title": "Ready to Build Your Institutional Facility?",
+        "description": "Let's discuss your institutional construction needs and deliver a facility that supports your operations for years to come.",
+        "button": "Contact Us"
+      }
+    },
+    "residential": {
+      "hero": {
+        "title": "Residential"
+      },
+      "content": {
+        "label": "Residential Projects",
+        "paragraph1": "Encotec brings craftsmanship and attention to detail to every residential project. From custom homes and luxury condominiums to multi-unit developments and heritage renovations, we create living spaces that combine beauty, functionality, and lasting quality.",
+        "paragraph2": "Our residential portfolio includes single-family homes, apartment buildings, townhouse complexes, and high-end residential renovations. We understand that homes are personal spaces, and we work closely with homeowners, architects, and designers to bring your vision to life with meticulous care and professional execution.",
+        "paragraph3": "Whether you're building a dream home from the ground up, renovating a heritage property, or developing a multi-unit residential complex, our team manages every detail with precision. We combine modern construction techniques with timeless craftsmanship to deliver residential spaces that stand the test of time."
+      },
+      "highlights": {
+        "sectors": "Specialization",
+        "sectorsValue": "Custom Homes & Renovations",
+        "scale": "Craftsmanship",
+        "scaleValue": "Attention to Every Detail",
+        "approach": "Service",
+        "approachValue": "From Concept to Completion"
+      },
+      "showcase": {
+        "label": "Featured Work",
+        "title": "Residential Projects",
+        "residence1": "Private Residence #1",
+        "residence2": "Private Residence #2",
+        "residence3": "Private Residence #3"
+      },
+      "cta": {
+        "title": "Ready to Build Your Dream Home?",
+        "description": "Let's bring your residential vision to life with craftsmanship and care that exceeds expectations.",
+        "button": "Contact Us"
+      }
+    }
   },
   "Buy": {
     "submit-title": "Booking Submitted!",

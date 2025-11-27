@@ -11,9 +11,11 @@ import {
   Building2,
   Clock,
 } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
+  const t = useTranslations("Contact");
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
@@ -52,17 +54,23 @@ export default function ContactPage() {
       if (response.ok) {
         router.push("/contact/success");
       } else {
-        alert(
-          `Error: ${data.error || "Failed to send message. Please try again."}`
-        );
+        alert(`Error: ${data.error || t("errors.sendFailed")}`);
         setIsSubmitting(false);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("An error occurred. Please try again later.");
+      alert(t("errors.genericError"));
       setIsSubmitting(false);
     }
   };
+
+  const projectTypes = [
+    { value: "commercial", label: t("form.projectTypes.commercial") },
+    { value: "institutional", label: t("form.projectTypes.institutional") },
+    { value: "residential", label: t("form.projectTypes.residential") },
+    { value: "renovation", label: t("form.projectTypes.renovation") },
+    { value: "other", label: t("form.projectTypes.other") },
+  ];
 
   return (
     <>
@@ -86,7 +94,7 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] sm:text-8xl md:text-9xl text-white text-center uppercase opacity-80">
-            Contact Us
+            {t("hero.title")}
           </h1>
         </div>
       </section>
@@ -96,17 +104,14 @@ export default function ContactPage() {
         <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col gap-16">
           <div className="flex items-start justify-between flex-col md:flex-row">
             <span className="text-black w-fit p-1 font-light tracking-wider uppercase">
-              Get in Touch
+              {t("intro.label")}
             </span>
             <div className="flex flex-col gap-6 items-start justify-start md:max-w-2xl">
               <h2 className="text-3xl md:text-4xl uppercase text-black">
-                Let's Build Together
+                {t("intro.title")}
               </h2>
               <p className="text-sm md:text-base text-black/80 font-light leading-7">
-                Whether you're planning a commercial build-out, an institutional
-                facility, or a residential renovation, Encotec is ready to bring
-                your vision to life. Reach out today to discuss your project
-                needs.
+                {t("intro.description")}
               </p>
             </div>
           </div>
@@ -121,7 +126,7 @@ export default function ContactPage() {
               className="bg-black/5 p-6 flex flex-col gap-4">
               <Phone className="h-6 w-6 text-black" />
               <div>
-                <h3 className="text-lg text-black mb-2">Phone</h3>
+                <h3 className="text-lg text-black mb-2">{t("cards.phone")}</h3>
                 <a
                   href="tel:+15149080266"
                   className="text-sm font-light text-black/70 hover:text-black transition-colors">
@@ -138,7 +143,7 @@ export default function ContactPage() {
               className="bg-black/5 p-6 flex flex-col gap-4">
               <Mail className="h-6 w-6 text-black" />
               <div>
-                <h3 className="text-lg font text-black mb-2">Email</h3>
+                <h3 className="text-lg font text-black mb-2">{t("cards.email")}</h3>
                 <a
                   href="mailto:michele@encotec.ca"
                   className="text-sm font-light text-black/70 hover:text-black transition-colors">
@@ -155,11 +160,9 @@ export default function ContactPage() {
               className="bg-black/5 p-6 flex flex-col gap-4">
               <Clock className="h-6 w-6 text-black" />
               <div>
-                <h3 className="text-lg text-black mb-2">Hours</h3>
-                <p className="text-sm font-light text-black/70">
-                  Monday - Friday
-                  <br />
-                  8:00 AM - 5:00 PM
+                <h3 className="text-lg text-black mb-2">{t("cards.hours")}</h3>
+                <p className="text-sm font-light text-black/70 whitespace-pre-line">
+                  {t("cards.hoursValue")}
                 </p>
               </div>
             </motion.div>
@@ -179,7 +182,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
               className="bg-white p-8">
               <h3 className="text-2xl md:text-3xl uppercase text-black mb-6">
-                Request a Quote
+                {t("form.title")}
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -187,7 +190,7 @@ export default function ContactPage() {
                     <label
                       htmlFor="name"
                       className="block text-sm font-light text-black mb-2">
-                      Name *
+                      {t("form.name")} {t("form.required")}
                     </label>
                     <input
                       type="text"
@@ -197,14 +200,14 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10"
-                      placeholder="Your name"
+                      placeholder={t("form.namePlaceholder")}
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="company"
                       className="block text-sm font-light text-black mb-2">
-                      Company
+                      {t("form.company")}
                     </label>
                     <input
                       type="text"
@@ -213,7 +216,7 @@ export default function ContactPage() {
                       value={formData.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10"
-                      placeholder="Your company"
+                      placeholder={t("form.companyPlaceholder")}
                     />
                   </div>
                 </div>
@@ -223,7 +226,7 @@ export default function ContactPage() {
                     <label
                       htmlFor="email"
                       className="block text-sm font-light text-black mb-2">
-                      Email *
+                      {t("form.email")} {t("form.required")}
                     </label>
                     <input
                       type="email"
@@ -233,14 +236,14 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10"
-                      placeholder="your.email@example.com"
+                      placeholder={t("form.emailPlaceholder")}
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="phone"
                       className="block text-sm font-light text-black mb-2">
-                      Phone *
+                      {t("form.phone")} {t("form.required")}
                     </label>
                     <input
                       type="tel"
@@ -250,7 +253,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10"
-                      placeholder="(514) 908-0266"
+                      placeholder={t("form.phonePlaceholder")}
                     />
                   </div>
                 </div>
@@ -259,7 +262,7 @@ export default function ContactPage() {
                   <label
                     htmlFor="projectType"
                     className="block text-sm font-light text-black mb-2">
-                    Project Type *
+                    {t("form.projectType")} {t("form.required")}
                   </label>
                   <div className="relative">
                     <select
@@ -275,12 +278,12 @@ export default function ContactPage() {
                         backgroundPosition: "right 1rem center",
                         paddingRight: "3rem",
                       }}>
-                      <option value="">Select a project type</option>
-                      <option value="commercial">Commercial</option>
-                      <option value="institutional">Institutional</option>
-                      <option value="residential">Residential</option>
-                      <option value="renovation">Renovation</option>
-                      <option value="other">Other</option>
+                      <option value="">{t("form.projectTypePlaceholder")}</option>
+                      {projectTypes.map((type) => (
+                        <option key={type.value} value={type.value}>
+                          {type.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -289,7 +292,7 @@ export default function ContactPage() {
                   <label
                     htmlFor="message"
                     className="block text-sm font-light text-black mb-2">
-                    Project Details *
+                    {t("form.message")} {t("form.required")}
                   </label>
                   <textarea
                     id="message"
@@ -299,7 +302,7 @@ export default function ContactPage() {
                     required
                     rows={5}
                     className="w-full px-4 py-3 bg-black/5 border-none transition-all duration-200 outline-none text-black focus:bg-black/10 resize-none"
-                    placeholder="Tell us about your project..."></textarea>
+                    placeholder={t("form.messagePlaceholder")}></textarea>
                 </div>
 
                 <div className="flex justify-start">
@@ -310,11 +313,11 @@ export default function ContactPage() {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                        Sending...
+                        {t("form.submitting")}
                       </>
                     ) : (
                       <>
-                        Send Message
+                        {t("form.submit")}
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </>
                     )}
@@ -332,12 +335,10 @@ export default function ContactPage() {
               className="bg-white p-8 space-y-8">
               <div>
                 <h3 className="text-2xl md:text-3xl uppercase text-black mb-6">
-                  Our Office
+                  {t("office.title")}
                 </h3>
                 <p className="text-sm md:text-base text-black/70 font-light leading-7 mb-8">
-                  Visit us at our office or reach out through any of the contact
-                  methods above. We're here to answer your questions and help
-                  bring your construction project to life.
+                  {t("office.description")}
                 </p>
               </div>
 
@@ -345,13 +346,9 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-black mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-lg text-black mb-2">Encotec Inc.</h4>
-                    <p className="text-sm font-light text-black/70 leading-relaxed">
-                      4459 Rue Sherbrooke O.
-                      <br />
-                      Westmount, QC H3Z 1E7
-                      <br />
-                      Canada
+                    <h4 className="text-lg text-black mb-2">{t("office.companyName")}</h4>
+                    <p className="text-sm font-light text-black/70 leading-relaxed whitespace-pre-line">
+                      {t("office.address")}
                     </p>
                   </div>
                 </div>
@@ -361,12 +358,9 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <Building2 className="h-6 w-6 text-black flex-shrink-0" />
                   <div>
-                    <h4 className="text-lg text-black mb-2">What We Do</h4>
+                    <h4 className="text-lg text-black mb-2">{t("office.whatWeDo")}</h4>
                     <p className="text-sm font-light text-black/70 leading-relaxed">
-                      From site management and coordination to turn-key and
-                      design-build mandates, we handle commercial,
-                      institutional, and residential construction projects with
-                      professionalism and care.
+                      {t("office.whatWeDoDescription")}
                     </p>
                   </div>
                 </div>

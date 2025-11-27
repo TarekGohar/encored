@@ -3,19 +3,23 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Link, useRouter } from "@/i18n/routing";
 import { useMediaQuery } from "react-responsive";
+import { useTranslations } from "next-intl";
 
 export default function ContactSuccess() {
+  const t = useTranslations("Contact.success");
+  const router = useRouter();
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   // Auto-redirect after 10 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
-      window.location.href = "/";
+      router.push("/");
     }, 10000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [router]);
 
   return (
     <main
@@ -46,13 +50,13 @@ export default function ContactSuccess() {
               } rounded-full bg-theme-primary/10 text-theme-primary ${
                 isMobile ? "text-xs" : "text-sm"
               } font-medium mb-4 border border-theme-primary/20`}>
-              Thank You
+              {t("badge")}
             </span>
             <h1
               className={`${
                 isMobile ? "text-3xl" : "text-4xl md:text-5xl"
               } font-medium mb-4 text-theme-foreground`}>
-              Message Received
+              {t("title")}
             </h1>
             <p
               className={`${
@@ -60,8 +64,7 @@ export default function ContactSuccess() {
               } text-theme-foreground-muted max-w-2xl mx-auto ${
                 isMobile ? "leading-relaxed" : ""
               }`}>
-              Thank you for reaching out to Fluent. We've received your inquiry
-              and will get back to you shortly.
+              {t("description")}
             </p>
           </motion.div>
 
@@ -93,15 +96,14 @@ export default function ContactSuccess() {
                   className={`${
                     isMobile ? "text-xl" : "text-2xl"
                   } font-medium mb-4 text-theme-foreground`}>
-                  Your Inquiry Has Been Submitted
+                  {t("cardTitle")}
                 </h2>
 
                 <p
                   className={`text-theme-foreground-muted mb-8 ${
                     isMobile ? "text-sm leading-relaxed" : ""
                   }`}>
-                  We appreciate your interest in Fluent. Our team will review
-                  your message and contact you within 2 business days.
+                  {t("cardDescription")}
                 </p>
 
                 <div
@@ -117,7 +119,7 @@ export default function ContactSuccess() {
                       className={`flex items-center justify-center bg-theme-primary text-theme-primary-foreground py-3 px-6 rounded-md font-semibold hover:bg-theme-primary-dark transition-colors shadow-sm ${
                         isMobile ? "w-full" : ""
                       }`}>
-                      Return to Home
+                      {t("returnHome")}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </motion.div>
                   </Link>
@@ -129,7 +131,7 @@ export default function ContactSuccess() {
                       className={`flex items-center justify-center bg-theme-background text-theme-primary py-3 px-6 rounded-md font-semibold border border-theme-primary hover:bg-theme-background-dark transition-colors ${
                         isMobile ? "w-full" : ""
                       }`}>
-                      Send Another Message
+                      {t("sendAnother")}
                     </motion.div>
                   </Link>
                 </div>
@@ -138,8 +140,7 @@ export default function ContactSuccess() {
                   className={`${
                     isMobile ? "text-xs" : "text-sm"
                   } text-theme-foreground-muted mt-6`}>
-                  You will be automatically redirected to the home page in 10
-                  seconds.
+                  {t("redirect")}
                 </p>
               </div>
             </motion.div>

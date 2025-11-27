@@ -1,8 +1,9 @@
-import type { NextConfig } from "next";
-import createNextIntlPlugin from "next-intl/plugin";
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
-const nextConfig: NextConfig = {eslint: {ignoreDuringBuilds: true}, typescript: {ignoreBuildErrors: true}};
+const nextConfig = {
+  turbopack: {},
+};
 
 export default withNextIntl(nextConfig);
