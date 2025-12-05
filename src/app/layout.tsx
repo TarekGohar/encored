@@ -7,6 +7,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta name="apple-mobile-web-app-title" content="Encotec" />
+
       <body className="!font-gontserrat">{children}</body>
     </html>
   );

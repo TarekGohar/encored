@@ -5,6 +5,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: '*', allow: '/' },
     ],
-    sitemap: 'https://edbattah.com/sitemap.xml',
+    sitemap: 'https://encotec.ca/sitemap.xml',
   };
 }
