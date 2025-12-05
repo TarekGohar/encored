@@ -36,11 +36,11 @@ export default async function Home() {
           className="absolute inset-0 z-10 pointer-events-none"
           style={{
             background:
-              "linear-gradient(135deg, rgba(20,16,8,0.6) 0%, rgba(40,32,16,0.4) 60%, rgba(10,8,4,0.6) 100%)",
+              "linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(200,200,200,0.09) 60%, rgba(255,255,245,0.17) 100%)",
           }}
         />
-        <div className="absolute inset-0 flex items-center justify-center gap-x-6 max-w-screen z-20">
-          <div className="h-[6rem] w-[6rem]">
+        <div className="absolute inset-0 flex items-center justify-center gap-x-2 md:gap-x-6 max-w-screen z-20">
+          <div className="h-[2.5rem] md:h-[6rem] w-[2.5rem] md:w-[6rem]">
             <svg
               id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ export default async function Home() {
               />
             </svg>
           </div>
-          <h1 className="px-4 text-7xl leading-[5rem] md:leading-[7rem] sm:text-9xl md:text-10xl !font-gontserrat text-white text-left uppercase opacity-90 er">
+          <h1 className="px-4 text-5xl leading-[5rem] md:leading-[7rem] sm:text-7xl md:text-[6rem] !font-gontserrat text-white text-left uppercase opacity-90 er">
             {t("hero.title")}
           </h1>
         </div>

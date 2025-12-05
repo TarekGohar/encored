@@ -163,7 +163,7 @@ export default function CommercialPage() {
           }}
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] text-white text-center uppercase opacity-90">
+          <h1 className="px-4 text-4xl leading-[4.5rem] md:leading-[6rem] sm:text-7xl md:text-[6rem] text-white text-center uppercase opacity-90">
             {t("hero.title")}
           </h1>
         </div>

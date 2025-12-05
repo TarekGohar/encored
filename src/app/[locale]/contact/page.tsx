@@ -93,7 +93,7 @@ export default function ContactPage() {
           }}
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] text-white text-center uppercase opacity-80">
+          <h1 className="px-4 text-4xl leading-[4.5rem] md:leading-[6rem] sm:text-7xl md:text-[6rem] text-white text-center uppercase opacity-80">
             {t("hero.title")}
           </h1>
         </div>
@@ -178,8 +178,8 @@ export default function ContactPage() {
 
       {/* Contact Form Section */}
       <section className="bg-theme-background-light py-24 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-12">
+        <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-start gap-12">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

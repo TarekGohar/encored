@@ -108,7 +108,7 @@ section#blank {
 /* Hamburger Menu */
 .hamburger {
   cursor: pointer;
-  width: 24px;
+  width: 28px;
   height: 24px;
   transition: all 0.25s;
   position: relative;
@@ -118,10 +118,11 @@ section#blank {
 .hamburger-middle,
 .hamburger-bottom {
   position: absolute;
-  width: 24px;
+  width: 28px;
   height: 2px;
   top: 0;
   left: 0;
+  background: #1f2020;
   transform: rotate(0);
   transition: all 0.5s;
 }
@@ -129,21 +130,21 @@ section#blank {
 .hamburger:hover .hamburger-bottom,
 .hamburger:hover .hamburger-middle,
 .hamburger:hover .hamburger-top {
-  background: #1f2020;
+  background: #000;
 }
 
 .hamburger-middle {
-  transform: translateY(7px);
+  transform: translateY(8px);
 }
 .hamburger-bottom {
-  transform: translateY(14px);
+  transform: translateY(16px);
 }
 
 .open {
   transform: rotate(90deg);
 }
 .open .hamburger-top {
-  transform: rotate(45deg) translateY(10.5px) translateX(5px);
+  transform: rotate(45deg) translateY(11px) translateX(5.5px);
 }
 
 .open .hamburger-middle {
@@ -151,7 +152,7 @@ section#blank {
 }
 
 .open .hamburger-bottom {
-  transform: rotate(-45deg) translateX(-10.5px) translateY(5px);
+  transform: rotate(-45deg) translateX(-11px) translateY(5.5px);
 }
 
 .word {

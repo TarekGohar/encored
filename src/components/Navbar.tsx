@@ -9,7 +9,7 @@ interface navbarProps {
   light: boolean;
 }
 
-export default function Navbar({ light }: navbarProps) {
+export default function Navbar({ light: _light }: navbarProps) {
   const [menu, setMenu] = useState(false);
   const [hover, setHover] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -102,7 +102,7 @@ export default function Navbar({ light }: navbarProps) {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 w-full z-[1001] p-1 pr-10 mx-auto flex items-center justify-between text-white unselectable"
+        className="fixed top-0 left-0 right-0 w-full z-[1001] px-4 py-4 md:px-6 md:py-2 lg:p-1 lg:pr-10 mx-auto flex items-center justify-between text-white unselectable"
         style={{
           WebkitBackdropFilter: "blur(12px)",
           backdropFilter: "blur(12px)",
@@ -110,14 +110,14 @@ export default function Navbar({ light }: navbarProps) {
         }}>
         <Link
           href="/"
-          className={`hover:cursor-pointer w-20 md:w-[16rem] z-10 duration-300`}
+          className={`hover:cursor-pointer w-52 sm:w-40 md:w-48 lg:w-[16rem] z-10 duration-300`}
           onClick={() => setMenu(false)}>
           <Image
             src="/images/logo.webp"
             alt="Encotec"
             width={1000}
             height={500}
-            className="w-full"
+            className="w-full ml-[-1rem]"
           />
         </Link>
 
@@ -185,11 +185,11 @@ export default function Navbar({ light }: navbarProps) {
           id="menu-btn"
           className={`${
             menu ? "open" : ""
-          } z-50 block hamburger lg:hidden focus:outline-none group`}
+          } z-50 block hamburger lg:hidden focus:outline-none group p-2`}
           onClick={() => setMenu((prev) => !prev)}>
-          <span className={`hamburger-top `}></span>
-          <span className={`hamburger-middle `}></span>
-          <span className={`hamburger-bottom `}></span>
+          <span className="hamburger-top"></span>
+          <span className="hamburger-middle"></span>
+          <span className="hamburger-bottom"></span>
         </button>
       </nav>
 

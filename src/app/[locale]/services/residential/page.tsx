@@ -16,12 +16,25 @@ function InfiniteCarousel({ title, images }: InfiniteCarouselProps) {
   // Start in the middle set for infinite looping
   const [currentIndex, setCurrentIndex] = useState(images.length);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const transitionRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Track screen size for responsive behavior
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Duplicate images for infinite scroll effect (3 sets)
   const duplicatedImages = [...images, ...images, ...images];
 
-  // Calculate the percentage to translate (each slide is 50% of viewport)
+  // Calculate the percentage to translate
+  // Mobile: 1 image at a time (100% per image), Desktop: 2 images (50% per image)
+  const imagesPerView = isMobile ? 1 : 2;
   const slideWidthPercent = 100 / duplicatedImages.length;
 
   const goToSlide = useCallback(
@@ -125,11 +138,13 @@ function InfiniteCarousel({ title, images }: InfiniteCarouselProps) {
               ? { duration: 0.5, ease: "easeInOut" }
               : { duration: 0 }
           }
-          style={{ width: `${duplicatedImages.length * 50}%` }}>
+          style={{
+            width: `${duplicatedImages.length * (100 / imagesPerView)}%`,
+          }}>
           {duplicatedImages.map((image, idx) => (
             <div
               key={idx}
-              className="relative h-[25rem] md:h-[35rem] flex-shrink-0 px-2"
+              className="relative h-[25rem] md:h-[35rem] flex-shrink-0 px-1 md:px-2"
               style={{ width: `${slideWidthPercent}%` }}>
               <div className="relative w-full h-full overflow-hidden rounded-sm">
                 <Image
@@ -137,7 +152,7 @@ function InfiniteCarousel({ title, images }: InfiniteCarouselProps) {
                   alt={image.alt}
                   fill
                   className="object-cover"
-                  sizes="50vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -304,7 +319,7 @@ export default function ResidentialPage() {
           }}
         />
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <h1 className="px-4 text-6xl leading-[4.5rem] md:leading-[6rem] text-white text-center uppercase opacity-90">
+          <h1 className="px-4 text-4xl leading-[4.5rem] md:leading-[6rem] sm:text-7xl md:text-[6rem] text-white text-center uppercase opacity-90">
             {t("hero.title")}
           </h1>
         </div>
