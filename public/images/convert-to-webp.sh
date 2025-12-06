@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script to convert all images (including HEIC) to WebP format
+# Script to convert all images (including HEIC) in the current directory (and subdirectories) to WebP format
 # Uses ImageMagick for conversion
 
 # Color codes for output
@@ -39,7 +39,7 @@ echo "Using ImageMagick command: $CONVERT_CMD"
 echo ""
 
 # Configuration
-IMAGES_DIR="public/images"
+IMAGES_DIR="."
 QUALITY=85  # WebP quality (0-100, higher is better quality but larger file)
 DELETE_ORIGINALS=false  # Set to true to delete original files after conversion
 
@@ -74,7 +74,7 @@ echo ""
 echo "Starting conversion..."
 echo ""
 
-# Find all image files (case insensitive)
+# Find all image files (case insensitive) in the current directory and subdirectories
 find "$IMAGES_DIR" -type f \( \
     -iname "*.jpg" -o \
     -iname "*.jpeg" -o \
@@ -90,32 +90,32 @@ find "$IMAGES_DIR" -type f \( \
     dir=$(dirname "$file")
     filename=$(basename "$file")
     filename_no_ext="${filename%.*}"
-    
+
     # Output WebP filename
     output_file="$dir/${filename_no_ext}.webp"
-    
+
     # Skip if WebP already exists and is newer than source
     if [ -f "$output_file" ] && [ "$output_file" -nt "$file" ]; then
         echo -e "${YELLOW}⊘ Skipping (already converted): $file${NC}"
         ((SKIPPED++))
         continue
     fi
-    
+
     # Convert to WebP
     echo -e "${GREEN}→ Converting: $file${NC}"
-    
+
     if [ "$CONVERT_CMD" = "magick" ]; then
         magick "$file" -quality "$QUALITY" -define webp:method=6 "$output_file" 2>/dev/null
     else
         convert "$file" -quality "$QUALITY" -define webp:method=6 "$output_file" 2>/dev/null
     fi
-    
+
     # Check if conversion was successful
     if [ $? -eq 0 ] && [ -f "$output_file" ]; then
         # Get file sizes for comparison
         original_size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file" 2>/dev/null)
         new_size=$(stat -f%z "$output_file" 2>/dev/null || stat -c%s "$output_file" 2>/dev/null)
-        
+
         # Calculate size reduction
         if [ "$original_size" -gt 0 ]; then
             reduction=$(( 100 - (new_size * 100 / original_size) ))
@@ -123,9 +123,9 @@ find "$IMAGES_DIR" -type f \( \
         else
             echo -e "${GREEN}✓ Success: $output_file${NC}"
         fi
-        
+
         ((CONVERTED++))
-        
+
         # Delete original if flag is set
         if [ "$DELETE_ORIGINALS" = true ]; then
             rm "$file"
@@ -137,7 +137,7 @@ find "$IMAGES_DIR" -type f \( \
         # Remove failed output file if it exists
         [ -f "$output_file" ] && rm "$output_file"
     fi
-    
+
     echo ""
 done
 

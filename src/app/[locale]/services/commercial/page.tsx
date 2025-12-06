@@ -63,7 +63,7 @@ function MiniCarousel({
         ))}
       </div>
       {/* Overlay with project info */}
-      <div className="absolute inset-0 bg-gradient-to-t from-neutral-500/50 via-neutral-500/30 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute inset-0 bg-gradient-to-t from-neutral-500/50 via-neutral-500/30 to-transparent pointer-events-none md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
           <h3 className="text-lg font-light uppercase tracking-wide mb-2">
             {title}
@@ -236,7 +236,7 @@ export default function CommercialPage() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     {/* Overlay with project info */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-500/50 via-neutral-500/30 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-500/50 via-neutral-500/30 to-transparent pointer-events-none md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                         <h3 className="text-lg font-light uppercase tracking-wide mb-2">
                           {item.title}
