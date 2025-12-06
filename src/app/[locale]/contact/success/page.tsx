@@ -123,7 +123,7 @@ export default function ContactSuccess() {
                   {t("description")}
                 </h3>
                 <p className="text-sm font-light text-black/70">
-                  We'll respond within 2 business days
+                  We&apos;ll respond within 2 business days
                 </p>
               </div>
             </motion.div>
@@ -179,7 +179,7 @@ export default function ContactSuccess() {
               transition={{ duration: 0.6 }}
               className="bg-white p-8">
               <h3 className="text-2xl md:text-3xl uppercase text-black mb-6 font-light">
-                What's Next?
+                What&apos;s Next?
               </h3>
               <div className="flex flex-col gap-4">
                 <Link href="/">
