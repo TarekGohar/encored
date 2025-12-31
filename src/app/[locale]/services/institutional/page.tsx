@@ -7,6 +7,23 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
+type ProjectImage = { src: string; alt: string };
+
+type ProjectItem =
+  | {
+      type: "carousel";
+      images: ProjectImage[];
+      title: string;
+      description: string;
+    }
+  | {
+      type: "image";
+      src: string;
+      alt: string;
+      title: string;
+      description: string;
+    };
+
 // Mini carousel for small project cards
 function MiniCarousel({
   images,
@@ -126,7 +143,87 @@ export default function InstitutionalPage() {
     },
   ];
 
-  const projects = [
+  // Welcome Hall Mission Reintegration Centre carousel images
+  const welcomeHallReintegrationImages = [
+    {
+      src: "/images/Reintegration Center/IMG_1210.webp",
+      alt: "Welcome Hall Mission Reintegration Centre - renovated space",
+    },
+    {
+      src: "/images/Reintegration Center/IMG_1215.webp",
+      alt: "Welcome Hall Mission Reintegration Centre - interior renovation",
+    },
+    {
+      src: "/images/Reintegration Center/IMG_1222.webp",
+      alt: "Welcome Hall Mission Reintegration Centre - upgraded room",
+    },
+    {
+      src: "/images/Reintegration Center/IMG_1247.webp",
+      alt: "Welcome Hall Mission Reintegration Centre - renovated interior",
+    },
+    {
+      src: "/images/Reintegration Center/IMG_1254.webp",
+      alt: "Welcome Hall Mission Reintegration Centre - completed renovation",
+    },
+  ];
+
+  // Salvation Army Kitchen carousel images
+  const salvationArmyKitchenImages = [
+    {
+      src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6260.webp",
+      alt: "Salvation Army Kitchen - renovation detail",
+    },
+    {
+      src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6261.webp",
+      alt: "Salvation Army Kitchen - renovated kitchen",
+    },
+    {
+      src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6262.webp",
+      alt: "Salvation Army Kitchen - commercial kitchen upgrade",
+    },
+    {
+      src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6263.webp",
+      alt: "Salvation Army Kitchen - renovation work completed",
+    },
+    {
+      src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6265.webp",
+      alt: "Salvation Army Kitchen - updated fixtures and finishes",
+    },
+    {
+      src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6266.webp",
+      alt: "Salvation Army Kitchen - renovated workspace",
+    },
+    {
+      src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6267.webp",
+      alt: "Salvation Army Kitchen - upgraded layout and equipment area",
+    },
+  ];
+
+  // Shaare Zedek carousel images
+  const shaareZedekImages = [
+    {
+      src: "/images/Shaare Zedek/c98b234cb9821cf084e422acdfbf90f2.jpeg",
+      alt: "Shaare Zedek project interior",
+    },
+    {
+      src: "/images/Shaare Zedek/rpcq_bien_170786_131064.JPG",
+      alt: "Shaare Zedek project interior wide view",
+    },
+  ];
+
+  // Maison des Greffes carousel images
+  const maisonDesGreffesImages = [
+    {
+      src: "/images/Maison des Greffés/IMG_1072.webp",
+      alt: "Maison des Greffes - interior renovation",
+    },
+    {
+      src: "/images/Maison des Greffés/IMG_1073.webp",
+      alt: "Maison des Greffes - renovated space",
+    },
+  ];
+
+  const projects: ProjectItem[] = [
     {
       type: "carousel" as const,
       images: welcomeHallImages,
@@ -134,16 +231,14 @@ export default function InstitutionalPage() {
       description: t("projects.welcomeHallPrism.description"),
     },
     {
-      type: "image" as const,
-      src: "/images/2222 Ontario Est (Mission)/IMG_5674.webp",
-      alt: "2222 Ontario Est Mission Project",
+      type: "carousel" as const,
+      images: welcomeHallReintegrationImages,
       title: t("projects.welcomeHallReintegration.title"),
       description: t("projects.welcomeHallReintegration.description"),
     },
     {
-      type: "image" as const,
-      src: "/images/880 rue Guy (Salvation Army)/Kitchen/IMG_6260.webp",
-      alt: "880 rue Guy Salvation Army Kitchen",
+      type: "carousel" as const,
+      images: salvationArmyKitchenImages,
       title: t("projects.salvationArmyKitchen.title"),
       description: t("projects.salvationArmyKitchen.description"),
     },
@@ -152,6 +247,18 @@ export default function InstitutionalPage() {
       images: mcgillImages,
       title: t("projects.welcomeHallDental.title"),
       description: t("projects.welcomeHallDental.description"),
+    },
+    {
+      type: "carousel" as const,
+      images: shaareZedekImages,
+      title: t("projects.shaarZedek.title"),
+      description: t("projects.shaarZedek.description"),
+    },
+    {
+      type: "carousel" as const,
+      images: maisonDesGreffesImages,
+      title: t("projects.maisonDesGreffes.title"),
+      description: t("projects.maisonDesGreffes.description"),
     },
   ];
 

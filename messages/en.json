@@ -186,6 +186,10 @@
         "ritzCarlton": {
           "title": "The Ritz-Carlton Montreal",
           "description": "Luxury hotel renovation maintaining heritage while adding modern amenities"
+        },
+        "kanawakiGolfClub": {
+          "title": "The Kanawaki Golf Club",
+          "description": "Full renovation of the ballroom, restructuring of the kitchen floor, renovation of the women's locker room, along with many other clubhouse upgrades"
         }
       },
       "cta": {
@@ -232,6 +236,14 @@
         "welcomeHallDental": {
           "title": "Welcome Hall Mission Dental Clinic",
           "description": "Major renovation of office spaces, day-care, gym, showers, change rooms, and HVAC"
+        },
+        "shaarZedek": {
+          "title": "Shaare Zedek",
+          "description": "Full renovation of the library along with washrooms"
+        },
+        "maisonDesGreffes": {
+          "title": "Maison des Greffes",
+          "description": "Interior renovations to the lobby and laundry room, plus exterior structural work on the building facade and balconies"
         }
       },
       "partners": {
