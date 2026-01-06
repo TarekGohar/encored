@@ -106,6 +106,26 @@ export default function CommercialPage() {
     },
   ];
 
+  // Pierrefonds Animal Hospital carousel images
+  const pierrefondsImages = [
+    {
+      src: "/images/Pierrefonds Animal Hospital/Vet Clinic.webp",
+      alt: "Pierrefonds Animal Hospital Interior 1",
+    },
+    {
+      src: "/images/Pierrefonds Animal Hospital/Vet Clinic 2.webp",
+      alt: "Pierrefonds Animal Hospital Interior 2",
+    },
+    {
+      src: "/images/Pierrefonds Animal Hospital/Vet Clinic 3.webp",
+      alt: "Pierrefonds Animal Hospital Interior 3",
+    },
+    {
+      src: "/images/Pierrefonds Animal Hospital/Vet Clinic 4.webp",
+      alt: "Pierrefonds Animal Hospital Interior 4",
+    },
+  ];
+
   const projects = [
     {
       type: "image" as const,
@@ -128,9 +148,8 @@ export default function CommercialPage() {
       description: t("projects.doubleTree.description"),
     },
     {
-      type: "image" as const,
-      src: "/images/Pierrefonds Animal Hospital/Commercial-PierrefondsAnimalHospital-1.webp",
-      alt: "Pierrefonds Animal Hospital",
+      type: "carousel" as const,
+      images: pierrefondsImages,
       title: t("projects.pierrefondsAnimalHospital.title"),
       description: t("projects.pierrefondsAnimalHospital.description"),
     },
