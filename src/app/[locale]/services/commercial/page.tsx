@@ -109,6 +109,10 @@ export default function CommercialPage() {
   // Pierrefonds Animal Hospital carousel images
   const pierrefondsImages = [
     {
+      src: "/images/Pierrefonds Animal Hospital/Vet Main.webp",
+      alt: "Pierrefonds Animal Hospital Interior 1",
+    },
+    {
       src: "/images/Pierrefonds Animal Hospital/Vet Clinic.webp",
       alt: "Pierrefonds Animal Hospital Interior 1",
     },
@@ -162,7 +166,7 @@ export default function CommercialPage() {
     },
     {
       type: "image" as const,
-      src: "/images/Kanawaki/kanawaki.webp",
+      src: "/images/kanawaki/kanawaki.webp",
       alt: "The Kanawaki Golf Club",
       title: t("projects.kanawakiGolfClub.title"),
       description: t("projects.kanawakiGolfClub.description"),
