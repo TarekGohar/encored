@@ -162,7 +162,7 @@ export default function CommercialPage() {
     },
     {
       type: "image" as const,
-      src: "/images/building-4.webp",
+      src: "/images/Kanawaki/kanawaki.webp",
       alt: "The Kanawaki Golf Club",
       title: t("projects.kanawakiGolfClub.title"),
       description: t("projects.kanawakiGolfClub.description"),

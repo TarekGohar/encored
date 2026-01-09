@@ -150,6 +150,10 @@ export default function InstitutionalPage() {
       alt: "Welcome Hall Mission Reintegration Centre - renovated space",
     },
     {
+      src: "/images/Reintegration Center/IMG_5674.webp",
+      alt: "Welcome Hall Mission Reintegration Centre - renovated space",
+    },
+    {
       src: "/images/Reintegration Center/IMG_1215.webp",
       alt: "Welcome Hall Mission Reintegration Centre - interior renovation",
     },
