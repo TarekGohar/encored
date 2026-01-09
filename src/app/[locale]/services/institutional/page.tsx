@@ -214,12 +214,8 @@ export default function InstitutionalPage() {
   // Maison des Greffes carousel images
   const maisonDesGreffesImages = [
     {
-      src: "/images/Maison des Greffés/IMG_1072.webp",
+      src: "/images/Maison des Greffés/IMG_1074.webp",
       alt: "Maison des Greffes - interior renovation",
-    },
-    {
-      src: "/images/Maison des Greffés/IMG_1073.webp",
-      alt: "Maison des Greffes - renovated space",
     },
   ];
 
